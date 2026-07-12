@@ -4,7 +4,7 @@ description: "Notes and stories about technology, architecture, gadgets, electri
 translationKey: home
 history_chips:
   - label: "1996 · Mazda 323F fan site"
-  - label: "1998 · Hjemmekino Web"
+  - label: "1997 · Hjemmekino Web"
   - label: "2008 · Altinn"
   - label: "2022 · EVKX"
   - label: "2026 · rtl.no relaunch"
@@ -27,7 +27,7 @@ timeline:
   - year: "1996"
     title: "First website"
     description: "A Mazda 323F fan site and a first encounter with HTML."
-  - year: "1998"
+  - year: "1997"
     title: "Hjemmekino Web"
     description: "An early Norwegian home-cinema knowledge site."
   - year: "2008"

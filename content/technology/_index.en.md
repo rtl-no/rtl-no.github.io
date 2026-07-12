@@ -26,7 +26,7 @@ topics:
     summary: "Displays, audio equipment, interfaces and the technology behind a good experience."
     tags: ["Home cinema", "Audio", "Displays"]
 showcase:
-  eyebrow: "The first knowledge site · 1998—"
+  eyebrow: "The first knowledge site · 1997—"
   title: "hjemmekino.no"
   text: "Hjemmekino Web was the first large knowledge site: a place to understand AV technology and help others do the same. The pattern started here. EVKX follows much of the same blueprint."
   url: "https://hjemmekino.no"
