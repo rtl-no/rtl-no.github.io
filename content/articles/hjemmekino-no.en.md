@@ -27,6 +27,12 @@ At launch, the site already contained 23 guides covering subjects such as speake
 
 Since 2004, hjemmekino.no has been independent. That format made it possible to continue with the same basic idea: understand the technology, organize the knowledge and make it available to others.
 
+## The AVForum community
+
+For many years, I was also highly active on [AVForum](https://avforum.no), where enthusiasts exchanged experiences about home cinema, audio, video and equipment. I served as a forum moderator and contributed both to the discussions and to keeping the community useful and well organized.
+
+The forum activity became an important extension of hjemmekino.no. Articles and guides could explain the fundamentals, while the discussions provided space for specific questions, personal experiences and more detailed technical issues.
+
 ## Two appearances on NRK
 
 In 2007, I appeared twice on NRK's consumer programme *Forbrukerinspektørene*, one week apart:

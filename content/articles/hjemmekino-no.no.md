@@ -27,6 +27,12 @@ Ved lanseringen inneholdt nettstedet allerede 23 guider om blant annet høyttale
 
 Fra 2004 har hjemmekino.no vært frittstående. Det uavhengige formatet gjorde det mulig å fortsette med den samme grunnideen: forstå teknologien, organisere kunnskapen og gjøre den tilgjengelig for andre.
 
+## Fagmiljøet på AVForum
+
+I mange år var jeg også svært aktiv på [AVForum](https://avforum.no), der entusiaster utvekslet erfaringer om hjemmekino, lyd, bilde og utstyr. Jeg var moderator på forumet og bidro både i diskusjonene og i arbeidet med å holde fellesskapet ryddig og nyttig.
+
+Forumaktiviteten ble en viktig forlengelse av hjemmekino.no. Artiklene og guidene kunne forklare det grunnleggende, mens diskusjonene ga rom for konkrete spørsmål, erfaringer og mer detaljerte tekniske problemstillinger.
+
 ## To ganger på NRK
 
 I 2007 var jeg med i NRKs *Forbrukerinspektørene* to ganger, med én ukes mellomrom:
