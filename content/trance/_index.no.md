@@ -6,5 +6,5 @@ description: "Jeg er ikke DJ eller musikkanmelder. Jeg elsker ganske enkelt tran
 translationKey: trance
 collection_title: "Samlingen"
 genres: ["Uplifting", "Progressive", "Vokal", "Klassisk", "Kjøring", "Jobbing"]
-artists: ["YOUNA", "Xenia Dia", "Korolova", "Armin van Buuren", "Tiësto"]
+artists: ["YOUNA", "Xenia Dia", "Korolova", "Armin van Buuren", "David Guetta", "Tiësto"]
 ---
