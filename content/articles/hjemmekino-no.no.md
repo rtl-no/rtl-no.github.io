@@ -29,9 +29,7 @@ Fra 2004 har hjemmekino.no vært frittstående. Det uavhengige formatet gjorde d
 
 ## Fagmiljøet på AVForum
 
-I mange år var jeg svært aktiv på [AVForum](https://avforum.no), der entusiaster utvekslet erfaringer om hjemmekino, lyd, bilde og utstyr. Jeg var moderator på forumet og bidro både i diskusjonene og i arbeidet med å holde fellesskapet ryddig og nyttig.
-
-AVForum var et helt separat nettsted, drevet av andre, og hadde ingen organisatorisk tilknytning til hjemmekino.no.
+I mange år var jeg svært aktiv på [AVForum](https://avforum.no) og var moderator der.
 
 ## To ganger på NRK
 
