@@ -13,6 +13,8 @@ toc: true
 
 Jeg startet hjemmekino.no i 1997. Interessen for bilde, lyd og film hadde blitt stor nok til at jeg ville samle det jeg lærte og forklare teknologien på nettet.
 
+Valget av hjemmekino og AV-utstyr som tema var ikke tilfeldig. Jeg er utdannet innen elektronikk, har fagbrev i audio/video og hadde arbeidet som reparatør av elektronikk. Den tekniske bakgrunnen ga meg både interessen og forutsetningene for å forklare hvordan utstyret faktisk fungerte — ikke bare hvordan det ble markedsført.
+
 Det begynte som et personlig prosjekt i en tid da både nettet og hjemmekino som interessefelt var i rask utvikling. Nettstedet ble et sted for guider, forklaringer og råd om hvordan man kunne få en bedre kinoopplevelse hjemme.
 
 ## En del av Akers Mic fra 1998 til 2004

@@ -13,6 +13,8 @@ toc: true
 
 I started hjemmekino.no in 1997. My interest in picture, sound and film had grown to the point where I wanted to collect what I learned and explain the technology on the web.
 
+Choosing home cinema and AV equipment as the subject was not accidental. I was educated in electronics, hold a Norwegian trade certificate in audio/video and had worked as an electronics repair technician. That technical background gave me both the interest and the foundation needed to explain how the equipment actually worked — not merely how it was marketed.
+
 It began as a personal project at a time when both the web and home cinema as a field of interest were developing rapidly. The site became a place for guides, explanations and advice on creating a better cinema experience at home.
 
 ## Part of Akers Mic from 1998 to 2004
