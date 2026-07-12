@@ -29,9 +29,9 @@ Since 2004, hjemmekino.no has been independent. That format made it possible to 
 
 ## The AVForum community
 
-For many years, I was also highly active on [AVForum](https://avforum.no), where enthusiasts exchanged experiences about home cinema, audio, video and equipment. I served as a forum moderator and contributed both to the discussions and to keeping the community useful and well organized.
+For many years, I was highly active on [AVForum](https://avforum.no), where enthusiasts exchanged experiences about home cinema, audio, video and equipment. I served as a forum moderator and contributed both to the discussions and to keeping the community useful and well organized.
 
-The forum activity became an important extension of hjemmekino.no. Articles and guides could explain the fundamentals, while the discussions provided space for specific questions, personal experiences and more detailed technical issues.
+AVForum was an entirely separate website, operated by others, with no organizational connection to hjemmekino.no.
 
 ## Two appearances on NRK
 
