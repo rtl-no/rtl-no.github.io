@@ -28,4 +28,10 @@ Presentasjon fra NDC Oslo 2020 med Rune Tømmerås Larsen, Nina Kylstad og Steph
 
 {{< vimeo id="431429016" title="Slik bygger vi Altinn 3 i skyen som åpen kildekode" >}}
 
+### Altinns historie – med Ringenes Herre som tema
+
+Fra Altinn kaffe og samarbeidsmøtet med tjenesteeiere og samarbeidspartnere 25. juni 2026. Her holder jeg en cirka 30 minutter lang gjennomgang av Altinns historie, fortalt med Ringenes Herre som gjennomgående tema. Hele opptaket varer 41:24.
+
+{{< vimeo id="1204460046" title="Altinns historie – med Ringenes Herre som tema" >}}
+
 > Meningene som publiseres her er mine egne. De er ikke offisielle uttalelser fra Altinn, Digitaliseringsdirektoratet eller arbeidsgiveren min.

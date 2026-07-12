@@ -28,4 +28,10 @@ A presentation from NDC Oslo 2020 with Rune Tømmerås Larsen, Nina Kylstad and 
 
 {{< vimeo id="431429016" title="How we build Altinn 3 in the cloud as open source" >}}
 
+### The history of Altinn – with a Lord of the Rings theme
+
+From Altinn Coffee and the collaboration meeting with service owners and partners on 25 June 2026. I give an approximately 30-minute presentation on the history of Altinn, told with The Lord of the Rings as its recurring theme. The full recording runs for 41:24.
+
+{{< vimeo id="1204460046" title="The history of Altinn – with a Lord of the Rings theme" >}}
+
 > Opinions published here are my own. They are not official statements from Altinn, the Norwegian Digitalisation Agency or my employer.
