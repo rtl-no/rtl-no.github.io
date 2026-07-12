@@ -1,0 +1,80 @@
+[skip_to_content]
+other = "Hopp til innhold"
+[home]
+other = "Hjem"
+[toggle_navigation]
+other = "Vis eller skjul navigasjon"
+[main_navigation]
+other = "Hovednavigasjon"
+[search]
+other = "Søk"
+[toggle_theme]
+other = "Bytt mellom lys og mørk visning"
+[role]
+other = "Teknologiarkitekt og utvikler"
+[building_since]
+other = "Har bygget nettsider siden 1996"
+[site]
+other = "Nettsted"
+[about]
+other = "Om"
+[projects]
+other = "Prosjekter"
+[tags]
+other = "Emner"
+[elsewhere]
+other = "Andre steder"
+[opinions]
+other = "Meningene som publiseres her er mine egne."
+[footer_joke]
+other = "Ikke tilknyttet en bestemt tysk TV-kanal."
+[nothing_published]
+other = "Det er ikke publisert noe her ennå."
+[min_read]
+other = "min lesetid"
+[on_this_page]
+other = "På denne siden"
+[read_more]
+other = "Les mer"
+[page_not_found]
+other = "Denne siden finnes ikke."
+[page_not_found_text]
+other = "Den kan ha blitt flyttet, eller tilhøre en del av arkivet som ennå ikke er bygget opp igjen."
+[back_home]
+other = "Tilbake til forsiden"
+[current_focus]
+other = "Nåværende fokus"
+[featured]
+other = "Fremhevet"
+[latest_technology]
+other = "Siste teknologiartikler"
+[view_all]
+other = "Vis alle"
+[from_archive]
+other = "Fra arkivet"
+[short_notes]
+other = "Korte notater"
+[explore_projects]
+other = "Utforsk prosjektene mine"
+[read_latest]
+other = "Les de siste artiklene"
+[status]
+other = "Status"
+[period]
+other = "Periode"
+[related_articles]
+other = "Relaterte artikler"
+[visit_project]
+other = "Besøk prosjektet"
+[filter_all]
+other = "Alle"
+[favourites]
+other = "Favoritter"
+[search_placeholder]
+other = "Søk i artikler, prosjekter, notater og musikk"
+[search_help]
+other = "Søk i det offentlige norske arkivet."
+[search_no_results]
+other = "Fant ingen sider som passer."
+[collection_in_progress]
+other = "De første godkjente oppføringene klargjøres."

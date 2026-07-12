@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<title>About Rune — rtl.no</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F5F0; color: #1C2430; -webkit-font-smoothing: antialiased; }
+  a { color: #0B7285; text-decoration: none; }
+  a:hover { color: #095E6D; }
+  ::selection { background: #0B7285; color: #fff; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:#F7F5F0; font-family:'Instrument Sans',system-ui,sans-serif; color:#1C2430;">
+
+  <!-- ============ HEADER ============ -->
+  <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:rgba(247,245,240,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #E3E0D8;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px; height:64px; display:flex; align-items:center; gap:32px;">
+      <a href="rtl.no Homepage.dc.html" style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:18px; color:#1C2430; letter-spacing:-0.5px;">rtl<span style="color:#0B7285;">.no</span></a>
+      <nav style="display:flex; gap:24px; flex:1; font-size:14.5px; font-weight:500;">
+        <a href="rtl.no Homepage.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">Home</a>
+        <a href="Technology.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">Technology</a>
+        <a href="rtl.no Homepage.dc.html#projects" style="color:#5A6472;" style-hover="color:#0B7285;">Projects</a>
+        <a href="EV & Mobility.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">EV &amp; Mobility</a>
+        <a href="Trance.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">Trance</a>
+        <a href="rtl.no Homepage.dc.html#notes" style="color:#5A6472;" style-hover="color:#0B7285;">Notes</a>
+        <a href="#" style="color:#1C2430;">About</a>
+      </nav>
+      <button aria-label="Search" style="background:none; border:none; cursor:pointer; padding:6px; color:#5A6472; display:flex;" style-hover="color:#1C2430;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section data-screen-label="About" style="max-width:1140px; margin:0 auto; padding:84px 28px 72px; display:grid; grid-template-columns:1fr 340px; gap:64px; align-items:start;">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#0B7285; margin-bottom:20px;">About</div>
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(38px,5vw,58px); line-height:1.05; letter-spacing:-1.8px; font-weight:700; margin:0 0 32px;">About Rune</h1>
+      <div style="font-size:17.5px; line-height:1.75; color:#3D4653; display:flex; flex-direction:column; gap:20px; max-width:620px;">
+        <p style="margin:0;">I am Rune T. Larsen, a Technology Architect and developer who has been building websites since 1996 — starting with a site dedicated to my mom's Mazda 323F. That was my first experience with HTML — cars and websites, apparently, from day one.</p>
+        <p style="margin:0;">Technology and gadgets have been central interests throughout my life. Over the years, those interests have resulted in websites and projects covering home cinema, electric vehicles, software development, architecture and digital public services.</p>
+        <p style="margin:0;">Some of these projects began as small ways to organize information for myself. Several became much larger than originally planned — <a href="https://hjemmekino.no">hjemmekino.no</a> taught Norwegians about AV technology in the early web years, and <a href="https://evkx.net">EVKX</a> grew into a detailed knowledge platform for electric vehicles.</p>
+        <p style="margin:0;">Since 2008 I have been building Altinn 2 and Altinn 3, Norway's digital public infrastructure. I told the full story in a detailed presentation for Altinn Kaffe — <a href="https://vimeo.com/1204460046" target="_blank" rel="noopener">watch it on Vimeo</a> — and back in 2020 I presented Altinn 3 together with two colleagues in <a href="https://vimeo.com/431429016" target="_blank" rel="noopener">this video</a>. Today, I work with software architecture and development, contribute to large digital systems and maintain EVKX.</p>
+        <p style="margin:0;">rtl.no is my personal home on the web. It is where I collect what I build, what I learn, the technology I find interesting, the music I return to and occasional stories from nearly three decades online.</p>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:24px;">
+      <div style="border-radius:16px; overflow:hidden; border:1px solid #E3E0D8; height:380px;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="rune-photo" shape="rect" placeholder="Drop a photo of yourself" hint-size="340px,380px"></x-import>
+      </div>
+      <div style="background:#fff; border:1px solid #E3E0D8; border-radius:14px; padding:24px 26px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:#8A857A; margin-bottom:16px;">Quick facts</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#3D4653;">
+          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="7">
+            <div style="display:flex; gap:10px; align-items:baseline;">
+              <span style="width:6px; height:6px; border-radius:50%; background:#0B7285; flex:none; position:relative; top:-2px;"></span>
+              <span>{{ f }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOW ============ -->
+  <section data-screen-label="Now" style="background:#fff; border-top:1px solid #E3E0D8; border-bottom:1px solid #E3E0D8; padding:64px 0;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px;">
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:8px;">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:700; letter-spacing:-0.8px; margin:0;">Now</h2>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A857A;">updated July 2026</span>
+      </div>
+      <p style="font-size:15px; color:#5A6472; margin:0 0 32px; max-width:560px; line-height:1.6;">The informal version — what is actually on my desk, in my driveway and on repeat right now.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px;">
+        <sc-for list="{{ now }}" as="n" hint-placeholder-count="4">
+          <div style="background:#F7F5F0; border:1px solid #E3E0D8; border-radius:12px; padding:22px 24px;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:{{ n.accent }}; margin-bottom:10px;">{{ n.label }}</div>
+            <div style="font-size:14.5px; line-height:1.6; color:#3D4653;">{{ n.text }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section data-screen-label="Three decades" style="max-width:1140px; margin:0 auto; padding:72px 28px 88px;">
+    <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0 0 36px;">Three decades online</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0; border-top:2px solid #1C2430;">
+      <sc-for list="{{ timeline }}" as="e" hint-placeholder-count="6">
+        <div style="padding:20px 16px 0 0; position:relative;">
+          <div style="width:9px; height:9px; border-radius:50%; background:{{ e.dot }}; position:absolute; top:-5.5px; left:0;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:#1C2430; margin-bottom:6px;">{{ e.year }}</div>
+          <div style="font-size:13.5px; line-height:1.5; color:#5A6472;">{{ e.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer data-screen-label="Footer" style="background:#1C2430; color:#B8BEC8; padding:40px 0;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; font-size:13px; color:#6B7484;">
+      <span style="font-family:'IBM Plex Mono',monospace;">rtl<span style="color:#5EC4D6;">.no</span> — Rune T. Larsen</span>
+      <span>Opinions published here are my own. Not affiliated with a certain German TV network.</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      facts: [
+        "Based in Norway",
+        "Technology Architect and developer",
+        "Building websites since 1996",
+        "Web editor at Akers Mic 1998–2004",
+        "GitHub: TheTechArch",
+        "Creator of EVKX and hjemmekino.no",
+        "Long-term work with large digital public systems",
+        "EV and Audi enthusiast",
+        "Trance fan — not a DJ"
+      ],
+      now: [
+        { label: "Building", accent: "#0B7285", text: "Relaunching rtl.no and expanding EVKX with new charging-curve data." },
+        { label: "Learning", accent: "#C0392B", text: "Getting more out of coding agents in real development workflows." },
+        { label: "Driving", accent: "#8C5ADC", text: "An electric Audi, of course. Long-term ownership notes in progress." },
+        { label: "On repeat", accent: "#E8951C", text: "Korolova's melodic sets — perfect for evenings of writing." }
+      ],
+      timeline: [
+        { year: "1996", label: "First website — a fan site for my mom's Mazda 323F", dot: "#1C2430" },
+        { year: "1998", label: "hjemmekino.no — and Web editor at Akers Mic (until 2004)", dot: "#8C5ADC" },
+        { year: "2008", label: "Building Altinn 2 and Altinn 3 — Norway's digital public infrastructure", dot: "#1C2430" },
+        { year: "2018", label: "Electric Has Gone Audi", dot: "#BB0A30" },
+        { year: "2022", label: "EVKX — knowledge eXchange for every EV", dot: "#0EA5C4" },
+        { year: "2026", label: "Relaunch of rtl.no", dot: "#0B7285" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

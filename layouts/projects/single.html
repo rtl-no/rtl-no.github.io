@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <article>
+    <header class="project-hero shell"><p class="kicker">{{ .Params.years }} · {{ .Params.status }}</p><h1>{{ .Title }}</h1><p class="lede">{{ .Params.summary }}</p>{{ with .Params.external_url }}<div class="button-row"><a class="button button-primary" href="{{ . }}" rel="noopener">{{ i18n "visit_project" }} ↗</a></div>{{ end }}</header>
+    <div class="project-article shell narrow-shell prose">{{ .Content }}</div>
+  </article>
+{{ end }}

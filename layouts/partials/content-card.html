@@ -1,0 +1,9 @@
+<article class="content-card">
+  <div class="card-meta">
+    {{ with .Params.category }}<span class="accent-text">{{ . }}</span>{{ end }}
+    {{ if .Date }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>{{ end }}
+  </div>
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ with .Params.summary | default .Summary }}<p>{{ . | plainify | truncate 170 }}</p>{{ end }}
+  <a class="card-link" href="{{ .RelPermalink }}">{{ i18n "read_more" }} <span aria-hidden="true">→</span></a>
+</article>

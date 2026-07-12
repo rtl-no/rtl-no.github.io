@@ -1,0 +1,124 @@
+baseURL = "https://rtl.no/"
+title = "Rune T. Larsen"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+enableGitInfo = false
+timeZone = "Europe/Oslo"
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = ["lastmod", ":git", "date"]
+
+[permalinks]
+  articles = "/articles/:year/:slug/"
+  notes = "/notes/:year/:month/:slug/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  artist = "artists"
+  project = "project-tags"
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[outputFormats.SearchIndex]
+  mediaType = "application/json"
+  baseName = "searchindex"
+  isPlainText = true
+  notAlternative = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[params]
+  author = "Rune T. Larsen"
+  github = "https://github.com/TheTechArch"
+  evkx = "https://evkx.net"
+  description = "Rune T. Larsen is a Technology Architect and developer writing about technology, software, AI, electric vehicles, web projects and trance music."
+  socialDescription = "Building websites since 1996. Still curious about how technology works."
+
+[languages]
+  [languages.en]
+    locale = "en-GB"
+    label = "English"
+    weight = 1
+    title = "Rune T. Larsen — Technology, Gadgets, Software and EVs"
+    [languages.en.params]
+      description = "Personal articles about technology, gadgets, software, AI, electric vehicles, web projects and trance music."
+    [[languages.en.menus.main]]
+      name = "Home"
+      pageRef = "/"
+      weight = 10
+    [[languages.en.menus.main]]
+      name = "Technology"
+      pageRef = "/technology"
+      weight = 20
+    [[languages.en.menus.main]]
+      name = "Projects"
+      pageRef = "/projects"
+      weight = 30
+    [[languages.en.menus.main]]
+      name = "EV & Mobility"
+      pageRef = "/ev-mobility"
+      weight = 40
+    [[languages.en.menus.main]]
+      name = "Trance"
+      pageRef = "/trance"
+      weight = 50
+    [[languages.en.menus.main]]
+      name = "Notes"
+      pageRef = "/notes"
+      weight = 60
+    [[languages.en.menus.main]]
+      name = "About"
+      pageRef = "/about"
+      weight = 70
+
+  [languages.no]
+    locale = "nb-NO"
+    label = "Norsk"
+    weight = 2
+    title = "Rune T. Larsen — Teknologi, dingser, programvare og elbiler"
+    [languages.no.params]
+      description = "Personlige artikler om teknologi, dingser, programvare, KI, elbiler, webprosjekter og trancemusikk."
+    [[languages.no.menus.main]]
+      name = "Hjem"
+      pageRef = "/"
+      weight = 10
+    [[languages.no.menus.main]]
+      name = "Teknologi"
+      pageRef = "/technology"
+      weight = 20
+    [[languages.no.menus.main]]
+      name = "Prosjekter"
+      pageRef = "/projects"
+      weight = 30
+    [[languages.no.menus.main]]
+      name = "Elbil og mobilitet"
+      pageRef = "/ev-mobility"
+      weight = 40
+    [[languages.no.menus.main]]
+      name = "Trance"
+      pageRef = "/trance"
+      weight = 50
+    [[languages.no.menus.main]]
+      name = "Notater"
+      pageRef = "/notes"
+      weight = 60
+    [[languages.no.menus.main]]
+      name = "Om"
+      pageRef = "/about"
+      weight = 70

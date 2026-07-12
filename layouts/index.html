@@ -1,0 +1,102 @@
+{{ define "main" }}
+  <section class="home-hero shell">
+    <p class="kicker">Rune T. Larsen</p>
+    <h1>{{ .Title }}</h1>
+    <div class="hero-intro">{{ .Content }}</div>
+    <div class="button-row">
+      <a class="button button-primary" href="{{ (site.GetPage "/projects").RelPermalink }}">{{ i18n "explore_projects" }}</a>
+      <a class="button" href="#latest">{{ i18n "read_latest" }}</a>
+    </div>
+    <div class="history-chips chip-row" aria-label="{{ i18n "from_archive" }}">
+      {{ range .Params.history_chips }}<span class="chip{{ if .current }} chip-accent{{ end }}">{{ .label }}</span>{{ end }}
+    </div>
+  </section>
+
+  <section class="section shell compact-top">
+    <p class="section-label">{{ i18n "current_focus" }}</p>
+    <div class="focus-grid">
+      {{ range .Params.focus }}
+        <a class="focus-card" href="{{ .url | relLangURL }}">
+          <span class="card-kicker {{ .tone }}">{{ .eyebrow }}</span>
+          <h3>{{ .title }}</h3>
+          <p>{{ .summary }}</p>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ $articles := where site.RegularPages "Section" "articles" }}
+  {{ $featuredArticles := where $articles "Params.featured" true }}
+  {{ if gt (len $featuredArticles) 0 }}{{ with index $featuredArticles 0 }}
+    <section class="section shell" id="latest">
+      <p class="section-label">{{ i18n "featured" }}</p>
+      <a class="featured-card" href="{{ .RelPermalink }}">
+        <div class="featured-visual" aria-hidden="true">
+          <span>1996</span><i></i><span>2026</span>
+        </div>
+        <div class="featured-copy">
+          <div class="card-meta"><span class="accent-text">{{ .Params.category }}</span><time>{{ .Date | time.Format ":date_medium" }}</time><span>{{ .ReadingTime }} {{ i18n "min_read" }}</span></div>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Params.summary }}</p>
+        </div>
+      </a>
+    </section>
+  {{ end }}{{ end }}
+
+  <section class="section shell">
+    <div class="section-heading"><h2>{{ i18n "latest_technology" }}</h2><a href="{{ (site.GetPage "/technology").RelPermalink }}">{{ i18n "view_all" }} →</a></div>
+    <div class="content-grid">
+      {{ range first 3 ($articles.ByDate.Reverse) }}{{ partial "content-card.html" . }}{{ end }}
+    </div>
+  </section>
+
+  {{ with site.GetPage "/projects" }}
+    <section class="section projects-preview">
+      <div class="shell">
+        <div class="section-heading"><h2>{{ .Title }}</h2><a href="{{ .RelPermalink }}">{{ i18n "view_all" }} →</a></div>
+        <div class="project-list">
+          {{ range first 5 (sort .Pages ".Params.weight" "asc") }}
+            <a class="project-row" href="{{ .RelPermalink }}">
+              <span class="project-years">{{ .Params.years }}</span>
+              <span class="project-main"><strong>{{ .Title }}</strong><small>{{ .Params.summary }}</small></span>
+              <span class="status-pill status-{{ .Params.status | urlize }}">{{ .Params.status }}</span>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ with site.GetPage "/trance" }}
+    <section class="trance-band">
+      <div class="shell trance-preview">
+        <div class="trance-intro"><p class="section-label">{{ .Title }}</p><h2>{{ .Params.home_title }}</h2><p>{{ .Description }}</p><a href="{{ .RelPermalink }}">{{ i18n "view_all" }} →</a></div>
+        <div class="trance-mini-grid">
+          {{ range first 3 .RegularPages }}
+            <a class="trance-mini-card" href="{{ .RelPermalink }}"><span>{{ substr .Params.artist 0 1 }}</span><small>{{ .Params.artist }}</small><strong>{{ .Title }}</strong></a>
+          {{ else }}
+            <p class="trance-empty">{{ i18n "collection_in_progress" }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  <section class="section shell">
+    <div class="section-heading"><h2>{{ i18n "from_archive" }}</h2></div>
+    <ol class="timeline">
+      {{ range .Params.timeline }}<li><time>{{ .year }}</time><strong>{{ .title }}</strong><span>{{ .description }}</span></li>{{ end }}
+    </ol>
+  </section>
+
+  {{ with site.GetPage "/notes" }}
+    <section class="section shell">
+      <div class="section-heading"><h2>{{ i18n "short_notes" }}</h2><a href="{{ .RelPermalink }}">{{ i18n "view_all" }} →</a></div>
+      <div class="notes-list">
+        {{ range first 4 .RegularPages.ByDate.Reverse }}
+          <a class="note-row" href="{{ .RelPermalink }}"><time>{{ .Date | time.Format "2 Jan" }}</time><span>{{ .Params.category }}</span><strong>{{ .Title }}</strong></a>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

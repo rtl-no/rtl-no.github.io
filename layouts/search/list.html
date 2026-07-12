@@ -1,0 +1,3 @@
+{{ define "main" }}
+  <header class="page-hero shell narrow-shell"><p class="kicker">{{ .Title }}</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ i18n "search_help" }}</p><div class="search-box" data-search data-index="{{ (site.Home.OutputFormats.Get "SearchIndex").RelPermalink }}"><label class="sr-only" for="site-search">{{ i18n "search" }}</label><input id="site-search" type="search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off"><div class="search-results" data-search-results aria-live="polite"></div><p class="empty-state" data-search-empty hidden>{{ i18n "search_no_results" }}</p></div></header>
+{{ end }}

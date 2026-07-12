@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <header class="page-hero shell"><p class="kicker">{{ .Title }}</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ .Description }}</p></header>
+  <section class="section shell compact-top">
+    <div class="topic-grid">
+      {{ range .Params.topics }}
+        <article class="topic-card" style="--topic: {{ .color }}"><span class="topic-icon" aria-hidden="true">{{ .icon }}</span><h2>{{ .title }}</h2><p>{{ .summary }}</p><div class="chip-row">{{ range .tags }}<span class="chip">{{ . }}</span>{{ end }}</div></article>
+      {{ end }}
+    </div>
+  </section>
+  <section class="showcase showcase-hjemmekino">
+    <div class="shell showcase-grid">
+      <div><p class="section-label">{{ .Params.showcase.eyebrow }}</p><h2>{{ .Params.showcase.title }}</h2><p>{{ .Params.showcase.text }}</p><div class="button-row"><a class="button showcase-button" href="{{ .Params.showcase.url }}" rel="noopener">{{ .Params.showcase.cta }} ↗</a></div></div>
+      <div class="site-memory" aria-hidden="true"><span>1998</span><strong>hjemmekino<span>.no</span></strong><small>picture · sound · technology</small></div>
+    </div>
+  </section>
+  <section class="section shell"><div class="section-heading"><h2>{{ .Params.latest_title }}</h2></div><div class="content-grid">{{ range where site.RegularPages "Section" "articles" }}{{ partial "content-card.html" . }}{{ else }}<p class="empty-state">{{ i18n "nothing_published" }}</p>{{ end }}</div></section>
+{{ end }}

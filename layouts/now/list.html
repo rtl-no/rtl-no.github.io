@@ -1,0 +1,3 @@
+{{ define "main" }}
+  <header class="page-hero shell"><p class="kicker">{{ .Params.updated_label }} {{ .Lastmod | time.Format ":date_long" }}</p><h1>{{ .Title }}</h1><p class="lede">{{ .Description }}</p></header><section class="section shell compact-top"><div class="now-grid">{{ range .Params.items }}<article class="now-card"><span class="card-kicker">{{ .label }}</span><h2>{{ .title }}</h2><p>{{ .text }}</p></article>{{ end }}</div></section>
+{{ end }}

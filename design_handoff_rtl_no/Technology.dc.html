@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<title>Technology — Rune T. Larsen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F5F0; color: #1C2430; -webkit-font-smoothing: antialiased; }
+  a { color: #0B7285; text-decoration: none; }
+  a:hover { color: #095E6D; }
+  ::selection { background: #0B7285; color: #fff; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:#F7F5F0; font-family:'Instrument Sans',system-ui,sans-serif; color:#1C2430;">
+
+  <!-- ============ HEADER ============ -->
+  <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:rgba(247,245,240,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #E3E0D8;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px; height:64px; display:flex; align-items:center; gap:32px;">
+      <a href="rtl.no Homepage.dc.html" style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:18px; color:#1C2430; letter-spacing:-0.5px;">rtl<span style="color:#0B7285;">.no</span></a>
+      <nav style="display:flex; gap:24px; flex:1; font-size:14.5px; font-weight:500;">
+        <a href="rtl.no Homepage.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">Home</a>
+        <a href="#" style="color:#1C2430;">Technology</a>
+        <a href="rtl.no Homepage.dc.html#projects" style="color:#5A6472;" style-hover="color:#0B7285;">Projects</a>
+        <a href="EV & Mobility.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">EV &amp; Mobility</a>
+        <a href="Trance.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">Trance</a>
+        <a href="rtl.no Homepage.dc.html#notes" style="color:#5A6472;" style-hover="color:#0B7285;">Notes</a>
+        <a href="About.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">About</a>
+      </nav>
+      <button aria-label="Search" style="background:none; border:none; cursor:pointer; padding:6px; color:#5A6472; display:flex;" style-hover="color:#1C2430;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="Technology hero" style="max-width:1140px; margin:0 auto; padding:84px 28px 48px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#0B7285; margin-bottom:20px;">Technology</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(38px,5vw,60px); line-height:1.05; letter-spacing:-1.8px; font-weight:700; margin:0 0 24px; max-width:840px;">My main interest for as long as I can remember.</h1>
+    <p style="font-size:18px; line-height:1.7; color:#3D4653; max-width:660px; margin:0;">Articles about software, cloud platforms, AI, the web, gadgets and AV technology — products and systems that are either unusually good, strangely designed or worth understanding.</p>
+  </section>
+
+  <!-- ============ TOPIC GROUPS ============ -->
+  <section data-screen-label="Topic groups" style="max-width:1140px; margin:0 auto; padding:24px 28px 72px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+      <sc-for list="{{ topics }}" as="t" hint-placeholder-count="4">
+        <a href="#" style="background:#fff; border:1px solid #E3E0D8; border-radius:14px; padding:28px; display:flex; flex-direction:column; gap:12px; color:inherit; position:relative; overflow:hidden; transition:border-color .15s, transform .15s;" style-hover="border-color:{{ t.accent }}; transform:translateY(-3px);">
+          <div style="position:absolute; top:0; left:0; right:0; height:3px; background:{{ t.accent }};"></div>
+          <div style="width:44px; height:44px; border-radius:10px; background:{{ t.iconBg }}; display:flex; align-items:center; justify-content:center; color:{{ t.accent }};">{{ t.icon }}</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:600; letter-spacing:-0.4px; margin:0;">{{ t.name }}</h3>
+          <p style="font-size:14px; line-height:1.6; color:#5A6472; margin:0; flex:1;">{{ t.desc }}</p>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <sc-for list="{{ t.tags }}" as="tag" hint-placeholder-count="3">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#8A857A; background:#F0EEE7; border:1px solid #E3E0D8; padding:3px 9px; border-radius:99px;">{{ tag }}</span>
+            </sc-for>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ HJEMMEKINO SHOWCASE ============ -->
+  <section data-screen-label="Hjemmekino Web" style="background:#0D0A14; color:#E9E5F0; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse 65% 85% at 80% 15%, rgba(140,90,220,0.20), transparent 60%), radial-gradient(ellipse 40% 60% at 10% 90%, rgba(232,178,74,0.10), transparent 60%); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1140px; margin:0 auto; padding:88px 28px; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;">
+      <div>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8C5ADC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M8 21h8"></path><path d="M12 18v3"></path></svg>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; color:#A98BD8;">THE FIRST KNOWLEDGE SITE · 1998 —</span>
+        </div>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(32px,3.8vw,46px); line-height:1.05; letter-spacing:-1.5px; font-weight:700; margin:0 0 20px; color:#fff;">hjemmekino<span style="color:#8C5ADC;">.no</span></h2>
+        <p style="font-size:16.5px; line-height:1.7; color:#BBAFD0; margin:0 0 18px;">My first big knowledge site — built in the early years of the Norwegian web to teach people about AV technology: projectors, surround sound, screens and how to actually set it all up properly.</p>
+        <p style="font-size:16.5px; line-height:1.7; color:#BBAFD0; margin:0 0 32px;">The pattern started here: understand the technology deeply, organize the knowledge, share it. EVKX follows the same blueprint two decades later.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="https://hjemmekino.no" target="_blank" rel="noopener" style="background:#8C5ADC; color:#fff; font-weight:600; font-size:15px; padding:12px 24px; border-radius:8px; display:inline-block;" style-hover="background:#A379E6; color:#fff;">Visit hjemmekino.no ↗</a>
+          <a href="#" style="border:1.5px solid #3A2F52; color:#E9E5F0; font-weight:600; font-size:15px; padding:11px 24px; border-radius:8px; display:inline-block;" style-hover="border-color:#8C5ADC; color:#fff;">The story from 1998</a>
+        </div>
+      </div>
+      <div style="position:relative; height:380px;">
+        <div style="position:absolute; inset:0; border-radius:16px; overflow:hidden; border:1px solid #2C2440; box-shadow:0 24px 60px rgba(0,0,0,0.5);">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hjemmekino-screenshot" shape="rect" placeholder="Drop a hjemmekino.no screenshot — old or new" hint-size="100%,380px"></x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LATEST ARTICLES ============ -->
+  <section data-screen-label="Latest articles" style="max-width:1140px; margin:0 auto; padding:80px 28px 88px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:24px;">
+      <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0;">Latest in technology</h2>
+      <a href="#" style="font-size:14px; font-weight:600;">Archive →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;">
+      <sc-for list="{{ articles }}" as="a" hint-placeholder-count="4">
+        <a href="#" style="background:#fff; border:1px solid #E3E0D8; border-radius:12px; padding:26px; display:flex; flex-direction:column; gap:12px; color:inherit; transition:border-color .15s, transform .15s;" style-hover="border-color:#0B7285; transform:translateY(-2px);">
+          <div style="display:flex; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A857A;"><span style="color:{{ a.accent }}; font-weight:600; letter-spacing:1px;">{{ a.cat }}</span><span>·</span><span>{{ a.date }}</span></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:19px; line-height:1.25; letter-spacing:-0.4px; font-weight:600; margin:0;">{{ a.title }}</h3>
+          <p style="font-size:14px; line-height:1.6; color:#5A6472; margin:0; flex:1;">{{ a.summary }}</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#8A857A;">{{ a.read }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer data-screen-label="Footer" style="background:#1C2430; color:#B8BEC8; padding:40px 0;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; font-size:13px; color:#6B7484;">
+      <span style="font-family:'IBM Plex Mono',monospace;">rtl<span style="color:#5EC4D6;">.no</span> — Rune T. Larsen</span>
+      <span>Opinions published here are my own.</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const icon = (paths) => React.createElement("svg", { width: 22, height: 22, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round" }, ...paths.map((d, i) => React.createElement("path", { key: i, d })));
+
+    return {
+      topics: [
+        { name: "Cloud", accent: "#0B7285", iconBg: "#E0F0EE",
+          icon: icon(["M17.5 19a4.5 4.5 0 1 0-.9-8.9 6 6 0 1 0-11.1 3.4", "M6 19h11.5"]),
+          desc: "Azure, APIs, architecture, authorization and lessons from large public digital platforms.",
+          tags: [".NET", "Azure", "Architecture", "Altinn"] },
+        { name: "AI", accent: "#C0392B", iconBg: "#F6E4DF",
+          icon: icon(["M12 3v3", "M12 18v3", "M3 12h3", "M18 12h3", "M7 7l2 2", "M15 15l2 2", "M7 17l2-2", "M15 9l2-2", "M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8"]),
+          desc: "AI-assisted development, coding agents and practical workflows — based on what I actually use, not the hype.",
+          tags: ["Coding agents", "Workflows", "Structured data"] },
+        { name: "Web", accent: "#8C5ADC", iconBg: "#EDE6F8",
+          icon: icon(["M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18", "M3 12h18", "M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9"]),
+          desc: "Building websites since 1996 — publishing, performance, content systems and the value of independent sites.",
+          tags: ["Web history", "Performance", "Publishing"] },
+        { name: "AV & Home cinema", accent: "#E8951C", iconBg: "#FAEEDA",
+          icon: icon(["M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1", "M8 21h8", "M3 10h18"]),
+          desc: "Projectors, surround sound, displays and calibration — the interest that started hjemmekino.no in 1998.",
+          tags: ["Home cinema", "Audio", "Displays"] }
+      ],
+
+      articles: [
+        { cat: "AI", accent: "#C0392B", date: "Jul 2026", title: "How AI Changed the Way I Build Personal Projects", summary: "Practical workflows for research, structured data and translation.", read: "9 min read" },
+        { cat: "CLOUD", accent: "#0B7285", date: "Jun 2026", title: "What Eighteen Years of Large Digital Systems Has Taught Me", summary: "Authorization, legacy modernization and the technical decisions that actually mattered.", read: "14 min read" },
+        { cat: "WEB", accent: "#8C5ADC", date: "Jun 2026", title: "What Happened to Personal Websites?", summary: "On the value of independent websites, and owning your own corner of the web.", read: "7 min read" },
+        { cat: "AV", accent: "#E8951C", date: "May 2026", title: "Setting Up a Projector Properly in 2026", summary: "Twenty-five years after hjemmekino.no started, the fundamentals still apply — the hardware just got better.", read: "10 min read" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{{ define "main" }}
+  <section class="about-hero shell"><div><p class="kicker">{{ .Title }}</p><h1>{{ .Params.headline }}</h1><div class="prose about-copy">{{ .Content }}</div></div><aside class="quick-facts"><div class="portrait-placeholder" aria-hidden="true"><span>RTL</span></div><h2>{{ .Params.facts_title }}</h2><ul>{{ range .Params.facts }}<li>{{ . }}</li>{{ end }}</ul></aside></section>
+  {{ with site.GetPage "/now" }}<section class="section now-band"><div class="shell"><div class="section-heading"><h2>{{ .Title }}</h2><a href="{{ .RelPermalink }}">{{ i18n "read_more" }} →</a></div><div class="now-grid">{{ range .Params.items }}<article class="now-card"><span class="card-kicker">{{ .label }}</span><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div></div></section>{{ end }}
+{{ end }}

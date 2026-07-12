@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<title>Rune T. Larsen — Technology, Gadgets, Software and EVs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F5F0; color: #1C2430; -webkit-font-smoothing: antialiased; }
+  a { color: #0B7285; text-decoration: none; }
+  a:hover { color: #095E6D; }
+  ::selection { background: #0B7285; color: #fff; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:#F7F5F0; font-family:'Instrument Sans',system-ui,sans-serif; color:#1C2430;">
+
+  <!-- ============ HEADER ============ -->
+  <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:rgba(247,245,240,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #E3E0D8;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px; height:64px; display:flex; align-items:center; gap:32px;">
+      <a href="#" style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:18px; color:#1C2430; letter-spacing:-0.5px; display:flex; align-items:baseline; gap:1px;">rtl<span style="color:#0B7285;">.no</span></a>
+      <nav style="display:flex; gap:24px; flex:1; font-size:14.5px; font-weight:500;">
+        <a href="#" style="color:#1C2430;" style-hover="color:#0B7285;">Home</a>
+        <a href="Technology.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">Technology</a>
+        <a href="#projects" style="color:#5A6472;" style-hover="color:#0B7285;">Projects</a>
+        <a href="EV & Mobility.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">EV &amp; Mobility</a>
+        <a href="Trance.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">Trance</a>
+        <a href="#notes" style="color:#5A6472;" style-hover="color:#0B7285;">Notes</a>
+        <a href="About.dc.html" style="color:#5A6472;" style-hover="color:#0B7285;">About</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <button aria-label="Search" style="background:none; border:none; cursor:pointer; padding:6px; color:#5A6472; display:flex;" style-hover="color:#1C2430;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
+        </button>
+        <button onClick="{{ toggleLang }}" style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; border:1px solid #D8D4CA; background:#fff; border-radius:6px; padding:5px 10px; cursor:pointer; color:#1C2430; letter-spacing:0.5px;" style-hover="border-color:#0B7285; color:#0B7285;">{{ langLabel }}</button>
+        <a href="https://github.com/TheTechArch" aria-label="GitHub" style="color:#5A6472; display:flex;" style-hover="color:#1C2430;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="Hero" style="max-width:1140px; margin:0 auto; padding:88px 28px 72px;">
+    <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#0B7285; margin-bottom:20px;">Rune T. Larsen</div>
+        <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(40px,5.5vw,68px); line-height:1.05; letter-spacing:-2px; font-weight:700; margin:0 0 28px; max-width:900px;">Building websites since 1996. Still curious about how technology&nbsp;works.</h1>
+        <p style="font-size:19px; line-height:1.65; color:#3D4653; max-width:640px; margin:0 0 36px;">I am a Technology Architect, developer and lifelong technology enthusiast. This is where I write about software, gadgets, artificial intelligence, electric vehicles, digital systems, web projects, trance music and other things I care about.</p>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isNo }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#0B7285; margin-bottom:20px;">Rune T. Larsen</div>
+        <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(40px,5.5vw,68px); line-height:1.05; letter-spacing:-2px; font-weight:700; margin:0 0 28px; max-width:900px;">Har bygget nettsider siden 1996. Fortsatt nysgjerrig på hvordan teknologi&nbsp;fungerer.</h1>
+        <p style="font-size:19px; line-height:1.65; color:#3D4653; max-width:640px; margin:0 0 36px;">Jeg er teknologiarkitekt, utvikler og livslang teknologientusiast. Her skriver jeg om programvare, dingser, kunstig intelligens, elbiler, digitale systemer, webprosjekter, trancemusikk og andre ting jeg bryr meg om.</p>
+      </div>
+    </sc-if>
+    <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+      <a href="#projects" style="background:#1C2430; color:#fff; font-weight:600; font-size:15px; padding:12px 24px; border-radius:8px; display:inline-block;" style-hover="background:#0B7285; color:#fff;">Explore my projects</a>
+      <a href="#latest" style="border:1.5px solid #C9C5BA; color:#1C2430; font-weight:600; font-size:15px; padding:11px 24px; border-radius:8px; display:inline-block;" style-hover="border-color:#0B7285; color:#0B7285;">Read the latest articles</a>
+    </div>
+    <div style="display:flex; gap:10px; margin-top:56px; flex-wrap:wrap; align-items:center;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A857A; background:#EFEDE6; border:1px solid #E3E0D8; padding:5px 12px; border-radius:99px;">1996 · Mazda 323F fan site</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A857A; background:#EFEDE6; border:1px solid #E3E0D8; padding:5px 12px; border-radius:99px;">1998 · Hjemmekino Web</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A857A; background:#EFEDE6; border:1px solid #E3E0D8; padding:5px 12px; border-radius:99px;">2008 · Altinn</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A857A; background:#EFEDE6; border:1px solid #E3E0D8; padding:5px 12px; border-radius:99px;">EVKX</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0B7285; background:#fff; border:1px solid #0B7285; padding:5px 12px; border-radius:99px;">2026 · rtl.no relaunch</span>
+    </div>
+  </section>
+
+  <!-- ============ CURRENT FOCUS ============ -->
+  <section data-screen-label="Current focus" style="max-width:1140px; margin:0 auto; padding:0 28px 80px;">
+    <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0 0 24px;">Current focus</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+      <a href="#projects" style="background:#fff; border:1px solid #E3E0D8; border-radius:12px; padding:28px; display:block; color:inherit; transition:border-color .15s, transform .15s;" style-hover="border-color:#0B7285; transform:translateY(-2px);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:1.5px; color:#C0392B; margin-bottom:14px;">EV KNOWLEDGE</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600; margin:0 0 10px; letter-spacing:-0.5px;">EVKX</h3>
+        <p style="font-size:14.5px; line-height:1.6; color:#5A6472; margin:0;">A detailed global knowledge platform for electric vehicles, charging, batteries, specifications and vehicle technology.</p>
+      </a>
+      <a href="Technology.dc.html" style="background:#fff; border:1px solid #E3E0D8; border-radius:12px; padding:28px; display:block; color:inherit; transition:border-color .15s, transform .15s;" style-hover="border-color:#0B7285; transform:translateY(-2px);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:1.5px; color:#0B7285; margin-bottom:14px;">ARCHITECTURE</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600; margin:0 0 10px; letter-spacing:-0.5px;">Digital systems</h3>
+        <p style="font-size:14.5px; line-height:1.6; color:#5A6472; margin:0;">Architecture, authorization, software development and lessons from working with large public digital platforms.</p>
+      </a>
+      <a href="Technology.dc.html" style="background:#fff; border:1px solid #E3E0D8; border-radius:12px; padding:28px; display:block; color:inherit; transition:border-color .15s, transform .15s;" style-hover="border-color:#0B7285; transform:translateY(-2px);">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:1.5px; color:#0B7285; margin-bottom:14px;">PRACTICAL AI</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600; margin:0 0 10px; letter-spacing:-0.5px;">AI-assisted development</h3>
+        <p style="font-size:14.5px; line-height:1.6; color:#5A6472; margin:0;">Practical experiences using AI for development, research, structured data, translation, design and editorial work.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ARTICLE ============ -->
+  <section data-screen-label="Featured article" id="latest" style="max-width:1140px; margin:0 auto; padding:0 28px 80px;">
+    <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0 0 24px;">Featured</h2>
+    <a href="#" style="display:grid; grid-template-columns:1.2fr 1fr; gap:0; background:#fff; border:1px solid #E3E0D8; border-radius:14px; overflow:hidden; color:inherit;" style-hover="border-color:#0B7285;">
+      <div style="min-height:340px;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="featured-article" shape="rect" placeholder="Drop a featured image (old + new site screenshots?)" hint-size="100%,340px"></x-import>
+      </div>
+      <div style="padding:40px 40px 36px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="display:flex; gap:12px; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A857A; margin-bottom:16px;">
+          <span style="color:#0B7285; font-weight:600;">WEB HISTORY</span><span>·</span><span>July 2026</span><span>·</span><span>12 min read</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:32px; line-height:1.15; letter-spacing:-1px; font-weight:700; margin:0 0 16px;">From Hjemmekino Web to EVKX: Thirty Years of Building Knowledge Sites</h3>
+        <p style="font-size:16px; line-height:1.65; color:#5A6472; margin:0;">Some of my projects began as a way to organize information for myself. Several became much larger than planned. This is the story of thirty years of turning personal interests into websites.</p>
+      </div>
+    </a>
+  </section>
+
+  <!-- ============ LATEST ARTICLES ============ -->
+  <section data-screen-label="Latest articles" id="technology" style="max-width:1140px; margin:0 auto; padding:0 28px 80px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:24px;">
+      <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0;">Latest technology articles</h2>
+      <a href="#" style="font-size:14px; font-weight:600;">All articles →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+      <sc-for list="{{ articles }}" as="a" hint-placeholder-count="4">
+        <a href="#" style="background:#fff; border:1px solid #E3E0D8; border-radius:12px; padding:26px; display:flex; flex-direction:column; gap:12px; color:inherit; transition:border-color .15s, transform .15s;" style-hover="border-color:#0B7285; transform:translateY(-2px);">
+          <div style="display:flex; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A857A;"><span style="color:#0B7285; font-weight:600; letter-spacing:1px;">{{ a.cat }}</span><span>·</span><span>{{ a.date }}</span></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:19px; line-height:1.25; letter-spacing:-0.4px; font-weight:600; margin:0;">{{ a.title }}</h3>
+          <p style="font-size:14px; line-height:1.6; color:#5A6472; margin:0; flex:1;">{{ a.summary }}</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#8A857A;">{{ a.read }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section data-screen-label="Projects" id="projects" style="max-width:1140px; margin:0 auto; padding:0 28px 80px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px;">
+      <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0;">Projects</h2>
+      <a href="#" style="font-size:14px; font-weight:600;">All projects →</a>
+    </div>
+    <p style="font-size:16px; color:#5A6472; max-width:620px; margin:0 0 28px; line-height:1.6;">Many of my projects begin as a way to organize information for myself. Some remain small. Others become considerably larger than planned.</p>
+    <div style="display:flex; flex-direction:column; border-top:1px solid #E3E0D8;">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="5">
+        <a href="#" style="display:grid; grid-template-columns:130px 1fr auto; gap:24px; align-items:baseline; padding:22px 8px; border-bottom:1px solid #E3E0D8; color:inherit; transition:background .15s;" style-hover="background:#F0EEE7;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#8A857A;">{{ p.years }}</span>
+          <span style="display:flex; flex-direction:column; gap:4px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; letter-spacing:-0.3px;">{{ p.name }}</span>
+            <span style="font-size:14px; color:#5A6472; line-height:1.5;">{{ p.desc }}</span>
+          </span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:1px; padding:4px 10px; border-radius:99px; background:{{ p.badgeBg }}; color:{{ p.badgeFg }};">{{ p.status }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ EV & MOBILITY ============ -->
+  <section data-screen-label="EV and Mobility" id="ev" style="max-width:1140px; margin:0 auto; padding:0 28px 80px;">
+    <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0 0 24px;">EV &amp; Mobility</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <a href="#" style="background:#fff; border:1px solid #E3E0D8; border-radius:12px; padding:28px; color:inherit; display:block;" style-hover="border-color:#C0392B;">
+        <div style="display:flex; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A857A; margin-bottom:12px;"><span style="color:#C0392B; font-weight:600; letter-spacing:1px;">EV OWNERSHIP</span><span>·</span><span>June 2026</span></div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; line-height:1.25; letter-spacing:-0.4px; font-weight:600; margin:0 0 10px;">Why I Prefer Adaptive Coasting to One-Pedal Driving</h3>
+        <p style="font-size:14.5px; line-height:1.6; color:#5A6472; margin:0;">Years of EV ownership have changed my view on regeneration strategies. The specifications never tell you this part.</p>
+      </a>
+      <a href="#" style="background:#fff; border:1px solid #E3E0D8; border-radius:12px; padding:28px; color:inherit; display:block;" style-hover="border-color:#C0392B;">
+        <div style="display:flex; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A857A; margin-bottom:12px;"><span style="color:#C0392B; font-weight:600; letter-spacing:1px;">BEHIND EVKX</span><span>·</span><span>May 2026</span></div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:21px; line-height:1.25; letter-spacing:-0.4px; font-weight:600; margin:0 0 10px;">How Charging Data Is Misunderstood</h3>
+        <p style="font-size:14.5px; line-height:1.6; color:#5A6472; margin:0;">What I learned from collecting and verifying charging curves for hundreds of vehicles on EVKX.</p>
+      </a>
+    </div>
+    <p style="font-size:14px; color:#8A857A; margin:18px 0 0;">Full specifications, charging curves and comparisons live on <a href="https://evkx.net" style="font-weight:600;">EVKX</a>. Here you get the personal perspective.</p>
+  </section>
+
+  <!-- ============ TRANCE ============ -->
+  <section data-screen-label="Trance" id="trance" style="background:#141B26; color:#E8E6E0; padding:72px 0;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; letter-spacing:-1px; margin:0 0 14px; color:#fff;">Trance</h2>
+      <p style="font-size:16px; line-height:1.65; color:#9BA3B0; max-width:640px; margin:0 0 36px;">Trance is the music I keep returning to. This is my personal collection of favourite tracks, live performances and DJ sets, mainly saved here so I can easily find and enjoy them again. I am not a DJ — just a fan.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+        <sc-for list="{{ tranceSets }}" as="t" hint-placeholder-count="3">
+          <a href="#" style="background:#1D2635; border:1px solid #2A3547; border-radius:12px; overflow:hidden; color:inherit; display:flex; flex-direction:column;" style-hover="border-color:#0B7285;">
+            <div style="position:relative; aspect-ratio:16/9; background:#0E141E; display:flex; align-items:center; justify-content:center;">
+              <div style="width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"></path></svg>
+              </div>
+              <span style="position:absolute; bottom:10px; right:10px; font-family:'IBM Plex Mono',monospace; font-size:11px; background:rgba(0,0,0,0.65); padding:3px 8px; border-radius:5px; color:#fff;">{{ t.duration }}</span>
+            </div>
+            <div style="padding:20px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:600; color:#fff; margin-bottom:6px;">{{ t.title }}</div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#7C8698; margin-bottom:10px;">{{ t.meta }}</div>
+              <p style="font-size:13.5px; line-height:1.55; color:#9BA3B0; margin:0;">{{ t.note }}</p>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+      <a href="#" style="display:inline-block; margin-top:28px; font-size:14px; font-weight:600; color:#5EC4D6;" style-hover="color:#fff;">Browse the full collection →</a>
+    </div>
+  </section>
+
+  <!-- ============ FROM THE ARCHIVE ============ -->
+  <section data-screen-label="From the archive" style="max-width:1140px; margin:0 auto; padding:80px 28px;">
+    <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0 0 8px;">From the archive</h2>
+    <p style="font-size:16px; color:#5A6472; max-width:620px; margin:0 0 36px; line-height:1.6;">Three decades of websites, projects and Norwegian web history — screenshots, stories and technical memories.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:0; border-top:2px solid #1C2430;">
+      <sc-for list="{{ timeline }}" as="e" hint-placeholder-count="6">
+        <div style="padding:20px 16px 0 0; position:relative;">
+          <div style="width:9px; height:9px; border-radius:50%; background:{{ e.dot }}; position:absolute; top:-5.5px; left:0;"></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:#1C2430; margin-bottom:6px;">{{ e.year }}</div>
+          <div style="font-size:13.5px; line-height:1.5; color:#5A6472;">{{ e.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ NOTES ============ -->
+  <section data-screen-label="Notes" id="notes" style="max-width:1140px; margin:0 auto; padding:0 28px 88px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:24px;">
+      <h2 style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#8A857A; margin:0;">Short notes</h2>
+      <a href="#" style="font-size:14px; font-weight:600;">All notes →</a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0; border-top:1px solid #E3E0D8;">
+      <sc-for list="{{ notes }}" as="n" hint-placeholder-count="4">
+        <a href="#" style="display:grid; grid-template-columns:110px auto 1fr; gap:20px; align-items:baseline; padding:16px 8px; border-bottom:1px solid #E3E0D8; color:inherit;" style-hover="background:#F0EEE7;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A857A;">{{ n.date }}</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:1px; color:#0B7285; text-transform:uppercase;">{{ n.tag }}</span>
+          <span style="font-size:15px; font-weight:500;">{{ n.text }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer data-screen-label="Footer" id="about" style="background:#1C2430; color:#B8BEC8; padding:56px 0 40px;">
+    <div style="max-width:1140px; margin:0 auto; padding:0 28px;">
+      <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:40px; margin-bottom:44px;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:18px; color:#fff; margin-bottom:14px;">rtl<span style="color:#5EC4D6;">.no</span></div>
+          <p style="font-size:14.5px; line-height:1.65; margin:0; max-width:320px;">Rune T. Larsen<br>Technology Architect and developer<br>Building websites since 1996</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:14px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#6B7484; text-transform:uppercase; margin-bottom:4px;">Site</span>
+          <a href="About.dc.html" style="color:#B8BEC8;" style-hover="color:#fff;">About</a>
+          <a href="#projects" style="color:#B8BEC8;" style-hover="color:#fff;">Projects</a>
+          <a href="#" style="color:#B8BEC8;" style-hover="color:#fff;">Archive</a>
+          <a href="#" style="color:#B8BEC8;" style-hover="color:#fff;">RSS</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:14px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#6B7484; text-transform:uppercase; margin-bottom:4px;">Elsewhere</span>
+          <a href="https://github.com/TheTechArch" style="color:#B8BEC8;" style-hover="color:#fff;">GitHub — TheTechArch</a>
+          <a href="https://evkx.net" style="color:#B8BEC8;" style-hover="color:#fff;">EVKX</a>
+          <a href="#" style="color:#B8BEC8;" style-hover="color:#fff;">Contact</a>
+          <a href="#" style="color:#B8BEC8;" style-hover="color:#fff;">Privacy</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid #2A3547; padding-top:24px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; font-size:13px; color:#6B7484;">
+        <span>Opinions published here are my own.</span>
+        <span>Not affiliated with a certain German TV network.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;language&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;en&quot;, &quot;no&quot;], &quot;default&quot;: &quot;en&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { lang: null };
+
+  renderVals() {
+    const lang = this.state.lang ?? this.props.language ?? "en";
+    return {
+      isEn: lang === "en",
+      isNo: lang === "no",
+      langLabel: lang === "en" ? "EN / no" : "en / NO",
+      toggleLang: () => this.setState({ lang: lang === "en" ? "no" : "en" }),
+
+      articles: [
+        { cat: "AI", date: "Jul 2026", title: "How AI Changed the Way I Build Personal Projects", summary: "Practical workflows for research, structured data and translation — based on what I actually use, not the hype.", read: "9 min read" },
+        { cat: "SOFTWARE", date: "Jun 2026", title: "What Eighteen Years of Large Digital Systems Has Taught Me", summary: "Authorization, legacy modernization and the technical decisions that actually mattered.", read: "14 min read" },
+        { cat: "WEB DEV", date: "Jun 2026", title: "What Happened to Personal Websites?", summary: "On the value of independent websites, and why I still believe in owning your own corner of the web.", read: "7 min read" },
+        { cat: "GADGETS", date: "May 2026", title: "The Technology and Gadgets I Use Every Day", summary: "Long-term ownership experiences — what survived years of daily use and what didn't.", read: "8 min read" }
+      ],
+
+      projects: [
+        { years: "2022 —", name: "EVKX", desc: "Electric-vehicle knowledge platform with specifications, charging curves, comparisons and calculators.", status: "ACTIVE", badgeBg: "#E0F0EE", badgeFg: "#0B7285" },
+        { years: "2008 —", name: "Altinn & digital public systems", desc: "Building Altinn 2 and Altinn 3 since 2008 — Norway's digital public infrastructure. Opinions are my own.", status: "ONGOING", badgeBg: "#E0F0EE", badgeFg: "#0B7285" },
+        { years: "1998 — 2006", name: "Hjemmekino Web", desc: "An early Norwegian home-cinema website from the first years of the commercial web.", status: "ARCHIVE", badgeBg: "#EFEDE6", badgeFg: "#8A857A" },
+        { years: "2018 — 2022", name: "Electric Has Gone Audi", desc: "A personal project about Audi, electric vehicles and the transition to electric mobility.", status: "ARCHIVE", badgeBg: "#EFEDE6", badgeFg: "#8A857A" },
+        { years: "1998 —", name: "rtl.no", desc: "My personal home on the web, relaunched as an archive and publication covering several decades of technology.", status: "RELAUNCHED", badgeBg: "#F6E4DF", badgeFg: "#C0392B" }
+      ],
+
+      tranceSets: [
+        { title: "Armin van Buuren — Live at Tomorrowland", meta: "Progressive trance · Live set · 2025", duration: "90 min", note: "A melodic set with a strong build and several tracks I keep returning to. Good for long drives or focused work." },
+        { title: "Korolova — Melodic Sunset Session", meta: "Melodic · DJ set · 2024", duration: "62 min", note: "Recently discovered. Calm, layered and perfect background for an evening of writing." },
+        { title: "Tiësto — Classic Trance Essentials", meta: "Classic trance · Favourite · 2003", duration: "74 min", note: "The set that got me into trance in the first place. Pure nostalgia, still holds up." }
+      ],
+
+      timeline: [
+        { year: "1996", label: "First website — my mom's Mazda 323F", dot: "#1C2430" },
+        { year: "1998", label: "Hjemmekino Web — early Norwegian home cinema site", dot: "#1C2430" },
+        { year: "2008", label: "Building Altinn 2 and Altinn 3", dot: "#1C2430" },
+        { year: "2018", label: "Electric Has Gone Audi", dot: "#1C2430" },
+        { year: "2022", label: "EVKX — EV knowledge platform", dot: "#C0392B" },
+        { year: "2026", label: "Relaunch of rtl.no", dot: "#0B7285" }
+      ],
+
+      notes: [
+        { date: "Jul 10", tag: "Gadgets", text: "A USB tester that finally shows PD negotiation properly. Small tool, big difference." },
+        { date: "Jul 04", tag: "EV", text: "Preconditioning logic differs wildly between brands — noted for a future EVKX article." },
+        { date: "Jun 28", tag: "Trance", text: "Added three new Korolova sets to the collection. The Cappadocia one is special." },
+        { date: "Jun 21", tag: "Web history", text: "Found a 1999 screenshot of Hjemmekino Web on an old backup CD. It's going in the archive." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

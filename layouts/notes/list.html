@@ -1,0 +1,4 @@
+{{ define "main" }}
+  <header class="page-hero shell narrow-shell"><p class="kicker">{{ .Title }}</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ .Description }}</p></header>
+  <section class="section shell compact-top"><div class="notes-list">{{ range .RegularPages.ByDate.Reverse }}<a class="note-row" href="{{ .RelPermalink }}"><time>{{ .Date | time.Format ":date_medium" }}</time><span>{{ .Params.category }}</span><strong>{{ .Title }}</strong></a>{{ else }}<p class="empty-state">{{ i18n "nothing_published" }}</p>{{ end }}</div></section>
+{{ end }}

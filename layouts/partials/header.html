@@ -1,0 +1,33 @@
+<header class="site-header" data-site-header>
+  <div class="shell header-inner">
+    <a class="wordmark" href="{{ site.Home.RelPermalink }}" aria-label="rtl.no — {{ i18n "home" }}">rtl<span>.no</span></a>
+    <button class="nav-toggle icon-button" type="button" aria-expanded="false" aria-controls="main-navigation" data-nav-toggle>
+      <span class="sr-only">{{ i18n "toggle_navigation" }}</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="{{ i18n "main_navigation" }}" data-navigation>
+      {{ range site.Menus.main }}
+        <a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <div class="header-actions">
+      {{ with site.GetPage "/search" }}
+        <a class="icon-button" href="{{ .RelPermalink }}" aria-label="{{ i18n "search" }}">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        </a>
+      {{ end }}
+      {{ range .AllTranslations }}
+        {{ if ne .Language.Lang site.Language.Lang }}
+          <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}">{{ upper .Language.Lang }}</a>
+        {{ end }}
+      {{ end }}
+      <button class="icon-button" type="button" data-theme-toggle aria-label="{{ i18n "toggle_theme" }}">
+        <svg class="theme-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="theme-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></svg>
+      </button>
+      <a class="github-link" href="{{ site.Params.github }}" rel="me noopener" aria-label="GitHub">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.57.1.78-.25.78-.55v-2.2c-3.18.7-3.85-1.35-3.85-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.54-.29-5.21-1.27-5.21-5.65 0-1.25.44-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.74.8 1.18 1.82 1.18 3.07 0 4.39-2.68 5.35-5.23 5.64.41.35.78 1.05.78 2.13v3.15c0 .3.2.66.79.55A11.4 11.4 0 0 0 12 .8Z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>

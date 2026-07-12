@@ -1,0 +1,80 @@
+[skip_to_content]
+other = "Skip to content"
+[home]
+other = "Home"
+[toggle_navigation]
+other = "Toggle navigation"
+[main_navigation]
+other = "Main navigation"
+[search]
+other = "Search"
+[toggle_theme]
+other = "Toggle light and dark mode"
+[role]
+other = "Technology Architect and developer"
+[building_since]
+other = "Building websites since 1996"
+[site]
+other = "Site"
+[about]
+other = "About"
+[projects]
+other = "Projects"
+[tags]
+other = "Tags"
+[elsewhere]
+other = "Elsewhere"
+[opinions]
+other = "Opinions published here are my own."
+[footer_joke]
+other = "Not affiliated with a certain German TV network."
+[nothing_published]
+other = "Nothing has been published here yet."
+[min_read]
+other = "min read"
+[on_this_page]
+other = "On this page"
+[read_more]
+other = "Read more"
+[page_not_found]
+other = "That page is not here."
+[page_not_found_text]
+other = "It may have moved, or it may belong to a part of the archive that has not been rebuilt yet."
+[back_home]
+other = "Back to the homepage"
+[current_focus]
+other = "Current focus"
+[featured]
+other = "Featured"
+[latest_technology]
+other = "Latest technology articles"
+[view_all]
+other = "View all"
+[from_archive]
+other = "From the archive"
+[short_notes]
+other = "Short notes"
+[explore_projects]
+other = "Explore my projects"
+[read_latest]
+other = "Read the latest articles"
+[status]
+other = "Status"
+[period]
+other = "Period"
+[related_articles]
+other = "Related articles"
+[visit_project]
+other = "Visit project"
+[filter_all]
+other = "All"
+[favourites]
+other = "Favourites"
+[search_placeholder]
+other = "Search articles, projects, notes and music"
+[search_help]
+other = "Search across the public English archive."
+[search_no_results]
+other = "No matching pages found."
+[collection_in_progress]
+other = "The first approved entries are being prepared."

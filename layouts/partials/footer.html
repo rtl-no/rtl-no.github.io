@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <a class="wordmark footer-wordmark" href="{{ site.Home.RelPermalink }}">rtl<span>.no</span></a>
+      <p class="footer-identity">Rune T. Larsen<br>{{ i18n "role" }}<br>{{ i18n "building_since" }}</p>
+    </div>
+    <div>
+      <h2>{{ i18n "site" }}</h2>
+      <a href="{{ (site.GetPage "/about").RelPermalink }}">{{ i18n "about" }}</a>
+      <a href="{{ (site.GetPage "/projects").RelPermalink }}">{{ i18n "projects" }}</a>
+      <a href="{{ site.Home.RelPermalink }}tags/">{{ i18n "tags" }}</a>
+      {{ with site.Home.OutputFormats.Get "RSS" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
+    </div>
+    <div>
+      <h2>{{ i18n "elsewhere" }}</h2>
+      <a href="{{ site.Params.github }}" rel="me noopener">GitHub — TheTechArch</a>
+      <a href="{{ site.Params.evkx }}" rel="noopener">EVKX</a>
+    </div>
+  </div>
+  <div class="shell footer-bottom">
+    <span>{{ i18n "opinions" }}</span>
+    <span>{{ i18n "footer_joke" }}</span>
+  </div>
+</footer>

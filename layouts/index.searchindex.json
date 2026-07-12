@@ -1,0 +1,7 @@
+{{- $pages := where site.RegularPages "Params.search_exclude" "ne" true -}}
+[
+{{- range $index, $page := $pages -}}
+  {{- if $index }},{{ end }}
+  {{- dict "title" $page.Title "url" $page.RelPermalink "summary" ($page.Params.summary | default $page.Summary | plainify) "section" $page.Section "tags" ($page.Params.tags | default slice) | jsonify -}}
+{{- end -}}
+]

@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <header class="page-hero shell"><p class="kicker">{{ .Title }}</p><h1>{{ .Params.headline }}</h1><div class="lede">{{ .Content }}</div></header>
+  <section class="section shell compact-top"><div class="project-list project-list-large">
+    {{ range sort .Pages ".Params.weight" "asc" }}<a class="project-row" href="{{ .RelPermalink }}"><span class="project-years">{{ .Params.years }}</span><span class="project-main"><strong>{{ .Title }}</strong><small>{{ .Params.summary }}</small></span><span class="status-pill status-{{ .Params.status | urlize }}">{{ .Params.status }}</span></a>{{ end }}
+  </div></section>
+{{ end }}
