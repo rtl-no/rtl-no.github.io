@@ -22,6 +22,10 @@ This part of rtl.no is for personal technical reflections on architecture, authe
 
 ## Videos
 
-I will also collect selected presentations and videos from my work with Altinn here.
+### How we build Altinn 3 in the cloud as open source
+
+A presentation from NDC Oslo 2020 with Rune Tømmerås Larsen, Nina Kylstad and Stephanie Buadu about building Altinn Services 3.0 as a cloud platform and open source software. Duration: 1:00:13.
+
+{{< vimeo id="431429016" title="How we build Altinn 3 in the cloud as open source" >}}
 
 > Opinions published here are my own. They are not official statements from Altinn, the Norwegian Digitalisation Agency or my employer.

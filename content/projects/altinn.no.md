@@ -22,6 +22,10 @@ Denne delen av rtl.no er for personlige tekniske refleksjoner om arkitektur, aut
 
 ## Videoer
 
-Jeg vil også samle utvalgte presentasjoner og videoer fra arbeidet med Altinn her.
+### Slik bygger vi Altinn 3 i skyen som åpen kildekode
+
+Presentasjon fra NDC Oslo 2020 med Rune Tømmerås Larsen, Nina Kylstad og Stephanie Buadu om arbeidet med Altinn Tjenester 3.0 som skyplattform og åpen kildekode. Varighet: 1:00:13.
+
+{{< vimeo id="431429016" title="Slik bygger vi Altinn 3 i skyen som åpen kildekode" >}}
 
 > Meningene som publiseres her er mine egne. De er ikke offisielle uttalelser fra Altinn, Digitaliseringsdirektoratet eller arbeidsgiveren min.
