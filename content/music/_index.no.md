@@ -1,8 +1,8 @@
 ---
 title: Musikk
 eyebrow: "Personlige samlinger"
-description: "Musikken jeg stadig vender tilbake til — fra trance og lange DJ-sett til eurodance-favorittene fra 90-tallet."
+description: "Musikken jeg stadig vender tilbake til — fra trance og eurodance til raphelter som Tupac og Dr. Dre."
 translationKey: music
-home_title: "Trance, eurodance og musikken jeg stadig vender tilbake til."
+home_title: "Trance, eurodance, rap og musikken jeg stadig vender tilbake til."
 collection_title: "Samlinger"
 ---
