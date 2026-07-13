@@ -3,8 +3,8 @@ title: "hjemmekino.no – from 1997 to today"
 slug: hjemmekino-no
 translationKey: article-hjemmekino-no
 date: 2026-07-12
-lastmod: 2026-07-12
-summary: "The story of hjemmekino.no: launched in 1997, six years as part of Akers Mic and two appearances on NRK about HDTV and the new HD formats."
+lastmod: 2026-07-13
+summary: "The story of hjemmekino.no: from its launch in 1997 and the Akers Mic years to the pause after 2012 and a new active beginning in 2026."
 category: "Web history"
 tags: ["hjemmekino.no", "Web history", "Akers Mic", "NRK", "AV technology"]
 featured: false
@@ -40,8 +40,16 @@ In 2007, I appeared twice on NRK's consumer programme *Forbrukerinspektørene*, 
 
 Both topics were new and surrounded by terminology and format choices that were difficult to navigate. This was exactly the kind of technology hjemmekino.no was created to explain.
 
+## Actively updated until 2012
+
+I actively updated hjemmekino.no until around 2012. Eventually, work — not least my involvement with Altinn — became so demanding that it was difficult to combine with the time required to maintain a good knowledge site. The content remained available, but the site no longer received the same continuous development.
+
+## A new active beginning in 2026
+
+2026 is the year hjemmekino.no returns as an active website. I have more time, and new technology makes it possible to build, update and publish far more efficiently than before. There are still only 24 hours in a day, but it is now realistic to give the site the attention it deserves within them.
+
 ## A long-term knowledge project
 
 hjemmekino.no established a pattern I later carried into other projects: study the details, structure the information and publish the result on an independent website.
 
-Today, [hjemmekino.no](https://hjemmekino.no) remains an independent resource with guides covering audio, video, rooms, acoustics, setup and calibration.
+[hjemmekino.no](https://hjemmekino.no) continues as an independent resource with guides covering audio, video, rooms, acoustics, setup and calibration — now with new life as an active website.
