@@ -20,6 +20,12 @@ I have been actively involved in a wide range of areas over the years. In recent
 
 This part of rtl.no is for personal technical reflections on architecture, authentication, authorization, modernization, platform development and what long-running systems can teach us.
 
+## Open source and documentation
+
+Altinn 3 is developed as open source. The [Altinn organization on GitHub](https://github.com/Altinn) brings together the source code for the platform and a range of products and components, including Altinn Studio, Dialogporten, notifications, correspondence, broker, authentication and authorization. This is where you can follow development, explore the architecture, read issues and contribute to the solutions.
+
+The [detailed technical documentation at docs.altinn.studio](https://docs.altinn.studio/en/) is the starting point for creating applications in Altinn Studio and using Altinn 3 functionality. It covers products, APIs, development guides, technology, tools and architecture.
+
 ## Videos
 
 ### How we build Altinn 3 in the cloud as open source

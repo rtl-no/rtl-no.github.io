@@ -20,6 +20,12 @@ Jeg har vært aktivt involvert i en rekke områder gjennom årene. De siste åre
 
 Denne delen av rtl.no er for personlige tekniske refleksjoner om arkitektur, autentisering, autorisasjon, modernisering, plattformutvikling og hva langvarige systemer kan lære oss.
 
+## Åpen kildekode og dokumentasjon
+
+Altinn 3 utvikles som åpen kildekode. [Altinn-organisasjonen på GitHub](https://github.com/Altinn) samler kildekoden til plattformen og en rekke produkter og komponenter, blant annet Altinn Studio, Dialogporten, varsling, melding, formidling, autentisering og autorisasjon. Her kan man følge utviklingen, utforske arkitekturen, lese saker og bidra til løsningene.
+
+Den [detaljerte tekniske dokumentasjonen på docs.altinn.studio](https://docs.altinn.studio/nb/) er inngangen til å lage applikasjoner i Altinn Studio og ta i bruk funksjonalitet i Altinn 3. Dokumentasjonen dekker blant annet produkter, API-er, utviklingsveiledninger, teknologi, verktøy og arkitektur.
+
 ## Videoer
 
 ### Slik bygger vi Altinn 3 i skyen som åpen kildekode
