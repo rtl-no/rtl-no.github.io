@@ -70,18 +70,20 @@
     input.addEventListener("input", render);
   }
 
-  const tranceFilters = document.querySelector("[data-trance-filters]");
-  const tranceCards = [...document.querySelectorAll("[data-trance-grid] .trance-card")];
-  tranceFilters?.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-filter]");
-    if (!button) return;
-    const filter = button.dataset.filter;
-    tranceFilters.querySelectorAll("[data-filter]").forEach((item) => item.classList.toggle("is-active", item === button));
-    tranceCards.forEach((card) => {
-      const visible = filter === "all" ||
-        (filter === "favourite" && card.dataset.favourite === "true") ||
-        card.dataset.artist === filter;
-      card.hidden = !visible;
+  document.querySelectorAll("[data-music-collection]").forEach((collection) => {
+    const filters = collection.querySelector("[data-music-filters]");
+    const cards = [...collection.querySelectorAll("[data-music-grid] .trance-card")];
+    filters?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-filter]");
+      if (!button) return;
+      const filter = button.dataset.filter;
+      filters.querySelectorAll("[data-filter]").forEach((item) => item.classList.toggle("is-active", item === button));
+      cards.forEach((card) => {
+        const visible = filter === "all" ||
+          (filter === "favourite" && card.dataset.favourite === "true") ||
+          card.dataset.artist === filter;
+        card.hidden = !visible;
+      });
     });
   });
 })();

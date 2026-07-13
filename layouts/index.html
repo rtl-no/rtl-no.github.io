@@ -67,16 +67,14 @@
     </section>
   {{ end }}
 
-  {{ with site.GetPage "/trance" }}
+  {{ with site.GetPage "/music" }}
     <section class="trance-band">
       <div class="shell trance-preview">
         <div class="trance-intro"><p class="section-label">{{ .Title }}</p><h2>{{ .Params.home_title }}</h2><p>{{ .Description }}</p><a href="{{ .RelPermalink }}">{{ i18n "view_all" }} →</a></div>
-        <div class="trance-mini-grid">
-          {{ range first 3 .RegularPages }}
-            <a class="trance-mini-card" href="{{ .RelPermalink }}"><span>{{ substr .Params.artist 0 1 }}</span><small>{{ .Params.artist }}</small><strong>{{ .Title }}</strong></a>
-          {{ else }}
-            <p class="trance-empty">{{ i18n "collection_in_progress" }}</p>
-          {{ end }}
+        <div class="trance-mini-grid music-category-mini-grid">
+          {{ range slice "/trance" "/eurodance" }}{{ with site.GetPage . }}
+            <a class="trance-mini-card" href="{{ .RelPermalink }}"><span>{{ if eq .Section "eurodance" }}90s{{ else }}T{{ end }}</span><small>{{ .Params.eyebrow }}</small><strong>{{ .Title }}</strong></a>
+          {{ end }}{{ end }}
         </div>
       </div>
     </section>

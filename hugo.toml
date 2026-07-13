@@ -47,7 +47,7 @@ timeZone = "Europe/Oslo"
   author = "Rune T. Larsen"
   github = "https://github.com/TheTechArch"
   evkx = "https://evkx.net"
-  description = "Rune T. Larsen is a Technology Architect and developer writing about technology, software, AI, electric vehicles, web projects and trance music."
+  description = "Rune T. Larsen is a Technology Architect and developer writing about technology, software, AI, electric vehicles, web projects and music."
   socialDescription = "Building websites since 1996. Still curious about how technology works."
 
 [languages]
@@ -57,7 +57,7 @@ timeZone = "Europe/Oslo"
     weight = 1
     title = "Rune T. Larsen — Technology, Gadgets, Software and EVs"
     [languages.en.params]
-      description = "Personal articles about technology, gadgets, software, AI, electric vehicles, web projects and trance music."
+      description = "Personal articles about technology, gadgets, software, AI, electric vehicles, web projects and music."
     [[languages.en.menus.main]]
       name = "Home"
       pageRef = "/"
@@ -75,8 +75,8 @@ timeZone = "Europe/Oslo"
       pageRef = "/ev-mobility"
       weight = 40
     [[languages.en.menus.main]]
-      name = "Trance"
-      pageRef = "/trance"
+      name = "Music"
+      pageRef = "/music"
       weight = 50
     [[languages.en.menus.main]]
       name = "Notes"
@@ -93,7 +93,7 @@ timeZone = "Europe/Oslo"
     weight = 2
     title = "Rune T. Larsen — Teknologi, dingser, programvare og elbiler"
     [languages.no.params]
-      description = "Personlige artikler om teknologi, dingser, programvare, KI, elbiler, webprosjekter og trancemusikk."
+      description = "Personlige artikler om teknologi, dingser, programvare, KI, elbiler, webprosjekter og musikk."
     [[languages.no.menus.main]]
       name = "Hjem"
       pageRef = "/"
@@ -111,8 +111,8 @@ timeZone = "Europe/Oslo"
       pageRef = "/ev-mobility"
       weight = 40
     [[languages.no.menus.main]]
-      name = "Trance"
-      pageRef = "/trance"
+      name = "Musikk"
+      pageRef = "/music"
       weight = 50
     [[languages.no.menus.main]]
       name = "Notater"
