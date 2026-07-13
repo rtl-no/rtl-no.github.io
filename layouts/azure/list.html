@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <header class="azure-hero">
+    <div class="shell azure-hero-grid">
+      <div><p class="kicker">Microsoft Azure</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ .Description }}</p><p class="azure-reviewed">{{ if eq site.Language.Lang "no" }}Sist faglig gjennomgått{{ else }}Last reviewed{{ end }} · {{ .Params.last_reviewed }}</p></div>
+      <div class="azure-architecture" aria-hidden="true"><span>IDENTITY</span><i></i><span>PLATFORM</span><i></i><span>DATA</span><i></i><span>OPERATIONS</span></div>
+    </div>
+  </header>
+  <section class="section shell">
+    <div class="prose intro-prose azure-intro">{{ .Content }}</div>
+    <div class="azure-section-grid">{{ range .Params.sections }}<a class="azure-section-card" href="{{ relLangURL .url }}"><span>{{ .mark }}</span><h2>{{ .title }}</h2><p>{{ .text }}</p><strong>{{ if eq site.Language.Lang "no" }}Åpne området{{ else }}Open area{{ end }} →</strong></a>{{ end }}</div>
+  </section>
+  <section class="section azure-principles"><div class="shell"><div class="section-heading"><h2>{{ if eq site.Language.Lang "no" }}Prinsipper for området{{ else }}Principles for this area{{ end }}</h2></div><div class="azure-principle-grid">{{ range .Params.principles }}<article><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div></div></section>
+{{ end }}

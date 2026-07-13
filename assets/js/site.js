@@ -86,4 +86,99 @@
       });
     });
   });
+
+  document.querySelectorAll("[data-quiz]").forEach((quiz) => {
+    const form = quiz.querySelector("[data-quiz-form]");
+    const questions = [...quiz.querySelectorAll(".quiz-question")];
+    const answered = quiz.querySelector("[data-quiz-answered]");
+    const progressBar = quiz.querySelector("[data-quiz-progress-bar]");
+    const result = quiz.querySelector("[data-quiz-result]");
+    const score = quiz.querySelector("[data-quiz-score]");
+    const scoreText = quiz.querySelector("[data-quiz-score-text]");
+    const message = quiz.querySelector("[data-quiz-message]");
+    const domainResults = quiz.querySelector("[data-quiz-domains]");
+    const reset = quiz.querySelector("[data-quiz-reset]");
+
+    const updateProgress = () => {
+      const count = questions.filter((question) => question.querySelector("input:checked")).length;
+      answered.textContent = String(count);
+      progressBar.style.width = `${Math.round((count / questions.length) * 100)}%`;
+    };
+
+    form?.addEventListener("change", updateProgress);
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let correctCount = 0;
+      const domains = new Map();
+
+      questions.forEach((question) => {
+        const expected = Number(question.dataset.correct);
+        const selected = question.querySelector("input:checked");
+        const optionLabels = [...question.querySelectorAll(".quiz-options label")];
+        const feedback = question.querySelector(".quiz-feedback");
+        const feedbackLabel = question.querySelector("[data-feedback-label]");
+        const domain = question.dataset.domain;
+        const domainScore = domains.get(domain) || { correct: 0, total: 0 };
+        domainScore.total += 1;
+
+        optionLabels[expected]?.classList.add("is-correct");
+        if (selected) {
+          const selectedIndex = Number(selected.value);
+          if (selectedIndex === expected) {
+            correctCount += 1;
+            domainScore.correct += 1;
+            question.classList.add("answered-correctly");
+            feedbackLabel.textContent = quiz.dataset.correctLabel;
+          } else {
+            optionLabels[selectedIndex]?.classList.add("is-wrong");
+            question.classList.add("answered-wrongly");
+            feedbackLabel.textContent = quiz.dataset.wrongLabel;
+          }
+        } else {
+          question.classList.add("unanswered");
+          feedbackLabel.textContent = quiz.dataset.unansweredLabel;
+        }
+
+        domains.set(domain, domainScore);
+        feedback.hidden = false;
+        question.querySelectorAll("input").forEach((input) => { input.disabled = true; });
+      });
+
+      const percentage = Math.round((correctCount / questions.length) * 100);
+      score.textContent = `${percentage}%`;
+      scoreText.textContent = `${correctCount} / ${questions.length}`;
+      message.textContent = percentage >= Number(quiz.dataset.pass) ? quiz.dataset.passMessage : quiz.dataset.reviewMessage;
+      domainResults.replaceChildren();
+
+      domains.forEach((value, name) => {
+        const row = document.createElement("div");
+        const label = document.createElement("span");
+        const valueText = document.createElement("strong");
+        label.textContent = name;
+        valueText.textContent = `${value.correct} / ${value.total} · ${Math.round((value.correct / value.total) * 100)}%`;
+        row.append(label, valueText);
+        domainResults.append(row);
+      });
+
+      result.hidden = false;
+      form.querySelector("button[type='submit']").disabled = true;
+      result.focus();
+      result.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+    reset?.addEventListener("click", () => {
+      form.reset();
+      questions.forEach((question) => {
+        question.classList.remove("answered-correctly", "answered-wrongly", "unanswered");
+        question.querySelectorAll(".quiz-options label").forEach((label) => label.classList.remove("is-correct", "is-wrong"));
+        question.querySelectorAll("input").forEach((input) => { input.disabled = false; });
+        question.querySelector(".quiz-feedback").hidden = true;
+      });
+      form.querySelector("button[type='submit']").disabled = false;
+      result.hidden = true;
+      domainResults.replaceChildren();
+      updateProgress();
+      quiz.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 })();

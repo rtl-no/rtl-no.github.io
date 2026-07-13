@@ -4,6 +4,12 @@ headline: "Hovedinteressen min så lenge jeg kan huske."
 description: "Artikler om programvare, skyplattformer, KI, web, dingser og AV-teknologi—produkter og systemer som er uvanlig gode, merkelig utformet eller verdt å forstå."
 translationKey: technology
 latest_title: "Siste innen teknologi"
+azure:
+  eyebrow: "Dedikert kunnskapsområde"
+  title: "Microsoft Azure"
+  text: "Produkter, arkitekturvalg, sertifiseringsløp og 75 scenario-baserte spørsmål for AZ-305, AZ-104 og SC-300."
+  url: "/azure/"
+  cta: "Utforsk Azure-området"
 topics:
   - title: "Programvare og sky"
     icon: "{}"

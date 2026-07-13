@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <header class="page-hero shell"><p class="kicker">Azure · {{ if eq site.Language.Lang "no" }}Tester{{ else }}Tests{{ end }}</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ .Description }}</p><p class="azure-reviewed">{{ if eq site.Language.Lang "no" }}Sist faglig gjennomgått{{ else }}Last reviewed{{ end }} · {{ .Params.last_reviewed }}</p></header>
+  <section class="shell azure-test-intro"><div><h2>{{ .Params.intro_title }}</h2><ul>{{ range .Params.intro_points }}<li>{{ . }}</li>{{ end }}</ul></div><p>{{ .Params.disclaimer }}</p></section>
+  <section class="section shell"><div class="azure-test-grid">{{ range .Pages.ByWeight }}<a class="azure-test-card" href="{{ .RelPermalink }}"><span>{{ .Params.exam_code }}</span><p class="card-kicker">{{ .Params.track }}</p><h2>{{ .Title }}</h2><p>{{ .Params.summary }}</p><ul>{{ range .Params.domains }}<li>{{ . }}</li>{{ end }}</ul><strong>{{ if eq site.Language.Lang "no" }}Start 25 spørsmål{{ else }}Start 25 questions{{ end }} →</strong></a>{{ end }}</div></section>
+  <footer class="shell azure-page-footer"><div class="prose">{{ .Content }}</div></footer>
+{{ end }}

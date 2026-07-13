@@ -7,6 +7,7 @@
       {{ end }}
     </div>
   </section>
+  {{ with .Params.azure }}<section class="azure-entry"><div class="shell"><div><p class="section-label">{{ .eyebrow }}</p><h2>{{ .title }}</h2><p>{{ .text }}</p></div><a class="button" href="{{ relLangURL .url }}">{{ .cta }} →</a></div></section>{{ end }}
   <section class="showcase showcase-hjemmekino">
     <div class="shell showcase-grid">
       <div><p class="section-label">{{ .Params.showcase.eyebrow }}</p><h2>{{ .Params.showcase.title }}</h2><p>{{ .Params.showcase.text }}</p><div class="button-row"><a class="button showcase-button" href="{{ .Params.showcase.url }}" rel="noopener">{{ .Params.showcase.cta }} ↗</a></div></div>

@@ -4,6 +4,12 @@ headline: "My main interest for as long as I can remember."
 description: "Articles about software, cloud platforms, AI, the web, gadgets and AV technology—products and systems that are unusually good, strangely designed or worth understanding."
 translationKey: technology
 latest_title: "Latest in technology"
+azure:
+  eyebrow: "Dedicated knowledge area"
+  title: "Microsoft Azure"
+  text: "Products, architecture decisions, certification paths and 75 scenario-based questions for AZ-305, AZ-104 and SC-300."
+  url: "/azure/"
+  cta: "Explore the Azure area"
 topics:
   - title: "Software & cloud"
     icon: "{}"
