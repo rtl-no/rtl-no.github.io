@@ -6,5 +6,5 @@ translationKey: eurodance
 collection_title: "The Eurodance collection"
 empty_state: "The Eurodance favourites will appear here."
 genres: ["Eurodance", "1990s", "Dance-pop", "Hi-NRG"]
-artists: []
+artists: ["Faithless"]
 ---
