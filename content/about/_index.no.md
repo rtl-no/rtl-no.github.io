@@ -4,6 +4,8 @@ headline: "Om Rune"
 description: "Om Rune T. Larsen, teknologiarkitekt, utvikler og teknologientusiast."
 translationKey: about
 facts_title: "Kort fortalt"
+portrait_alt: "Rune ved siden av en kamuflert Audi Q6 e-tron under en test før verdenspremieren."
+portrait_caption: "Eksklusivt besøk og test av Audi Q6 e-tron før verdenspremieren, mars 2024."
 facts:
   - "Basert i Norge"
   - "Teknologiarkitekt og utvikler"
