@@ -1,10 +1,10 @@
 ---
 title: Eurodance
-eyebrow: "1990s favourites"
-description: "The 1990s Eurodance tracks I still return to: huge choruses, fast beats, synth lines and pure nostalgia."
+eyebrow: "Eurodance and dance favourites"
+description: "The Eurodance and dance tracks I still return to — from 1990s club classics to later favourites."
 translationKey: eurodance
 collection_title: "The Eurodance collection"
 empty_state: "The Eurodance favourites will appear here."
-genres: ["Eurodance", "1990s", "Dance-pop", "Hi-NRG"]
-artists: ["Faithless"]
+genres: ["Eurodance", "1990s", "2000s", "Dance-pop", "Hi-NRG"]
+artists: ["Faithless", "Basshunter"]
 ---
