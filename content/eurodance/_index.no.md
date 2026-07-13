@@ -6,5 +6,5 @@ translationKey: eurodance
 collection_title: "Eurodance-samlingen"
 empty_state: "Eurodance-favorittene kommer her."
 genres: ["Eurodance", "90-tallet", "2000-tallet", "Dance-pop", "Hi-NRG"]
-artists: ["Faithless", "Basshunter", "C-Block", "E-Type", "Dr. Alban", "Centory", "B.G. The Prince of Rap"]
+artists: ["Faithless", "Basshunter", "C-Block", "E-Type", "Dr. Alban", "Centory", "B.G. The Prince of Rap", "CB Milton"]
 ---
