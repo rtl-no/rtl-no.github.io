@@ -5,6 +5,7 @@ description: "En samlet inngang til .NET, React, webplattformen, API-er, arkitek
 translationKey: development
 type: section-hub
 theme: development
+hero_image: "images/development-hero.webp"
 eyebrow: "Software engineering"
 featured:
   title: ".NET"

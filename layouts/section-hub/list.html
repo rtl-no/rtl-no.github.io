@@ -1,5 +1,6 @@
 {{ define "main" }}
-  <header class="hub-hero hub-{{ .Params.theme }}">
+  {{ $hero := resources.Get .Params.hero_image | fingerprint }}
+  <header class="hub-hero hub-{{ .Params.theme }} has-hero-image" style="--hub-hero-image: url('{{ $hero.RelPermalink }}')">
     <div class="shell hub-hero-grid">
       <div><p class="kicker">{{ .Params.eyebrow }}</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ .Description }}</p></div>
       <div class="hub-visual" aria-hidden="true"><span>{{ .Params.featured.mark }}</span><i></i><span>{{ if eq .Params.theme "cloud" }}IDENTITY{{ else }}CODE{{ end }}</span><i></i><span>{{ if eq .Params.theme "cloud" }}PLATFORM{{ else }}TEST{{ end }}</span><i></i><span>{{ if eq .Params.theme "cloud" }}OPERATIONS{{ else }}SHIP{{ end }}</span></div>

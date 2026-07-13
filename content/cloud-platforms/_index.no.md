@@ -5,6 +5,7 @@ description: "Azure er skyplattformen jeg har jobbet mest med. Her samles den de
 translationKey: cloud-platforms
 type: section-hub
 theme: cloud
+hero_image: "images/cloud-platforms-hero.webp"
 eyebrow: "Cloud platforms"
 featured:
   title: "Microsoft Azure"

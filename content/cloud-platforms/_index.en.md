@@ -5,6 +5,7 @@ description: "Azure is the cloud platform I have worked with the most. This area
 translationKey: cloud-platforms
 type: section-hub
 theme: cloud
+hero_image: "images/cloud-platforms-hero.webp"
 eyebrow: "Cloud platforms"
 featured:
   title: "Microsoft Azure"

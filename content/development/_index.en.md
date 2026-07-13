@@ -5,6 +5,7 @@ description: "A single entry point to .NET, React, the web platform, APIs, archi
 translationKey: development
 type: section-hub
 theme: development
+hero_image: "images/development-hero.webp"
 eyebrow: "Software engineering"
 featured:
   title: ".NET"
