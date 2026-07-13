@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article>
-    <header class="project-hero shell"><p class="kicker">{{ .Params.years }} · {{ .Params.status }}</p><h1>{{ .Title }}</h1><p class="lede">{{ .Params.summary }}</p>{{ with .Params.external_url }}<div class="button-row"><a class="button button-primary" href="{{ . }}" rel="noopener">{{ i18n "visit_project" }} ↗</a></div>{{ end }}</header>
+    <header class="project-hero shell"><p class="kicker">{{ .Params.years }} · {{ .Params.status }}</p><h1>{{ .Title }}</h1><p class="lede">{{ .Params.summary }}</p>{{ with .Params.external_url }}<div class="button-row"><a class="button button-primary" href="{{ . }}" rel="noopener">{{ i18n "visit_project" }} ↗</a></div>{{ end }}{{ with .Params.logo }}{{ with resources.Get . }}{{ $logo := .Resize "1600x webp q90" }}<figure class="project-brand"><img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ $.Params.logo_alt }}" fetchpriority="high"></figure>{{ end }}{{ end }}</header>
     <div class="project-article shell narrow-shell prose">{{ .Content }}</div>
   </article>
 {{ end }}

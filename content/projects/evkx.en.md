@@ -6,6 +6,8 @@ status: Active
 weight: 10
 summary: "A detailed electric-vehicle knowledge platform built around a data model that enables exceptionally capable search and comparison."
 external_url: "https://evkx.net"
+logo: "images/evkx-logo-dark.png"
+logo_alt: "EVKX – Electric Vehicle Knowledge Exchange"
 tags: ["EVKX", "Electric vehicles", "Structured data"]
 ---
 

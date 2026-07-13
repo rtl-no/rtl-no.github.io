@@ -6,6 +6,8 @@ status: Aktiv
 weight: 10
 summary: "En detaljert kunnskapsplattform for elbiler, bygget rundt en datamodell som gir svært gode muligheter for søk og sammenligning."
 external_url: "https://evkx.net"
+logo: "images/evkx-logo-dark.png"
+logo_alt: "EVKX – Electric Vehicle Knowledge Exchange"
 tags: ["EVKX", "Elbiler", "Strukturerte data"]
 ---
 
