@@ -60,8 +60,10 @@
               <div class="travel-stop-card">
                 <header><div><p>{{ $stop.phase }}</p><h3>{{ $stop.city }}</h3><span>{{ $stop.country }}</span></div><strong>{{ $stop.status }}</strong></header>
                 <p class="travel-stop-description">{{ $stop.description }}</p>
-                <ul>{{ range $stop.highlights }}<li>{{ . }}</li>{{ end }}</ul>
-                <a href="{{ $stop.map_url }}" rel="noopener">{{ if eq site.Language.Lang "no" }}Se stedet på kartet{{ else }}View this place on the map{{ end }} ↗</a>
+                <ul class="travel-stop-highlights">{{ range $stop.highlights }}<li>{{ . }}</li>{{ end }}</ul>
+                {{ with $stop.facts }}<div class="travel-stop-facts">{{ range . }}<div><small>{{ .label }}</small><strong>{{ .value }}</strong></div>{{ end }}</div>{{ end }}
+                {{ with $stop.details }}<div class="travel-stop-details">{{ range . }}<section class="travel-stop-detail"><h4>{{ .label }}</h4><ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul></section>{{ end }}</div>{{ end }}
+                <div class="travel-stop-links">{{ with $stop.external_url }}<a href="{{ . }}" rel="noopener">{{ $stop.external_label }} ↗</a>{{ end }}<a href="{{ $stop.map_url }}" rel="noopener">{{ if eq site.Language.Lang "no" }}Se stedet på kartet{{ else }}View this place on the map{{ end }} ↗</a></div>
               </div>
             </article>
           {{ end }}
