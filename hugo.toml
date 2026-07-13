@@ -87,6 +87,10 @@ timeZone = "Europe/Oslo"
       pageRef = "/music"
       weight = 50
     [[languages.en.menus.main]]
+      name = "Travel"
+      pageRef = "/travel"
+      weight = 55
+    [[languages.en.menus.main]]
       name = "Notes"
       pageRef = "/notes"
       weight = 60
@@ -130,6 +134,10 @@ timeZone = "Europe/Oslo"
       name = "Musikk"
       pageRef = "/music"
       weight = 50
+    [[languages.no.menus.main]]
+      name = "Reiser"
+      pageRef = "/travel"
+      weight = 55
     [[languages.no.menus.main]]
       name = "Notater"
       pageRef = "/notes"

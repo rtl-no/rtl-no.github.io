@@ -181,4 +181,31 @@
       quiz.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+
+  document.querySelectorAll("[data-travel-route]").forEach((journey) => {
+    const stops = [...journey.querySelectorAll("[data-travel-stop]")];
+    const mapStops = [...journey.querySelectorAll("[data-map-stop]")];
+    const progressLine = journey.querySelector("[data-route-progress-line]");
+    const counter = journey.querySelector("[data-route-counter]");
+
+    const activateStop = (index) => {
+      stops.forEach((stop, stopIndex) => stop.classList.toggle("is-active", stopIndex === index));
+      mapStops.forEach((stop, stopIndex) => {
+        stop.classList.toggle("is-active", stopIndex === index);
+        stop.classList.toggle("is-passed", stopIndex < index);
+      });
+      if (progressLine) {
+        const progress = stops.length > 1 ? index / (stops.length - 1) : 1;
+        progressLine.style.strokeDashoffset = String(1 - progress);
+      }
+      if (counter) counter.textContent = `${String(index + 1).padStart(2, "0")} / ${String(stops.length).padStart(2, "0")}`;
+    };
+
+    activateStop(0);
+    if (!("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.filter((entry) => entry.isIntersecting).forEach((entry) => activateStop(Number(entry.target.dataset.travelStop)));
+    }, { rootMargin: "-32% 0px -48%", threshold: [0, .2, .6] });
+    stops.forEach((stop) => observer.observe(stop));
+  });
 })();

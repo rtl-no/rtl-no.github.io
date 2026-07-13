@@ -1,0 +1,74 @@
+{{ define "main" }}
+  {{ $hero := resources.Get .Params.hero_image }}
+  {{ with $hero }}{{ $hero = .Fill "2000x1160 webp q88" }}{{ end }}
+  <article class="travel-journey travel-journey-{{ .Params.status_kind }}" data-travel-route>
+    <header class="travel-journey-hero"{{ with $hero }} style="--travel-hero: url('{{ .RelPermalink }}')"{{ end }}>
+      <div class="shell travel-journey-hero-inner">
+        <a class="travel-back" href="{{ (site.GetPage "/travel").RelPermalink }}">← {{ if eq site.Language.Lang "no" }}Alle reiser{{ else }}All journeys{{ end }}</a>
+        <div class="travel-journey-title">
+          <p class="kicker">{{ .Params.eyebrow }}</p>
+          <h1>{{ .Title }}</h1>
+          <p>{{ .Params.summary }}</p>
+        </div>
+        <div class="travel-hero-facts">
+          <div><small>{{ if eq site.Language.Lang "no" }}Når{{ else }}When{{ end }}</small><strong>{{ .Params.dates }}</strong></div>
+          <div><small>{{ if eq site.Language.Lang "no" }}Hvordan{{ else }}How{{ end }}</small><strong>{{ .Params.mode }}</strong></div>
+          <div><small>{{ if eq site.Language.Lang "no" }}Status{{ else }}Status{{ end }}</small><strong>{{ .Params.status }}</strong></div>
+        </div>
+        <a class="travel-hero-next" href="#travel-intro"><span>{{ if eq site.Language.Lang "no" }}Følg ruten{{ else }}Follow the route{{ end }}</span><i aria-hidden="true">↓</i></a>
+      </div>
+    </header>
+
+    <section class="travel-introduction" id="travel-intro">
+      <div class="shell travel-intro-grid">
+        <div><p class="section-label">{{ .Params.route_label }}</p><h2>{{ .Params.intro_title }}</h2><p class="travel-intro-lede">{{ .Params.intro_text }}</p><div class="prose">{{ .Content }}</div></div>
+        <aside class="travel-route-note"><span aria-hidden="true">⌁</span><p>{{ .Params.route_note }}</p></aside>
+      </div>
+      <div class="shell travel-overview">{{ range .Params.overview }}<div><small>{{ .label }}</small><strong>{{ .value }}</strong></div>{{ end }}</div>
+    </section>
+
+    {{ with .Params.planning_items }}
+      <section class="travel-planner">
+        <div class="shell"><div class="travel-planner-heading"><div><p class="section-label">{{ if eq site.Language.Lang "no" }}Planlegger{{ else }}Planner{{ end }}</p><h2>{{ $.Params.planner_title }}</h2></div><p>{{ $.Params.planner_intro }}</p></div>
+          <div class="travel-planner-grid">{{ range . }}<article><span>{{ .status }}</span><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div>
+        </div>
+      </section>
+    {{ end }}
+
+    <section class="travel-route-section" id="route">
+      <div class="shell travel-route-heading"><div><p class="section-label">{{ if eq site.Language.Lang "no" }}Sted for sted{{ else }}Place by place{{ end }}</p><h2>{{ .Params.route_name }}</h2></div><p>{{ if eq site.Language.Lang "no" }}Scroll gjennom stoppene. Kartet følger reisen og viser hvor i fortellingen du befinner deg.{{ else }}Scroll through the stops. The map follows the journey and shows where you are in the story.{{ end }}</p></div>
+      <div class="shell travel-route-layout">
+        <aside class="travel-map-wrap">
+          <div class="travel-map" data-travel-map>
+            <div class="travel-map-head"><div><small>{{ .Params.route_label }}</small><strong>{{ .Params.map_label }}</strong></div><span data-route-counter>01 / {{ printf "%02d" (len .Params.stops) }}</span></div>
+            <svg viewBox="0 0 420 660" role="img" aria-label="{{ .Params.map_label }}">
+              <defs><linearGradient id="travel-route-gradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#58d0c2"/><stop offset=".52" stop-color="#f5b347"/><stop offset="1" stop-color="#ef6d5a"/></linearGradient></defs>
+              <path class="travel-map-land" d="M54 31C116 4 183 23 218 63c28 33 37 91 89 116 49 24 72 63 48 111-23 46-10 87 9 125 24 50 5 111-54 134-51 20-59 67-112 83-52 16-118-9-131-55-13-47 22-87 3-132-20-47-51-79-38-130 13-48 58-74 54-124-3-40-65-121-32-160Z"/>
+              <path class="travel-map-grid-line" d="M25 150H391M21 326H398M34 505H383M105 19V638M216 18V640M326 28V631"/>
+              <polyline class="travel-route-base" points="{{ range .Params.stops }}{{ .x }},{{ .y }} {{ end }}"/>
+              <polyline class="travel-route-progress" data-route-progress-line pathLength="1" points="{{ range .Params.stops }}{{ .x }},{{ .y }} {{ end }}"/>
+              {{ range $index, $stop := .Params.stops }}{{ $labelX := add $stop.x 15 }}{{ $labelY := add $stop.y 4 }}<g class="travel-map-stop{{ if eq $index 0 }} is-active{{ end }}" data-map-stop="{{ $index }}"><circle class="travel-map-halo" cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="15"/><circle cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="6"/><text x="{{ $labelX }}" y="{{ $labelY }}">{{ $stop.city }}</text></g>{{ end }}
+            </svg>
+            <a href="{{ .Params.map_url }}" rel="noopener">{{ .Params.map_link_label }} ↗</a>
+          </div>
+        </aside>
+
+        <div class="travel-stops">
+          {{ range $index, $stop := .Params.stops }}
+            <article class="travel-stop{{ if eq $index 0 }} is-active{{ end }}" id="stop-{{ add $index 1 }}" data-travel-stop="{{ $index }}">
+              {{ with $stop.leg }}<div class="travel-leg"><span aria-hidden="true">{{ if eq $index 0 }}●{{ else }}↓{{ end }}</span><p>{{ . }}</p></div>{{ end }}
+              <div class="travel-stop-card">
+                <header><div><p>{{ $stop.phase }}</p><h3>{{ $stop.city }}</h3><span>{{ $stop.country }}</span></div><strong>{{ $stop.status }}</strong></header>
+                <p class="travel-stop-description">{{ $stop.description }}</p>
+                <ul>{{ range $stop.highlights }}<li>{{ . }}</li>{{ end }}</ul>
+                <a href="{{ $stop.map_url }}" rel="noopener">{{ if eq site.Language.Lang "no" }}Se stedet på kartet{{ else }}View this place on the map{{ end }} ↗</a>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <footer class="travel-journey-footer"><div class="shell"><p>{{ if eq site.Language.Lang "no" }}Neste reise begynner med den første ideen.{{ else }}The next journey begins with the first idea.{{ end }}</p><a class="button" href="{{ (site.GetPage "/travel").RelPermalink }}">← {{ if eq site.Language.Lang "no" }}Tilbake til alle reiser{{ else }}Back to all journeys{{ end }}</a></div></footer>
+  </article>
+{{ end }}

@@ -1,0 +1,52 @@
+{{ define "main" }}
+  {{ $trips := .RegularPages.ByWeight }}
+  <header class="travel-hub-hero">
+    <div class="shell travel-hub-grid">
+      <div class="travel-hub-copy">
+        <p class="kicker">{{ .Params.eyebrow }}</p>
+        <h1>{{ .Params.headline }}</h1>
+        <p class="lede">{{ .Description }}</p>
+        <a class="travel-scroll-cue" href="#journeys"><span aria-hidden="true">↓</span>{{ if eq site.Language.Lang "no" }}Start reisen{{ else }}Start the journey{{ end }}</a>
+      </div>
+      <div class="travel-hub-collage" aria-hidden="true">
+        {{ range $index, $trip := first 2 $trips }}
+          {{ with resources.Get $trip.Params.hero_image }}{{ $image := .Fill "900x1080 webp q86" }}
+            <div class="travel-collage-card travel-collage-card-{{ add $index 1 }}">
+              <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="">
+              <span>{{ $trip.Title }}</span>
+            </div>
+          {{ end }}
+        {{ end }}
+        <div class="travel-collage-route"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section shell travel-hub-intro">
+    <p class="section-label">{{ if eq site.Language.Lang "no" }}Reisekonseptet{{ else }}The travel concept{{ end }}</p>
+    <div><h2>{{ .Params.intro_title }}</h2><p>{{ .Params.intro_text }}</p></div>
+  </section>
+
+  <section class="travel-index" id="journeys">
+    <div class="shell">
+      {{ range $trips }}
+        {{ $trip := . }}
+        <article class="travel-index-card">
+          <a class="travel-index-media" href="{{ .RelPermalink }}">
+            {{ with resources.Get .Params.hero_image }}{{ $image := .Fill "1600x920 webp q87" }}<img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $trip.Params.hero_alt }}" loading="lazy">{{ end }}
+            <span class="travel-status travel-status-{{ .Params.status_kind }}">{{ .Params.status }}</span>
+          </a>
+          <div class="travel-index-copy">
+            <div class="travel-index-meta"><span>{{ .Params.year }}</span><span>{{ .Params.mode }}</span></div>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Params.summary }}</p>
+            <div class="travel-index-route"><small>{{ $.Params.route_label }}</small><strong>{{ .Params.route_name }}</strong></div>
+            <a class="travel-index-link" href="{{ .RelPermalink }}">{{ $.Params.explore_label }} <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="travel-hub-footer"><div class="shell"><p class="section-label">{{ if eq site.Language.Lang "no" }}Tanken bak{{ else }}The idea{{ end }}</p><h2>{{ .Params.footer_title }}</h2><p>{{ .Params.footer_text }}</p></div></section>
+{{ end }}
