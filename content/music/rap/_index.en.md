@@ -5,6 +5,7 @@ description: "The rap music and artists that have stayed with me through the yea
 translationKey: rap
 type: rap
 genre_key: rap
+hero_image: "images/rap-hero.webp"
 cascade:
   type: rap
 collection_title: "The rap collection"

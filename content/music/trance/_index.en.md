@@ -6,6 +6,7 @@ description: "I am not a DJ or music critic. I simply love trance. This is where
 translationKey: trance
 type: trance
 genre_key: trance
+hero_image: "images/trance-hero.webp"
 cascade:
   type: trance
 collection_title: "The collection"

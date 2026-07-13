@@ -5,6 +5,7 @@ description: "Rapmusikken og artistene som har fulgt meg gjennom årene — med 
 translationKey: rap
 type: rap
 genre_key: rap
+hero_image: "images/rap-hero.webp"
 cascade:
   type: rap
 collection_title: "Rap-samlingen"

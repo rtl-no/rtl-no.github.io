@@ -6,6 +6,7 @@ description: "Jeg er ikke DJ eller musikkanmelder. Jeg elsker ganske enkelt tran
 translationKey: trance
 type: trance
 genre_key: trance
+hero_image: "images/trance-hero.webp"
 cascade:
   type: trance
 collection_title: "Samlingen"

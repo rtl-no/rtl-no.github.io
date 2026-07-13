@@ -5,6 +5,7 @@ description: "The Eurodance and dance tracks I still return to — from 1990s cl
 translationKey: eurodance
 type: eurodance
 genre_key: eurodance
+hero_image: "images/eurodance-hero.webp"
 cascade:
   type: eurodance
 collection_title: "The Eurodance collection"

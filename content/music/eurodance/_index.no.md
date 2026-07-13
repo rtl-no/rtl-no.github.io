@@ -5,6 +5,7 @@ description: "Eurodance- og dance-låtene jeg fortsatt setter på — fra 90-tal
 translationKey: eurodance
 type: eurodance
 genre_key: eurodance
+hero_image: "images/eurodance-hero.webp"
 cascade:
   type: eurodance
 collection_title: "Eurodance-samlingen"
