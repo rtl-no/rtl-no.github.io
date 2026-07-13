@@ -35,6 +35,14 @@
       </section>
     {{ end }}
 
+    {{ with .Params.status_groups }}
+      <section class="travel-status-board">
+        <div class="shell"><div class="travel-status-board-heading"><div><p class="section-label">{{ if eq site.Language.Lang "no" }}Modulær plan{{ else }}Modular plan{{ end }}</p><h2>{{ $.Params.status_board_title }}</h2></div><p>{{ $.Params.status_board_intro }}</p></div>
+          <div class="travel-status-grid">{{ range . }}<article class="travel-status-group travel-status-group-{{ .key }}"><span>{{ .status }}</span><h3>{{ .title }}</h3><ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}</div>
+        </div>
+      </section>
+    {{ end }}
+
     <section class="travel-route-section" id="route">
       <div class="shell travel-route-heading"><div><p class="section-label">{{ if eq site.Language.Lang "no" }}Sted for sted{{ else }}Place by place{{ end }}</p><h2>{{ .Params.route_name }}</h2></div><p>{{ if eq site.Language.Lang "no" }}Scroll gjennom stoppene. Kartet følger reisen og viser hvor i fortellingen du befinner deg.{{ else }}Scroll through the stops. The map follows the journey and shows where you are in the story.{{ end }}</p></div>
       <div class="shell travel-route-layout">
@@ -47,7 +55,7 @@
               <path class="travel-map-grid-line" d="M25 150H391M21 326H398M34 505H383M105 19V638M216 18V640M326 28V631"/>
               <polyline class="travel-route-base" points="{{ range .Params.stops }}{{ .x }},{{ .y }} {{ end }}"/>
               <polyline class="travel-route-progress" data-route-progress-line pathLength="1" points="{{ range .Params.stops }}{{ .x }},{{ .y }} {{ end }}"/>
-              {{ range $index, $stop := .Params.stops }}{{ $labelX := add $stop.x 15 }}{{ $labelY := add $stop.y 4 }}<g class="travel-map-stop{{ if eq $index 0 }} is-active{{ end }}" data-map-stop="{{ $index }}"><circle class="travel-map-halo" cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="15"/><circle cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="6"/><text x="{{ $labelX }}" y="{{ $labelY }}">{{ $stop.city }}</text></g>{{ end }}
+              {{ range $index, $stop := .Params.stops }}{{ $labelX := add $stop.x 15 }}{{ $labelY := add $stop.y 4 }}<g class="travel-map-stop{{ with $stop.status_level }} travel-map-stop-{{ . }}{{ end }}{{ if eq $index 0 }} is-active{{ end }}" data-map-stop="{{ $index }}"><circle class="travel-map-halo" cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="15"/><circle cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="6"/><text x="{{ $labelX }}" y="{{ $labelY }}">{{ $stop.city }}</text></g>{{ end }}
             </svg>
             <a href="{{ .Params.map_url }}" rel="noopener">{{ .Params.map_link_label }} ↗</a>
           </div>
@@ -58,12 +66,12 @@
             <article class="travel-stop{{ if eq $index 0 }} is-active{{ end }}" id="stop-{{ add $index 1 }}" data-travel-stop="{{ $index }}">
               {{ with $stop.leg }}<div class="travel-leg"><span aria-hidden="true">{{ if eq $index 0 }}●{{ else }}↓{{ end }}</span><p>{{ . }}</p></div>{{ end }}
               <div class="travel-stop-card">
-                <header><div><p>{{ $stop.phase }}</p><h3>{{ $stop.city }}</h3><span>{{ $stop.country }}</span></div><strong>{{ $stop.status }}</strong></header>
+                <header><div><p>{{ $stop.phase }}</p><h3>{{ $stop.city }}</h3><span>{{ $stop.country }}</span></div><strong class="travel-plan-status{{ with $stop.status_level }} travel-plan-status-{{ . }}{{ end }}">{{ $stop.status }}</strong></header>
                 <p class="travel-stop-description">{{ $stop.description }}</p>
                 <ul class="travel-stop-highlights">{{ range $stop.highlights }}<li>{{ . }}</li>{{ end }}</ul>
                 {{ with $stop.facts }}<div class="travel-stop-facts">{{ range . }}<div><small>{{ .label }}</small><strong>{{ .value }}</strong></div>{{ end }}</div>{{ end }}
                 {{ with $stop.details }}<div class="travel-stop-details">{{ range . }}<section class="travel-stop-detail"><h4>{{ .label }}</h4><ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul></section>{{ end }}</div>{{ end }}
-                <div class="travel-stop-links">{{ with $stop.external_url }}<a href="{{ . }}" rel="noopener">{{ $stop.external_label }} ↗</a>{{ end }}<a href="{{ $stop.map_url }}" rel="noopener">{{ if eq site.Language.Lang "no" }}Se stedet på kartet{{ else }}View this place on the map{{ end }} ↗</a></div>
+                <div class="travel-stop-links">{{ with $stop.external_links }}{{ range . }}<a href="{{ .url }}" rel="noopener">{{ .label }} ↗</a>{{ end }}{{ else }}{{ with $stop.external_url }}<a href="{{ . }}" rel="noopener">{{ $stop.external_label }} ↗</a>{{ end }}{{ end }}<a href="{{ $stop.map_url }}" rel="noopener">{{ if eq site.Language.Lang "no" }}Se stedet på kartet{{ else }}View this place on the map{{ end }} ↗</a></div>
               </div>
             </article>
           {{ end }}
