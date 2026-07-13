@@ -1,0 +1,60 @@
+{{ define "main" }}
+  <header class="dotnet-hero">
+    <div class="shell dotnet-hero-grid">
+      <div>
+        <p class="kicker">Microsoft .NET</p>
+        <h1>{{ .Params.headline }}</h1>
+        <p class="lede">{{ .Description }}</p>
+        <div class="dotnet-focus">{{ range .Params.focus }}<span>{{ . }}</span>{{ end }}</div>
+        <p class="dotnet-reviewed">{{ if eq site.Language.Lang "no" }}Sist faglig gjennomgått{{ else }}Last reviewed{{ end }} · {{ .Params.last_reviewed }}</p>
+      </div>
+      <div class="dotnet-code" aria-hidden="true">
+        <div><i></i><i></i><i></i><span>Program.cs</span></div>
+        <pre><b>var</b> builder = WebApplication
+    .CreateBuilder(args);
+
+builder.Services
+    .AddAuthentication()
+    .AddAuthorization();
+
+<b>var</b> app = builder.Build();
+
+app.MapGet(<em>"/knowledge"</em>, () =&gt;
+    Results.Ok(<em>"Share it."</em>));
+
+app.Run();</pre>
+      </div>
+    </div>
+  </header>
+
+  <section class="section shell dotnet-intro">
+    <div class="prose intro-prose">{{ .Content }}</div>
+  </section>
+
+  <div class="shell dotnet-source-list">
+    {{ range .Params.source_groups }}
+      <section class="dotnet-source-group">
+        <header><span>{{ .mark }}</span><div><h2>{{ .title }}</h2><p>{{ .description }}</p></div></header>
+        <div class="dotnet-resource-grid">
+          {{ range .sources }}<a class="dotnet-resource-card" href="{{ .url }}" rel="noopener"><small>{{ .label }}</small><h3>{{ .name }}</h3><p>{{ .text }}</p><strong>{{ if eq site.Language.Lang "no" }}Åpne kilden{{ else }}Open source{{ end }} ↗</strong></a>{{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+
+  <section class="dotnet-creators">
+    <div class="shell">
+      <div class="dotnet-section-heading"><p class="section-label">Community</p><h2>{{ .Params.creators_title }}</h2><p>{{ .Params.creators_intro }}</p></div>
+      <div class="dotnet-creator-grid">
+        {{ range .Params.creators }}
+          <article class="dotnet-creator-card"><p>{{ .focus }}</p><h3>{{ .name }}</h3><div>{{ .text }}</div><nav aria-label="{{ .name }}">{{ range .links }}<a href="{{ .url }}" rel="noopener">{{ .label }} ↗</a>{{ end }}</nav></article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell dotnet-learning">
+    <div class="section-heading"><h2>{{ if eq site.Language.Lang "no" }}En læringsrekkefølge som holder{{ else }}A learning sequence that holds up{{ end }}</h2></div>
+    <div class="dotnet-learning-grid">{{ range .Params.learning_steps }}<article><span>{{ .mark }}</span><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div>
+  </section>
+{{ end }}

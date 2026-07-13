@@ -10,6 +10,18 @@ azure:
   text: "Produkter, arkitekturvalg, sertifiseringsløp og 75 scenario-baserte spørsmål for AZ-305, AZ-104 og SC-300."
   url: "/azure/"
   cta: "Utforsk Azure-området"
+dotnet:
+  eyebrow: "Dedikert kunnskapsområde"
+  title: ".NET"
+  text: "Offisielle kilder for C#, ASP.NET Core, EF Core, Aspire og arkitektur – sammen med fagfolk og innholdsskapere det er verdt å følge."
+  url: "/dotnet/"
+  cta: "Utforsk .NET-området"
+ai:
+  eyebrow: "Dedikert kunnskapsområde"
+  title: "AI-utvikling"
+  text: "Agentisk utvikling i praksis: kontekst, verktøy, sikkerhet, evaluering og grundige guider til Codex og Claude Code."
+  url: "/ai-development/"
+  cta: "Utforsk AI-området"
 topics:
   - title: "Programvare og sky"
     icon: "{}"

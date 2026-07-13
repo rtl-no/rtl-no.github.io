@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <article class="ai-guide">
+    <header class="ai-guide-hero"><div class="shell narrow-shell"><p class="kicker">AI development · {{ .Params.eyebrow }}</p><h1>{{ .Title }}</h1><p class="lede">{{ .Params.summary }}</p><p class="ai-reviewed">{{ if eq site.Language.Lang "no" }}Sist faglig gjennomgått{{ else }}Last reviewed{{ end }} · {{ .Params.last_reviewed }}</p></div></header>
+    <div class="article shell narrow-shell ai-guide-body">
+      {{ if and (.Params.toc | default true) (gt (len .TableOfContents) 32) }}<aside class="toc"><h2>{{ i18n "on_this_page" }}</h2>{{ .TableOfContents }}</aside>{{ end }}
+      <div class="prose">{{ .Content }}</div>
+      {{ with .Params.official_sources }}<aside class="ai-guide-sources"><h2>{{ if eq site.Language.Lang "no" }}Offisielle kilder{{ else }}Official sources{{ end }}</h2>{{ range . }}<a href="{{ .url }}" rel="noopener"><strong>{{ .name }}</strong><span>{{ .description }}</span><i>↗</i></a>{{ end }}</aside>{{ end }}
+      <footer class="ai-guide-footer"><a href="{{ (site.GetPage "/ai-development").RelPermalink }}">← {{ if eq site.Language.Lang "no" }}Tilbake til AI-utvikling{{ else }}Back to AI development{{ end }}</a></footer>
+    </div>
+  </article>
+{{ end }}

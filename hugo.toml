@@ -67,9 +67,17 @@ timeZone = "Europe/Oslo"
       pageRef = "/technology"
       weight = 20
     [[languages.en.menus.main]]
+      name = ".NET"
+      pageRef = "/dotnet"
+      weight = 23
+    [[languages.en.menus.main]]
       name = "Azure"
       pageRef = "/azure"
       weight = 25
+    [[languages.en.menus.main]]
+      name = "AI"
+      pageRef = "/ai-development"
+      weight = 27
     [[languages.en.menus.main]]
       name = "Projects"
       pageRef = "/projects"
@@ -107,9 +115,17 @@ timeZone = "Europe/Oslo"
       pageRef = "/technology"
       weight = 20
     [[languages.no.menus.main]]
+      name = ".NET"
+      pageRef = "/dotnet"
+      weight = 23
+    [[languages.no.menus.main]]
       name = "Azure"
       pageRef = "/azure"
       weight = 25
+    [[languages.no.menus.main]]
+      name = "AI"
+      pageRef = "/ai-development"
+      weight = 27
     [[languages.no.menus.main]]
       name = "Prosjekter"
       pageRef = "/projects"

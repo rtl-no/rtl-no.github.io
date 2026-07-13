@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <header class="ai-hero">
+    <div class="shell ai-hero-grid">
+      <div><p class="kicker">AI · AGENTS · SOFTWARE</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ .Description }}</p><p class="ai-reviewed">{{ if eq site.Language.Lang "no" }}Sist faglig gjennomgått{{ else }}Last reviewed{{ end }} · {{ .Params.last_reviewed }}</p></div>
+      <div class="agent-loop" aria-hidden="true"><span>GOAL</span><i>01</i><span>CONTEXT</span><i>02</i><span>ACT</span><i>03</i><span>OBSERVE</span><i>04</i><span>VERIFY</span><b>↻</b></div>
+    </div>
+  </header>
+  <section class="section shell ai-intro"><div class="prose intro-prose">{{ .Content }}</div></section>
+  <section class="shell ai-area-grid">{{ range .Params.areas }}<a class="ai-area-card" href="{{ relLangURL .url }}"><span>{{ .mark }}</span><h2>{{ .title }}</h2><p>{{ .text }}</p><strong>{{ .cta }} →</strong></a>{{ end }}</section>
+  <section class="ai-principles"><div class="shell"><div class="section-heading"><h2>{{ if eq site.Language.Lang "no" }}Prinsippene som varer{{ else }}Principles that endure{{ end }}</h2></div><div class="ai-principle-grid">{{ range .Params.principles }}<article><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div></div></section>
+  <footer class="section shell ai-sources"><p class="section-label">{{ if eq site.Language.Lang "no" }}Primærkilder{{ else }}Primary sources{{ end }}</p><div>{{ range .Params.official_sources }}<a href="{{ .url }}" rel="noopener">{{ .name }} ↗</a>{{ end }}</div></footer>
+{{ end }}

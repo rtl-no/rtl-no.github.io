@@ -10,6 +10,18 @@ azure:
   text: "Products, architecture decisions, certification paths and 75 scenario-based questions for AZ-305, AZ-104 and SC-300."
   url: "/azure/"
   cta: "Explore the Azure area"
+dotnet:
+  eyebrow: "Dedicated knowledge area"
+  title: ".NET"
+  text: "Official sources for C#, ASP.NET Core, EF Core, Aspire and architecture—alongside practitioners and content creators worth following."
+  url: "/dotnet/"
+  cta: "Explore the .NET area"
+ai:
+  eyebrow: "Dedicated knowledge area"
+  title: "AI development"
+  text: "Agentic development in practice: context, tools, security, evaluation and detailed guides to Codex and Claude Code."
+  url: "/ai-development/"
+  cta: "Explore the AI area"
 topics:
   - title: "Software & cloud"
     icon: "{}"

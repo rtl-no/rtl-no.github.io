@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <article class="ai-guide ai-creators-page">
+    <header class="ai-guide-hero"><div class="shell narrow-shell"><p class="kicker">AI development · {{ .Params.eyebrow }}</p><h1>{{ .Title }}</h1><p class="lede">{{ .Params.summary }}</p><p class="ai-reviewed">{{ if eq site.Language.Lang "no" }}Sist faglig gjennomgått{{ else }}Last reviewed{{ end }} · {{ .Params.last_reviewed }}</p></div></header>
+    <section class="section shell ai-creators-intro"><div class="prose">{{ .Content }}</div></section>
+    <div class="shell ai-channel-groups">{{ range .Params.groups }}<section><header><h2>{{ .title }}</h2><p>{{ .description }}</p></header><div class="ai-channel-grid">{{ range .channels }}<a class="ai-channel-card" href="{{ .url }}" rel="noopener"><span>{{ .mark }}</span><small>{{ .focus }}</small><h3>{{ .name }}</h3><p>{{ .text }}</p><strong>{{ .note }} · YouTube ↗</strong></a>{{ end }}</div></section>{{ end }}</div>
+    <section class="ai-selection"><div class="shell narrow-shell"><h2>{{ if eq site.Language.Lang "no" }}Slik er kanalene valgt{{ else }}How the channels were selected{{ end }}</h2><ul>{{ range .Params.selection_criteria }}<li>{{ . }}</li>{{ end }}</ul></div></section>
+    <footer class="shell ai-guide-footer"><a href="{{ (site.GetPage "/ai-development").RelPermalink }}">← {{ if eq site.Language.Lang "no" }}Tilbake til AI-utvikling{{ else }}Back to AI development{{ end }}</a></footer>
+  </article>
+{{ end }}
