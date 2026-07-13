@@ -65,7 +65,7 @@
         <div class="travel-stops">
           {{ range $index, $stop := .Params.stops }}
             <article class="travel-stop{{ if eq $index 0 }} is-active{{ end }}" id="stop-{{ add $index 1 }}" data-travel-stop="{{ $index }}">
-              {{ with $stop.leg }}<div class="travel-leg"><span aria-hidden="true">{{ if eq $index 0 }}●{{ else }}↓{{ end }}</span><p>{{ . }}</p></div>{{ end }}
+              {{ with $stop.leg }}<div class="travel-leg"><span aria-hidden="true">{{ if eq $index 0 }}●{{ else }}↓{{ end }}</span><div class="travel-leg-copy"><p>{{ . }}</p>{{ if or $stop.distance $stop.drive_time }}<div class="travel-leg-meta">{{ with $stop.distance }}<strong>{{ . }}</strong>{{ end }}{{ with $stop.drive_time }}<small>{{ . }}</small>{{ end }}</div>{{ end }}</div></div>{{ end }}
               <div class="travel-stop-card">
                 <header><div><p>{{ $stop.phase }}</p><h3>{{ $stop.city }}</h3><span>{{ $stop.country }}</span></div><strong class="travel-plan-status{{ with $stop.status_level }} travel-plan-status-{{ . }}{{ end }}">{{ $stop.status }}</strong></header>
                 <p class="travel-stop-description">{{ $stop.description }}</p>
