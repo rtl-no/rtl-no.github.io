@@ -3,10 +3,10 @@ title: "Derfor relanserer jeg rtl.no"
 slug: relanserer-rtl-no
 translationKey: article-relaunch
 date: 2026-07-12
-lastmod: 2026-07-12
-summary: "Et uavhengig personlig nettsted er fortsatt det beste stedet for å koble sammen prosjekter, tekniske notater, webhistorie og interessene som ikke passer andre steder."
+lastmod: 2026-07-13
+summary: "Nye KI-verktøy gjør det mulig å bygge rtl.no på nytt som et personlig laboratorium, en langsiktig publikasjon og et uavhengig arkiv."
 category: "Webhistorie"
-tags: ["Personlig web", "Hugo", "Webhistorie"]
+tags: ["Personlig web", "Hugo", "KI", "Webhistorie"]
 featured: true
 toc: true
 ---
@@ -14,6 +14,12 @@ toc: true
 Jeg har bygget nettsider siden 1996. Verktøyene har endret seg mange ganger, men grunnen til å ha et personlig sted på nettet har blitt sterkere, ikke svakere.
 
 rtl.no bygges på nytt som en langsiktig publikasjon og et arkiv: et sted for teknologi, programvarearkitektur, dingser, elbiler, kunstig intelligens, gamle prosjekter, trance og kortere notater som er verdt å ta vare på.
+
+## Hvorfor nå
+
+Med nye KI-verktøy som Claude Code og Codex er det faktisk mulig å bygge dette nettstedet på nytt på en måte jeg kan følge opp over tid. Verktøyene gjør veien fra idé til fungerende løsning kortere, enten jeg arbeider med design, Hugo, innholdsstruktur eller automatisert publisering. Jeg tar fortsatt valgene, vurderer resultatet og har ansvaret for det som publiseres.
+
+rtl.no gir meg samtidig et konkret sted hvor jeg kan utforske disse verktøyene gjennom reelt arbeid. Jeg kan prøve nye arbeidsmåter, oppdage hva verktøyene er gode og mindre gode til, og bygge kompetanse gjennom faktisk bruk. Erfaringene kan jeg dele her sammen med kunnskapen, prosjektene og interessene jeg allerede har.
 
 ## Hvorfor et uavhengig nettsted
 

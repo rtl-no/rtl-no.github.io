@@ -25,3 +25,5 @@ Technology and gadgets have been central interests throughout my life. Over the 
 Some began as small ways to organize information for myself. Several became much larger than originally planned.
 
 Today I work with software architecture and development, contribute to large digital systems and maintain EVKX. rtl.no is where I collect what I build, what I learn, the technology I find interesting and the music I return to.
+
+An important reason I am relaunching rtl.no now is that new AI tools such as Claude Code and Codex make it practical. At the same time, the site gives me a real place to experiment with the tools, build competence through actual use, and share both what I learn and what I already know.
