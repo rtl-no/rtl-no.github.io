@@ -20,7 +20,7 @@ ai:
   eyebrow: "Dedikert kunnskapsområde"
   title: "AI-utvikling"
   text: "Agentisk utvikling i praksis: kontekst, verktøy, sikkerhet, evaluering og grundige guider til Codex og Claude Code."
-  url: "/ai-development/"
+  url: "/ai/"
   cta: "Utforsk AI-området"
 topics:
   - title: "Programvare og sky"

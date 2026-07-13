@@ -1,6 +1,6 @@
 {{ define "main" }}
   <header class="page-hero shell"><p class="kicker">{{ .Params.eyebrow }}</p><h1>{{ .Title }}</h1><p class="lede">{{ .Description }}</p></header>
   <section class="section shell compact-top"><div class="section-heading"><h2>{{ .Params.collection_title }}</h2></div><div class="music-genre-grid">
-    {{ range slice "/trance" "/eurodance" "/rap" }}{{ with site.GetPage . }}<a class="music-genre-card music-genre-{{ .Section }}" href="{{ .RelPermalink }}"><span class="music-genre-mark" aria-hidden="true">{{ if eq .Section "eurodance" }}90s{{ else if eq .Section "rap" }}R{{ else }}T{{ end }}</span><div><p class="card-kicker">{{ .Params.eyebrow }}</p><h2>{{ .Title }}</h2><p>{{ .Description }}</p><span class="card-link">{{ i18n "view_all" }} →</span></div></a>{{ end }}{{ end }}
+    {{ range slice "/music/trance" "/music/eurodance" "/music/rap" }}{{ with site.GetPage . }}{{ $genre := .Params.genre_key }}<a class="music-genre-card music-genre-{{ $genre }}" href="{{ .RelPermalink }}"><span class="music-genre-mark" aria-hidden="true">{{ if eq $genre "eurodance" }}90s{{ else if eq $genre "rap" }}R{{ else }}T{{ end }}</span><div><p class="card-kicker">{{ .Params.eyebrow }}</p><h2>{{ .Title }}</h2><p>{{ .Description }}</p><span class="card-link">{{ i18n "view_all" }} →</span></div></a>{{ end }}{{ end }}
   </div></section>
 {{ end }}

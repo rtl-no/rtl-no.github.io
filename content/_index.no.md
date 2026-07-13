@@ -18,11 +18,11 @@ focus:
   - eyebrow: "Arkitektur"
     title: "Digitale systemer"
     summary: "Arkitektur, autorisasjon, programvareutvikling og erfaringer fra store offentlige digitale plattformer."
-    url: "/technology/"
+    url: "/development/"
   - eyebrow: "Praktisk KI"
     title: "KI-assistert utvikling"
     summary: "Praktisk bruk av KI til utvikling, research, strukturerte data, oversettelse, design og redaksjonelt arbeid."
-    url: "/technology/"
+    url: "/ai/"
 timeline:
   - year: "1996"
     title: "Første nettside"

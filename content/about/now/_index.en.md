@@ -2,6 +2,7 @@
 title: Now
 description: "A lightweight snapshot of what I am building, learning, driving and listening to."
 translationKey: now
+type: now
 lastmod: 2026-07-12
 updated_label: "Updated"
 items:

@@ -72,7 +72,7 @@ timeZone = "Europe/Oslo"
       weight = 23
     [[languages.en.menus.main]]
       name = "AI"
-      pageRef = "/ai-development"
+      pageRef = "/ai"
       weight = 26
     [[languages.en.menus.main]]
       name = "Projects"
@@ -116,7 +116,7 @@ timeZone = "Europe/Oslo"
       weight = 23
     [[languages.no.menus.main]]
       name = "AI"
-      pageRef = "/ai-development"
+      pageRef = "/ai"
       weight = 26
     [[languages.no.menus.main]]
       name = "Prosjekter"

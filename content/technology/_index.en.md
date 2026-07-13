@@ -20,7 +20,7 @@ ai:
   eyebrow: "Dedicated knowledge area"
   title: "AI development"
   text: "Agentic development in practice: context, tools, security, evaluation and detailed guides to Codex and Claude Code."
-  url: "/ai-development/"
+  url: "/ai/"
   cta: "Explore the AI area"
 topics:
   - title: "Software & cloud"

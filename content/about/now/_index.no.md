@@ -2,6 +2,7 @@
 title: Akkurat nå
 description: "Et enkelt øyeblikksbilde av det jeg bygger, lærer, kjører og lytter til."
 translationKey: now
+type: now
 lastmod: 2026-07-12
 updated_label: "Oppdatert"
 items:

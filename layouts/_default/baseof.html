@@ -3,7 +3,7 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="page-{{ .Kind }}{{ with .Section }} section-{{ . }}{{ end }}">
+  <body class="page-{{ .Kind }}{{ with .Section }} section-{{ . }}{{ end }}{{ if ne .Type .Section }} section-{{ .Type }}{{ end }}">
     <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" }}</a>
     {{ partial "header.html" . }}
     <main id="main-content">

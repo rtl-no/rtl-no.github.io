@@ -18,11 +18,11 @@ focus:
   - eyebrow: "Architecture"
     title: "Digital systems"
     summary: "Architecture, authorization, software development and lessons from large public digital platforms."
-    url: "/technology/"
+    url: "/development/"
   - eyebrow: "Practical AI"
     title: "AI-assisted development"
     summary: "Practical use of AI for development, research, structured data, translation, design and editorial work."
-    url: "/technology/"
+    url: "/ai/"
 timeline:
   - year: "1996"
     title: "First website"

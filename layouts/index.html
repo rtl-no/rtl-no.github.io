@@ -72,8 +72,8 @@
       <div class="shell trance-preview">
         <div class="trance-intro"><p class="section-label">{{ .Title }}</p><h2>{{ .Params.home_title }}</h2><p>{{ .Description }}</p><a href="{{ .RelPermalink }}">{{ i18n "view_all" }} →</a></div>
         <div class="trance-mini-grid music-category-mini-grid">
-          {{ range slice "/trance" "/eurodance" "/rap" }}{{ with site.GetPage . }}
-            <a class="trance-mini-card" href="{{ .RelPermalink }}"><span>{{ if eq .Section "eurodance" }}90s{{ else if eq .Section "rap" }}R{{ else }}T{{ end }}</span><small>{{ .Params.eyebrow }}</small><strong>{{ .Title }}</strong></a>
+          {{ range slice "/music/trance" "/music/eurodance" "/music/rap" }}{{ with site.GetPage . }}{{ $genre := .Params.genre_key }}
+            <a class="trance-mini-card" href="{{ .RelPermalink }}"><span>{{ if eq $genre "eurodance" }}90s{{ else if eq $genre "rap" }}R{{ else }}T{{ end }}</span><small>{{ .Params.eyebrow }}</small><strong>{{ .Title }}</strong></a>
           {{ end }}{{ end }}
         </div>
       </div>
