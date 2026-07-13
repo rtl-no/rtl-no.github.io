@@ -39,6 +39,7 @@
       <section class="travel-status-board">
         <div class="shell"><div class="travel-status-board-heading"><div><p class="section-label">{{ if eq site.Language.Lang "no" }}Modulær plan{{ else }}Modular plan{{ end }}</p><h2>{{ $.Params.status_board_title }}</h2></div><p>{{ $.Params.status_board_intro }}</p></div>
           <div class="travel-status-grid">{{ range . }}<article class="travel-status-group travel-status-group-{{ .key }}"><span>{{ .status }}</span><h3>{{ .title }}</h3><ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul></article>{{ end }}</div>
+          {{ with $.Params.excluded_items }}<aside class="travel-excluded"><div><span>{{ if eq site.Language.Lang "no" }}Avklart{{ else }}Decided{{ end }}</span><h3>{{ $.Params.excluded_title }}</h3><p>{{ $.Params.excluded_intro }}</p></div><div class="travel-excluded-grid">{{ range . }}<article><strong>{{ .title }}</strong><p>{{ .text }}</p></article>{{ end }}</div></aside>{{ end }}
         </div>
       </section>
     {{ end }}
