@@ -38,7 +38,7 @@ timeline:
     description: "Audi and the transition to electric mobility."
   - year: "2022"
     title: "EVKX"
-    description: "A global EV knowledge exchange."
+    description: "Work begins on a structured data model and global knowledge platform for electric vehicles."
   - year: "2026"
     title: "rtl.no"
     description: "A personal home and archive, rebuilt."

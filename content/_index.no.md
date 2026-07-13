@@ -38,7 +38,7 @@ timeline:
     description: "Audi og overgangen til elektrisk mobilitet."
   - year: "2022"
     title: "EVKX"
-    description: "En global kunnskapsutveksling om elbiler."
+    description: "Arbeidet med en strukturert datamodell og global kunnskapsplattform for elbiler starter."
   - year: "2026"
     title: "rtl.no"
     description: "Et personlig hjem og arkiv, bygget på nytt."
