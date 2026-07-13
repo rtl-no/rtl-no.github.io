@@ -27,3 +27,5 @@ Noen begynte som små måter å organisere informasjon for meg selv. Flere ble m
 I dag arbeider jeg med programvarearkitektur og utvikling, bidrar til store digitale systemer og vedlikeholder EVKX. rtl.no er stedet der jeg samler det jeg bygger, det jeg lærer, teknologien jeg synes er interessant og musikken jeg stadig vender tilbake til.
 
 En viktig grunn til at jeg relanserer rtl.no nå, er at nye KI-verktøy som Claude Code og Codex gjør det praktisk mulig. Samtidig gir nettstedet meg et ekte sted å eksperimentere med verktøyene, bygge kompetanse gjennom faktisk bruk og dele både det jeg lærer og det jeg allerede kan.
+
+Du finner meg også på [LinkedIn](https://www.linkedin.com/in/runetl/).
