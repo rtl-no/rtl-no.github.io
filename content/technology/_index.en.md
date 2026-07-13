@@ -28,7 +28,7 @@ topics:
 showcase:
   eyebrow: "The first knowledge site · 1997—"
   title: "hjemmekino.no"
-  text: "Hjemmekino Web was the first large knowledge site: a place to understand AV technology and help others do the same. The pattern started here. EVKX follows much of the same blueprint."
+  text: "hjemmekino.no was the first large knowledge site: a place to understand AV technology and help others do the same. The pattern started here. EVKX follows much of the same blueprint."
   url: "https://hjemmekino.no"
   cta: "Visit hjemmekino.no"
 ---

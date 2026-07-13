@@ -21,7 +21,7 @@ It began as a personal project at a time when both the web and home cinema as a 
 
 From 1998 to 2004, hjemmekino.no was part of Akers Mic, where I worked as web editor. The connection gave the site a clear place in a professional audio and video environment while I continued building its content and knowledge base.
 
-When the collaboration launched, Digi.no covered it in the article [“Akers Mic aims to capture film enthusiasts”](https://www.digi.no/artikler/akers-mic-vil-kapre-filmfrikene/337970) on 25 May 1998. It described how Hjemmekino Web had grown from my private home page and noted that I had registered the hjemmekino.no domain. I was to serve as editor and retain the freedom to cover products that Akers Mic did not sell.
+When the collaboration launched, Digi.no covered it in the article [“Akers Mic aims to capture film enthusiasts”](https://www.digi.no/artikler/akers-mic-vil-kapre-filmfrikene/337970) on 25 May 1998. It described how the website had grown from my private home page and noted that I had registered the hjemmekino.no domain. I was to serve as editor and retain the freedom to cover products that Akers Mic did not sell.
 
 At launch, the site already contained 23 guides covering subjects such as speaker placement and the differences between THX and Dolby Digital. This reflected the ambition from the beginning: the site was intended to be more than a product catalogue and to focus primarily on explaining the technology.
 

@@ -1,5 +1,5 @@
 ---
-title: Hjemmekino Web
+title: hjemmekino.no
 translationKey: project-hjemmekino
 years: "1997—"
 status: Aktiv igjen
@@ -9,7 +9,7 @@ external_url: "https://hjemmekino.no"
 tags: ["Webhistorie", "Hjemmekino", "AV"]
 ---
 
-Jeg startet Hjemmekino Web i 1997. Fra 1998 til 2004 var nettstedet en del av Akers Mic, og fra 2004 har det vært frittstående. Interessen for bilde og lyd vokste til et sted for å forklare AV-teknologi og hjelpe folk med å gjøre bedre valg.
+Jeg startet hjemmekino.no i 1997. Fra 1998 til 2004 var nettstedet en del av Akers Mic, og fra 2004 har det vært frittstående. Interessen for bilde og lyd vokste til et sted for å forklare AV-teknologi og hjelpe folk med å gjøre bedre valg.
 
 Nettstedet ble aktivt oppdatert fram til omtrent 2012. Hektiske arbeidsdager, særlig med Altinn, gjorde det vanskelig å fortsette i samme tempo. I 2026 blir hjemmekino.no aktivt igjen: Jeg har bedre tid, og nye teknologiske verktøy gjør det mulig å følge opp prosjektet innenfor døgnets 24 timer.
 

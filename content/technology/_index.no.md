@@ -28,7 +28,7 @@ topics:
 showcase:
   eyebrow: "Det første kunnskapsnettstedet · 1997—"
   title: "hjemmekino.no"
-  text: "Hjemmekino Web var det første store kunnskapsnettstedet: et sted for å forstå AV-teknologi og hjelpe andre med det samme. Mønsteret startet her. EVKX følger mye av den samme oppskriften."
+  text: "hjemmekino.no var det første store kunnskapsnettstedet: et sted for å forstå AV-teknologi og hjelpe andre med det samme. Mønsteret startet her. EVKX følger mye av den samme oppskriften."
   url: "https://hjemmekino.no"
   cta: "Besøk hjemmekino.no"
 ---

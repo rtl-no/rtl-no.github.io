@@ -23,7 +23,7 @@ rtl.no gir meg samtidig et konkret sted hvor jeg kan utforske disse verktøyene 
 
 ## Hvorfor et uavhengig nettsted
 
-Prosjekter som Hjemmekino Web, Electric Has Gone Audi og EVKX begynte med et ønske om å forstå et emne ordentlig og organisere resultatet. Et personlig nettsted kan knytte prosjektene sammen uten å tvinge dem inn i en CV, en bedriftsside eller en strøm i sosiale medier.
+Prosjekter som hjemmekino.no, Electric Has Gone Audi og EVKX begynte med et ønske om å forstå et emne ordentlig og organisere resultatet. Et personlig nettsted kan knytte prosjektene sammen uten å tvinge dem inn i en CV, en bedriftsside eller en strøm i sosiale medier.
 
 Det gjør også arkivet flyttbart. Innholdet er Markdown. Hugo gjør det om til statiske sider. GitHub Pages publiserer resultatet uten database eller en komplisert applikasjonsplattform.
 
