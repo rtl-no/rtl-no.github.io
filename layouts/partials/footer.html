@@ -7,8 +7,8 @@
     <div>
       <h2>{{ i18n "site" }}</h2>
       <a href="{{ (site.GetPage "/about").RelPermalink }}">{{ i18n "about" }}</a>
-      <a href="{{ (site.GetPage "/dotnet").RelPermalink }}">.NET</a>
-      <a href="{{ (site.GetPage "/azure").RelPermalink }}">Azure</a>
+      <a href="{{ (site.GetPage "/development").RelPermalink }}">{{ if eq site.Language.Lang "no" }}Utvikling{{ else }}Development{{ end }}</a>
+      <a href="{{ (site.GetPage "/cloud-platforms").RelPermalink }}">{{ if eq site.Language.Lang "no" }}Skyplattformer{{ else }}Cloud platforms{{ end }}</a>
       <a href="{{ (site.GetPage "/ai-development").RelPermalink }}">AI</a>
       <a href="{{ (site.GetPage "/projects").RelPermalink }}">{{ i18n "projects" }}</a>
       <a href="{{ site.Home.RelPermalink }}tags/">{{ i18n "tags" }}</a>

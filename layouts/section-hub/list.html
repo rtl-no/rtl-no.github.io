@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <header class="hub-hero hub-{{ .Params.theme }}">
+    <div class="shell hub-hero-grid">
+      <div><p class="kicker">{{ .Params.eyebrow }}</p><h1>{{ .Params.headline }}</h1><p class="lede">{{ .Description }}</p></div>
+      <div class="hub-visual" aria-hidden="true"><span>{{ .Params.featured.mark }}</span><i></i><span>{{ if eq .Params.theme "cloud" }}IDENTITY{{ else }}CODE{{ end }}</span><i></i><span>{{ if eq .Params.theme "cloud" }}PLATFORM{{ else }}TEST{{ end }}</span><i></i><span>{{ if eq .Params.theme "cloud" }}OPERATIONS{{ else }}SHIP{{ end }}</span></div>
+    </div>
+  </header>
+  <section class="section shell hub-intro"><div class="prose intro-prose">{{ .Content }}</div></section>
+  <section class="shell hub-featured"><a href="{{ relLangURL .Params.featured.url }}"><span>{{ .Params.featured.mark }}</span><div><p class="section-label">{{ if eq site.Language.Lang "no" }}Dedikert kunnskapsområde{{ else }}Dedicated knowledge area{{ end }}</p><h2>{{ .Params.featured.title }}</h2><p>{{ .Params.featured.text }}</p><strong>{{ .Params.featured.cta }} →</strong></div></a></section>
+  <section class="section shell hub-areas"><div class="section-heading"><h2>{{ if eq site.Language.Lang "no" }}Flere innganger{{ else }}More entry points{{ end }}</h2></div><div class="hub-area-grid">{{ range .Params.areas }}<a class="hub-area-card" href="{{ if .external }}{{ .url }}{{ else }}{{ relLangURL .url }}{{ end }}"{{ if .external }} rel="noopener"{{ end }}><span>{{ .mark }}</span><small>{{ .label }}</small><h3>{{ .title }}</h3><p>{{ .text }}</p><strong>{{ if eq site.Language.Lang "no" }}Åpne{{ else }}Open{{ end }} {{ if .external }}↗{{ else }}→{{ end }}</strong></a>{{ end }}</div></section>
+  <section class="hub-principles"><div class="shell"><div class="section-heading"><h2>{{ if eq site.Language.Lang "no" }}Prinsipper for området{{ else }}Principles for this area{{ end }}</h2></div><div>{{ range .Params.principles }}<article><h3>{{ .title }}</h3><p>{{ .text }}</p></article>{{ end }}</div></div></section>
+{{ end }}

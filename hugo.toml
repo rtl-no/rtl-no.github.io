@@ -63,21 +63,17 @@ timeZone = "Europe/Oslo"
       pageRef = "/"
       weight = 10
     [[languages.en.menus.main]]
-      name = "Technology"
-      pageRef = "/technology"
+      name = "Development"
+      pageRef = "/development"
       weight = 20
     [[languages.en.menus.main]]
-      name = ".NET"
-      pageRef = "/dotnet"
+      name = "Cloud"
+      pageRef = "/cloud-platforms"
       weight = 23
-    [[languages.en.menus.main]]
-      name = "Azure"
-      pageRef = "/azure"
-      weight = 25
     [[languages.en.menus.main]]
       name = "AI"
       pageRef = "/ai-development"
-      weight = 27
+      weight = 26
     [[languages.en.menus.main]]
       name = "Projects"
       pageRef = "/projects"
@@ -111,21 +107,17 @@ timeZone = "Europe/Oslo"
       pageRef = "/"
       weight = 10
     [[languages.no.menus.main]]
-      name = "Teknologi"
-      pageRef = "/technology"
+      name = "Utvikling"
+      pageRef = "/development"
       weight = 20
     [[languages.no.menus.main]]
-      name = ".NET"
-      pageRef = "/dotnet"
+      name = "Skyplattformer"
+      pageRef = "/cloud-platforms"
       weight = 23
-    [[languages.no.menus.main]]
-      name = "Azure"
-      pageRef = "/azure"
-      weight = 25
     [[languages.no.menus.main]]
       name = "AI"
       pageRef = "/ai-development"
-      weight = 27
+      weight = 26
     [[languages.no.menus.main]]
       name = "Prosjekter"
       pageRef = "/projects"
