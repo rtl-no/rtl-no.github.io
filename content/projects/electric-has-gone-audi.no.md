@@ -1,14 +1,14 @@
 ---
 title: Electric Has Gone Audi
 translationKey: project-ehga
-years: "2018—2022"
-status: Arkiv
+years: "2018—"
+status: Aktiv
 weight: 40
-summary: "Et personlig prosjekt om Audi, elbiler og overgangen til elektrisk mobilitet."
+summary: "Et aktivt, personlig prosjekt om Audi, elbiler og overgangen til elektrisk mobilitet."
 external_url: "https://electrichasgoneaudi.net"
 tags: ["Audi", "Elbiler", "Webprosjekter"]
 ---
 
-Electric Has Gone Audi begynte som et sted for å dele kunnskap og entusiasme om Audis overgang til elbiler.
+Electric Has Gone Audi er et aktivt prosjekt for å dele kunnskap og entusiasme om Audi og merkets overgang til elektrisk mobilitet.
 
-Det kombinerte erfaringer fra eierskap, kjøretøyteknologi, spesifikasjoner og de små praktiske detaljene produsentene ofte forklarer dårlig. Arbeidet ledet etter hvert mot det bredere, merkeuavhengige omfanget til EVKX.
+Prosjektet kombinerer erfaringer fra eierskap, kjøretøyteknologi, spesifikasjoner og de små praktiske detaljene produsentene ofte forklarer dårlig. Arbeidet var også en viktig del av veien fram mot det bredere, merkeuavhengige EVKX, men EVKX erstattet ikke Electric Has Gone Audi. Prosjektene har ulike perspektiver og fortsetter side om side.

@@ -35,7 +35,7 @@ timeline:
     description: "Started building large digital public systems."
   - year: "2018"
     title: "Electric Has Gone Audi"
-    description: "Audi and the transition to electric mobility."
+    description: "An active project about Audi and the transition to electric mobility."
   - year: "2022"
     title: "EVKX"
     description: "Work begins on a structured data model and global knowledge platform for electric vehicles."

@@ -35,7 +35,7 @@ timeline:
     description: "Begynte å bygge store offentlige digitale systemer."
   - year: "2018"
     title: "Electric Has Gone Audi"
-    description: "Audi og overgangen til elektrisk mobilitet."
+    description: "Et aktivt prosjekt om Audi og overgangen til elektrisk mobilitet."
   - year: "2022"
     title: "EVKX"
     description: "Arbeidet med en strukturert datamodell og global kunnskapsplattform for elbiler starter."
