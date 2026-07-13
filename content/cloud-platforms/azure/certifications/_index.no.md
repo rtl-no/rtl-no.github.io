@@ -16,7 +16,7 @@ certifications:
     skills: ["Identitet og governance · 20–25 %", "Compute · 20–25 %", "Storage · 15–20 %", "Nettverk · 15–20 %", "Monitorering · 10–15 %"]
     official_url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/"
     study_url: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104"
-    test_url: "/azure/tests/az-104/"
+    test_url: "/cloud-platforms/azure/tests/az-104/"
   - code: "AZ-305"
     name: "Azure Solutions Architect Expert"
     priority: "Hovedmål"
@@ -25,7 +25,7 @@ certifications:
     skills: ["Infrastruktur · 30–35 %", "Identitet, governance og monitorering · 25–30 %", "Data · 20–25 %", "Kontinuitet · 15–20 %"]
     official_url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/"
     study_url: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-305"
-    test_url: "/azure/tests/az-305/"
+    test_url: "/cloud-platforms/azure/tests/az-305/"
   - code: "SC-300"
     name: "Identity and Access Administrator Associate"
     priority: "Spisskompetanse"
@@ -34,7 +34,7 @@ certifications:
     skills: ["Autentisering og tilgang · 25–30 %", "Brukeridentiteter · 20–25 %", "Workload identities · 20–25 %", "Identity governance · 20–25 %"]
     official_url: "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/"
     study_url: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-300"
-    test_url: "/azure/tests/sc-300/"
+    test_url: "/cloud-platforms/azure/tests/sc-300/"
   - code: "AI-200"
     name: "Azure AI Cloud Developer Associate"
     priority: "Følg med"

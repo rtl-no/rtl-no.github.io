@@ -3,19 +3,22 @@ title: Azure
 headline: "The cloud platform I have worked with the most."
 description: "A practical Microsoft Azure knowledge area: products, architecture decisions, official documentation, certifications and tests that reveal what you actually know."
 translationKey: azure
+type: azure
+cascade:
+  type: azure
 last_reviewed: "13 July 2026"
 sections:
   - title: "Products and services"
     text: "A curated entry point to the Azure services most relevant to architecture, development, identity, integration, operations and security."
-    url: "/azure/products/"
+    url: "/cloud-platforms/azure/products/"
     mark: "01"
   - title: "Certifications"
     text: "A recommended certification path built around AZ-305, AZ-104 and SC-300, with newer and retiring tracks clearly identified."
-    url: "/azure/certifications/"
+    url: "/cloud-platforms/azure/certifications/"
     mark: "02"
   - title: "Knowledge tests"
     text: "Comprehensive scenario-based tests with explanations and links back to Microsoft Learn."
-    url: "/azure/tests/"
+    url: "/cloud-platforms/azure/tests/"
     mark: "03"
 principles:
   - title: "Architecture over product lists"

@@ -9,7 +9,7 @@ eyebrow: "Cloud platforms"
 featured:
   title: "Microsoft Azure"
   text: "Produkter, arkitekturvalg, identitet, sikkerhet, sertifiseringer og 75 scenario-baserte kunnskapsspørsmål."
-  url: "/azure/"
+  url: "/cloud-platforms/azure/"
   cta: "Utforsk Azure-området"
   mark: "AZ"
 areas:

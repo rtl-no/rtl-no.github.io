@@ -9,7 +9,7 @@ eyebrow: "Software engineering"
 featured:
   title: ".NET"
   text: "Det mest utviklede fagområdet her: C#, runtime, ASP.NET Core, EF Core, Aspire, arkitektur og sentrale fagstemmer."
-  url: "/dotnet/"
+  url: "/development/dotnet/"
   cta: "Utforsk .NET-området"
   mark: ".NET"
 areas:

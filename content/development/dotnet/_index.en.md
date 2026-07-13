@@ -3,6 +3,7 @@ title: ".NET"
 headline: "The platform behind much of what I build."
 description: "A curated .NET area with the most important official sources, practical learning paths and content creators worth following."
 translationKey: dotnet
+type: dotnet
 last_reviewed: "13 July 2026"
 focus:
   - "C# and the .NET runtime"

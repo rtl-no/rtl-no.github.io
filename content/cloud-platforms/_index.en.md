@@ -9,7 +9,7 @@ eyebrow: "Cloud platforms"
 featured:
   title: "Microsoft Azure"
   text: "Products, architecture decisions, identity, security, certifications and 75 scenario-based knowledge questions."
-  url: "/azure/"
+  url: "/cloud-platforms/azure/"
   cta: "Explore the Azure area"
   mark: "AZ"
 areas:

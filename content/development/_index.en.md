@@ -9,7 +9,7 @@ eyebrow: "Software engineering"
 featured:
   title: ".NET"
   text: "The most developed engineering area here: C#, the runtime, ASP.NET Core, EF Core, Aspire, architecture and important expert voices."
-  url: "/dotnet/"
+  url: "/development/dotnet/"
   cta: "Explore the .NET area"
   mark: ".NET"
 areas:

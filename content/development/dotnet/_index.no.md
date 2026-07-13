@@ -3,6 +3,7 @@ title: ".NET"
 headline: "Plattformen bak mye av det jeg bygger."
 description: "Et kuratert .NET-område med de viktigste offisielle kildene, faglige innganger og innholdsskapere det er verdt å følge."
 translationKey: dotnet
+type: dotnet
 last_reviewed: "13. juli 2026"
 focus:
   - "C# og .NET runtime"

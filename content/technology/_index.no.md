@@ -8,13 +8,13 @@ azure:
   eyebrow: "Dedikert kunnskapsområde"
   title: "Microsoft Azure"
   text: "Produkter, arkitekturvalg, sertifiseringsløp og 75 scenario-baserte spørsmål for AZ-305, AZ-104 og SC-300."
-  url: "/azure/"
+  url: "/cloud-platforms/azure/"
   cta: "Utforsk Azure-området"
 dotnet:
   eyebrow: "Dedikert kunnskapsområde"
   title: ".NET"
   text: "Offisielle kilder for C#, ASP.NET Core, EF Core, Aspire og arkitektur – sammen med fagfolk og innholdsskapere det er verdt å følge."
-  url: "/dotnet/"
+  url: "/development/dotnet/"
   cta: "Utforsk .NET-området"
 ai:
   eyebrow: "Dedikert kunnskapsområde"
