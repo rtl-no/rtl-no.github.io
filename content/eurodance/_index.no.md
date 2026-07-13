@@ -6,5 +6,5 @@ translationKey: eurodance
 collection_title: "Eurodance-samlingen"
 empty_state: "Eurodance-favorittene kommer her."
 genres: ["Eurodance", "90-tallet", "2000-tallet", "Dance-pop", "Hi-NRG"]
-artists: ["Faithless", "Basshunter"]
+artists: ["Faithless", "Basshunter", "C-Block"]
 ---
