@@ -14,13 +14,15 @@ facts:
   - "GitHub: TheTechArch"
   - "Skaperen av EVKX og hjemmekino.no"
   - "Lang erfaring med store offentlige digitale systemer"
-  - "Elbil- og Audi-entusiast"
+  - "På min tredje elektriske Audi"
   - "Trancefan—ikke DJ"
 ---
 
 Jeg er Rune T. Larsen, teknologiarkitekt og utvikler, og har bygget nettsider siden 1996. Det første nettstedet var en fanside for min mors Mazda 323F—mitt første møte med HTML.
 
 Teknologi og dingser har vært sentrale interesser gjennom hele livet. Gjennom årene har disse interessene blitt til nettsteder og prosjekter om hjemmekino, elbiler, programvareutvikling, arkitektur og offentlige digitale tjenester.
+
+Elbilinteressen er også svært praktisk: Jeg er nå på min tredje elektriske Audi. Erfaringene fra eierskap, lading, programvare og langturer er en viktig del av perspektivet bak Electric Has Gone Audi og EVKX.
 
 Noen begynte som små måter å organisere informasjon for meg selv. Flere ble mye større enn opprinnelig planlagt.
 
