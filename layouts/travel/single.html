@@ -58,7 +58,7 @@
               <polyline class="travel-route-progress" data-route-progress-line pathLength="1" points="{{ range .Params.stops }}{{ .x }},{{ .y }} {{ end }}"/>
               {{ range $index, $stop := .Params.stops }}{{ $labelX := add $stop.x 15 }}{{ $labelY := add $stop.y 4 }}<g class="travel-map-stop{{ with $stop.status_level }} travel-map-stop-{{ . }}{{ end }}{{ if eq $index 0 }} is-active{{ end }}" data-map-stop="{{ $index }}"><circle class="travel-map-halo" cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="15"/><circle cx="{{ $stop.x }}" cy="{{ $stop.y }}" r="6"/><text x="{{ $labelX }}" y="{{ $labelY }}">{{ $stop.city }}</text></g>{{ end }}
             </svg>
-            <a href="{{ .Params.map_url }}" rel="noopener">{{ .Params.map_link_label }} ↗</a>
+            {{ with .Params.map_url }}<a href="{{ . }}" rel="noopener">{{ $.Params.map_link_label }} ↗</a>{{ else }}<span class="travel-map-note">{{ $.Params.map_note }}</span>{{ end }}
           </div>
         </aside>
 
@@ -72,6 +72,7 @@
                 <ul class="travel-stop-highlights">{{ range $stop.highlights }}<li>{{ . }}</li>{{ end }}</ul>
                 {{ with $stop.facts }}<div class="travel-stop-facts">{{ range . }}<div><small>{{ .label }}</small><strong>{{ .value }}</strong></div>{{ end }}</div>{{ end }}
                 {{ with $stop.details }}<div class="travel-stop-details">{{ range . }}<section class="travel-stop-detail"><h4>{{ .label }}</h4><ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul></section>{{ end }}</div>{{ end }}
+                {{ with $stop.route_links }}<section class="travel-day-routes"><p><span>Google Maps</span>{{ if eq site.Language.Lang "no" }}Dagsetappe{{ else }}Daily route{{ end }}</p><div>{{ range . }}<a href="{{ .url }}" rel="noopener"><span><strong>{{ .label }}</strong>{{ with .via }}<small>{{ . }}</small>{{ end }}</span><i aria-hidden="true">↗</i></a>{{ end }}</div></section>{{ end }}
                 <div class="travel-stop-links">{{ with $stop.external_links }}{{ range . }}<a href="{{ .url }}" rel="noopener">{{ .label }} ↗</a>{{ end }}{{ else }}{{ with $stop.external_url }}<a href="{{ . }}" rel="noopener">{{ $stop.external_label }} ↗</a>{{ end }}{{ end }}<a href="{{ $stop.map_url }}" rel="noopener">{{ if eq site.Language.Lang "no" }}Se stedet på kartet{{ else }}View this place on the map{{ end }} ↗</a></div>
               </div>
             </article>

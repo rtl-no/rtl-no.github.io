@@ -475,6 +475,23 @@ button { color: inherit; }
   .azure-quiz-hero h1 { font-size: clamp(36px,9.5vw,40px); letter-spacing: -1.5px; }.azure-quiz-progress { top: 58px; }.quiz-question { padding: 21px 18px; }.quiz-question-header { grid-template-columns: 32px minmax(0,1fr); font-size: 16px; }.quiz-score strong { font-size: 52px; }
 }
 
+.travel-map-note { display: block; color: #78969a; font: 550 10px/1.5 var(--font-mono); }
+.travel-day-routes { display: grid; gap: 14px; margin-top: 30px; padding: 20px; border: 1px solid rgba(240,183,90,.28); border-radius: 11px; background: rgba(240,183,90,.045); }
+.travel-day-routes > p { display: flex; gap: 10px; align-items: center; margin: 0; color: #819da1; font: 600 9px/1 var(--font-mono); text-transform: uppercase; letter-spacing: .8px; }
+.travel-day-routes > p span { color: #f0b75a; }
+.travel-day-routes > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+.travel-day-routes a { display: flex; min-width: 0; gap: 14px; align-items: center; justify-content: space-between; padding: 14px 15px; border: 1px solid #314852; border-radius: 8px; background: rgba(8,24,32,.62); color: #e4efee; text-decoration: none; transition: border-color .2s,transform .2s,background .2s; }
+.travel-day-routes a:hover { border-color: #c99443; background: rgba(240,183,90,.08); transform: translateY(-1px); }
+.travel-day-routes a > span { display: grid; min-width: 0; gap: 6px; }
+.travel-day-routes strong { font: 650 12px/1.35 var(--font-display); }
+.travel-day-routes small { overflow-wrap: anywhere; color: #7f9a9e; font: 550 9px/1.4 var(--font-mono); }
+.travel-day-routes i { flex: 0 0 auto; color: #f0b75a; font-style: normal; }
+
+@media (max-width: 700px) {
+  .travel-day-routes { padding: 16px; }
+  .travel-day-routes > div { grid-template-columns: 1fr; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
