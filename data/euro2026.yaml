@@ -1,3 +1,122 @@
+hotel_stays:
+  - day: 1
+    destinations:
+      - label_no: "Odense"
+        label_en: "Odense"
+        query: "Odense, Denmark"
+  - day: 2
+    destinations:
+      - label_no: "Berlin"
+        label_en: "Berlin"
+        query: "Berlin, Germany"
+  - day: 3
+    destinations:
+      - label_no: "Berlin"
+        label_en: "Berlin"
+        query: "Berlin, Germany"
+  - day: 4
+    destinations:
+      - label_no: "Ingolstadt"
+        label_en: "Ingolstadt"
+        query: "Ingolstadt, Germany"
+  - day: 5
+    destinations:
+      - label_no: "München"
+        label_en: "Munich"
+        query: "Munich, Germany"
+  - day: 6
+    destinations:
+      - label_no: "München"
+        label_en: "Munich"
+        query: "Munich, Germany"
+  - day: 7
+    destinations:
+      - label_no: "Sölden"
+        label_en: "Sölden"
+        query: "Sölden, Austria"
+  - day: 8
+    destinations:
+      - label_no: "Selva di Val Gardena"
+        label_en: "Selva di Val Gardena"
+        query: "Selva di Val Gardena, Italy"
+  - day: 9
+    destinations:
+      - label_no: "Verona"
+        label_en: "Verona"
+        query: "Verona, Italy"
+      - label_no: "Gardasjøen"
+        label_en: "Lake Garda"
+        query: "Lake Garda, Italy"
+  - day: 10
+    destinations:
+      - label_no: "Verona"
+        label_en: "Verona"
+        query: "Verona, Italy"
+      - label_no: "Gardasjøen"
+        label_en: "Lake Garda"
+        query: "Lake Garda, Italy"
+  - day: 11
+    destinations:
+      - label_no: "Antibes"
+        label_en: "Antibes"
+        query: "Antibes, France"
+  - day: 12
+    destinations:
+      - label_no: "Antibes"
+        label_en: "Antibes"
+        query: "Antibes, France"
+  - day: 13
+    destinations:
+      - label_no: "Antibes"
+        label_en: "Antibes"
+        query: "Antibes, France"
+  - day: 14
+    destinations:
+      - label_no: "Antibes"
+        label_en: "Antibes"
+        query: "Antibes, France"
+  - day: 15
+    destinations:
+      - label_no: "Lugano"
+        label_en: "Lugano"
+        query: "Lugano, Switzerland"
+      - label_no: "Andermatt"
+        label_en: "Andermatt"
+        query: "Andermatt, Switzerland"
+  - day: 16
+    destinations:
+      - label_no: "Vaduz"
+        label_en: "Vaduz"
+        query: "Vaduz, Liechtenstein"
+  - day: 17
+    destinations:
+      - label_no: "Frankfurt Airport"
+        label_en: "Frankfurt Airport"
+        query: "Frankfurt Airport, Germany"
+  - day: 18
+    destinations:
+      - label_no: "Amsterdam"
+        label_en: "Amsterdam"
+        query: "Amsterdam, Netherlands"
+  - day: 19
+    destinations:
+      - label_no: "Amsterdam"
+        label_en: "Amsterdam"
+        query: "Amsterdam, Netherlands"
+  - day: 20
+    destinations:
+      - label_no: "Kolding"
+        label_en: "Kolding"
+        query: "Kolding, Denmark"
+      - label_no: "Vejle"
+        label_en: "Vejle"
+        query: "Vejle, Denmark"
+  - day: 21
+    destinations:
+      - label_no: "Oslo"
+        label_en: "Oslo"
+        query: "Oslo, Norway"
+
 days:
   - number: 1
     stop_index: 1
