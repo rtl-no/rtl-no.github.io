@@ -1,0 +1,62 @@
+{{ define "main" }}
+  {{ $day := index (where hugo.Data.euro2026.days "number" .Params.day) 0 }}
+  {{ $copy := index $day site.Language.Lang }}
+  {{ $prefix := cond (eq site.Language.Lang "no") "dag" "day" }}
+  {{ $parentURL := printf "/%s/travel/euro-2026/" site.Language.Lang }}
+  {{ $fallback := resources.Get "images/travel-euro-2026-hero.webp" }}
+  {{ with $fallback }}{{ $fallback = .Fill "2000x1160 webp q86" }}{{ end }}
+  <article class="travel-day travel-day-tone-{{ $day.tone }}">
+    <header class="travel-day-hero" style="{{ with $day.image }}--travel-day-image:url('{{ .url }}');{{ end }}{{ with $fallback }}--travel-day-fallback:url('{{ .RelPermalink }}');{{ end }}">
+      <div class="shell travel-day-hero-inner">
+        <nav class="travel-day-breadcrumb" aria-label="{{ if eq site.Language.Lang "no" }}Brødsmuler{{ else }}Breadcrumb{{ end }}"><a href="{{ $parentURL }}">Euro 2026</a><span>／</span><strong>{{ if eq site.Language.Lang "no" }}Dag{{ else }}Day{{ end }} {{ $day.number }}</strong></nav>
+        <div class="travel-day-count"><span>{{ printf "%02d" $day.number }}</span><i></i><small>21</small></div>
+        <div class="travel-day-hero-copy">
+          <p>{{ $copy.eyebrow }}</p>
+          <h1>{{ .Title }}</h1>
+          <p>{{ $copy.summary }}</p>
+        </div>
+        <div class="travel-day-route-line"><div><small>{{ if eq site.Language.Lang "no" }}Fra{{ else }}From{{ end }}</small><strong>{{ $copy.from }}</strong></div><span aria-hidden="true"><i></i>→</span><div><small>{{ if eq site.Language.Lang "no" }}Til{{ else }}To{{ end }}</small><strong>{{ $copy.to }}</strong></div></div>
+      </div>
+      {{ with $day.image }}<a class="travel-day-photo-credit" href="{{ .source }}" rel="noopener">{{ .credit }} · {{ .license }} ↗</a>{{ end }}
+    </header>
+
+    <section class="travel-day-overview">
+      <div class="shell travel-day-overview-grid">
+        <div><small>{{ if eq site.Language.Lang "no" }}Status{{ else }}Status{{ end }}</small><strong>{{ $copy.status }}</strong></div>
+        <div><small>{{ if eq site.Language.Lang "no" }}Avstand{{ else }}Distance{{ end }}</small><strong>{{ $day.distance }}</strong></div>
+        <div><small>{{ if eq site.Language.Lang "no" }}Kjøretid{{ else }}Drive time{{ end }}</small><strong>{{ index $day (printf "drive_%s" site.Language.Lang) }}</strong></div>
+        <div><small>{{ if eq site.Language.Lang "no" }}Dagens type{{ else }}Day type{{ end }}</small><strong>{{ $copy.day_type }}</strong></div>
+      </div>
+    </section>
+
+    <section class="travel-day-plan section">
+      <div class="shell travel-day-plan-grid">
+        <div class="travel-day-section-heading"><p class="section-label">{{ if eq site.Language.Lang "no" }}Dagens plan{{ else }}The plan{{ end }}</p><h2>{{ $copy.plan_title }}</h2><p>{{ $copy.plan_intro }}</p></div>
+        <ol class="travel-day-plan-steps">{{ range $index, $step := $copy.steps }}<li><span>{{ printf "%02d" (add $index 1) }}</span><p>{{ $step }}</p></li>{{ end }}</ol>
+      </div>
+      {{ with $day.routes }}<div class="shell travel-day-map-links"><header><small>Google Maps</small><strong>{{ if eq site.Language.Lang "no" }}Åpne dagens rute{{ else }}Open today's route{{ end }}</strong></header><div>{{ range . }}<a href="{{ .url }}" rel="noopener"><span><strong>{{ index . (printf "label_%s" site.Language.Lang) }}</strong><small>{{ index . (printf "via_%s" site.Language.Lang) }}</small></span><i aria-hidden="true">↗</i></a>{{ end }}</div></div>{{ end }}
+    </section>
+
+    <section class="travel-day-sights section">
+      <div class="shell"><div class="travel-day-section-heading travel-day-section-heading-wide"><p class="section-label">{{ if eq site.Language.Lang "no" }}Verdt å se{{ else }}Worth seeing{{ end }}</p><h2>{{ if eq site.Language.Lang "no" }}Stopp og opplevelser underveis{{ else }}Stops and experiences along the way{{ end }}</h2><p>{{ if eq site.Language.Lang "no" }}Dette er kandidater, ikke en sjekkliste. Dagens energi, vær og trafikk avgjør hva som faktisk passer.{{ else }}These are candidates, not a checklist. Energy, weather and traffic decide what actually fits the day.{{ end }}</p></div><div class="travel-day-sight-grid">{{ range $index, $sight := $copy.sights }}<article><div class="travel-day-sight-number">{{ printf "%02d" (add $index 1) }}</div><small>{{ .location }}</small><h3>{{ .title }}</h3><p>{{ .text }}</p>{{ with .url }}<a href="{{ . }}" rel="noopener">{{ $sight.link_label }} ↗</a>{{ end }}</article>{{ end }}</div></div>
+    </section>
+
+    <section class="travel-day-media section">
+      <div class="shell"><div class="travel-day-section-heading travel-day-section-heading-wide"><p class="section-label">{{ if eq site.Language.Lang "no" }}Etter reisen{{ else }}After the journey{{ end }}</p><h2>{{ if eq site.Language.Lang "no" }}Her vokser planen til en reiselogg{{ else }}This is where the plan becomes a travel log{{ end }}</h2><p>{{ if eq site.Language.Lang "no" }}Siden er klar for egne bilder, timelapse fra kjøreetappen og notater om hvordan dagen faktisk ble.{{ else }}The page is ready for personal photos, a driving timelapse and notes about how the day actually unfolded.{{ end }}</p></div>
+        {{ with .Params.gallery }}<div class="travel-day-gallery">{{ range . }}{{ $item := . }}{{ $photo := resources.Get .image }}{{ with $photo }}{{ $large := .Fill "1400x1000 webp q86" }}<figure><img src="{{ $large.RelPermalink }}" width="{{ $large.Width }}" height="{{ $large.Height }}" alt="{{ $item.alt }}" loading="lazy">{{ with $item.caption }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>{{ end }}{{ end }}</div>{{ end }}
+        <div class="travel-day-media-grid">
+          {{ if .Params.gallery }}<article class="travel-day-media-card travel-day-media-card-complete"><span aria-hidden="true">✓</span><small>{{ if eq site.Language.Lang "no" }}Bildegalleri{{ else }}Photo gallery{{ end }}</small><h3>{{ len .Params.gallery }} {{ if eq site.Language.Lang "no" }}bilder fra dagen{{ else }}photos from the day{{ end }}</h3><p>{{ if eq site.Language.Lang "no" }}Egne bilder har erstattet planleggingsillustrasjonene.{{ else }}Personal photos now complement the planning material.{{ end }}</p></article>{{ else }}<article class="travel-day-media-card"><span aria-hidden="true">▧</span><small>{{ if eq site.Language.Lang "no" }}Bildegalleri{{ else }}Photo gallery{{ end }}</small><h3>{{ if eq site.Language.Lang "no" }}Egne bilder kommer her{{ else }}Personal photos will live here{{ end }}</h3><p>{{ if eq site.Language.Lang "no" }}Stopp, utsikt, bilen og de små øyeblikkene fra dagen.{{ else }}Stops, views, the car and the small moments from the day.{{ end }}</p></article>{{ end }}
+          {{ if or .Params.timelapse_youtube .Params.timelapse_vimeo }}<article class="travel-day-media-card travel-day-media-card-complete"><span aria-hidden="true">▶</span><small>Timelapse</small><h3>{{ if eq site.Language.Lang "no" }}Kjøreetappen er publisert{{ else }}The drive is published{{ end }}</h3><p>{{ if eq site.Language.Lang "no" }}Videoen ligger bygget inn rett under mediedelen.{{ else }}The video is embedded directly below the media section.{{ end }}</p></article>{{ else }}<article class="travel-day-media-card"><span aria-hidden="true">▶</span><small>Timelapse</small><h3>{{ if eq site.Language.Lang "no" }}Kjøreetappen i komprimert form{{ else }}The drive, compressed{{ end }}</h3><p>{{ if eq site.Language.Lang "no" }}YouTube- eller Vimeo-video kan bygges inn direkte når den er ferdig.{{ else }}A YouTube or Vimeo video can be embedded directly when it is ready.{{ end }}</p></article>{{ end }}
+          {{ if or .Params.actual_distance .Params.actual_drive_time .Params.actual_summary }}<article class="travel-day-media-card travel-day-media-card-complete"><span aria-hidden="true">✓</span><small>{{ if eq site.Language.Lang "no" }}Faktisk dag{{ else }}Actual day{{ end }}</small><h3>{{ with .Params.actual_distance }}{{ . }}{{ end }}{{ with .Params.actual_drive_time }} · {{ . }}{{ end }}</h3><p>{{ .Params.actual_summary }}</p></article>{{ else }}<article class="travel-day-media-card"><span aria-hidden="true">⌁</span><small>{{ if eq site.Language.Lang "no" }}Faktisk dag{{ else }}Actual day{{ end }}</small><h3>{{ if eq site.Language.Lang "no" }}Tid, distanse og erfaringer{{ else }}Time, distance and lessons{{ end }}</h3><p>{{ if eq site.Language.Lang "no" }}Plan mot virkelighet, ladestopp, hotell og det vi ville gjort annerledes.{{ else }}Plan versus reality, charging stops, hotel and what we would do differently.{{ end }}</p></article>{{ end }}
+        </div>
+        {{ with .Params.timelapse_youtube }}<div class="travel-day-video"><iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="Timelapse" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>{{ else }}{{ with .Params.timelapse_vimeo }}<div class="travel-day-video"><iframe src="https://player.vimeo.com/video/{{ . }}" title="Timelapse" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>{{ end }}{{ end }}
+        {{ with .Content }}<div class="travel-day-journal prose">{{ . }}</div>{{ end }}
+      </div>
+    </section>
+
+    <nav class="travel-day-pagination shell" aria-label="{{ if eq site.Language.Lang "no" }}Navigasjon mellom dager{{ else }}Day navigation{{ end }}">
+      {{ if gt $day.number 1 }}{{ $prev := sub $day.number 1 }}{{ $prevDay := index (where hugo.Data.euro2026.days "number" $prev) 0 }}{{ $prevCopy := index $prevDay site.Language.Lang }}<a href="/{{ site.Language.Lang }}/travel/euro-2026/{{ $prefix }}-{{ printf "%02d" $prev }}/"><small>← {{ if eq site.Language.Lang "no" }}Forrige{{ else }}Previous{{ end }}</small><strong>{{ if eq site.Language.Lang "no" }}Dag{{ else }}Day{{ end }} {{ $prev }} · {{ $prevCopy.short_title }}</strong></a>{{ else }}<a href="{{ $parentURL }}"><small>← Euro 2026</small><strong>{{ if eq site.Language.Lang "no" }}Hele reiseplanen{{ else }}Full journey plan{{ end }}</strong></a>{{ end }}
+      {{ if lt $day.number 21 }}{{ $next := add $day.number 1 }}{{ $nextDay := index (where hugo.Data.euro2026.days "number" $next) 0 }}{{ $nextCopy := index $nextDay site.Language.Lang }}<a class="travel-day-pagination-next" href="/{{ site.Language.Lang }}/travel/euro-2026/{{ $prefix }}-{{ printf "%02d" $next }}/"><small>{{ if eq site.Language.Lang "no" }}Neste{{ else }}Next{{ end }} →</small><strong>{{ if eq site.Language.Lang "no" }}Dag{{ else }}Day{{ end }} {{ $next }} · {{ $nextCopy.short_title }}</strong></a>{{ else }}<a class="travel-day-pagination-next" href="{{ $parentURL }}"><small>Euro 2026 →</small><strong>{{ if eq site.Language.Lang "no" }}Tilbake til hele reisen{{ else }}Back to the full journey{{ end }}</strong></a>{{ end }}
+    </nav>
+  </article>
+{{ end }}

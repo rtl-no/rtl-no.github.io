@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ $trips := .RegularPages.ByWeight }}
+  {{ $trips := where .RegularPages.ByWeight "Type" "travel" }}
   <header class="travel-hub-hero">
     <div class="shell travel-hub-grid">
       <div class="travel-hub-copy">
