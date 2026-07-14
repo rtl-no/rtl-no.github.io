@@ -487,9 +487,23 @@ button { color: inherit; }
 .travel-day-routes small { overflow-wrap: anywhere; color: #7f9a9e; font: 550 9px/1.4 var(--font-mono); }
 .travel-day-routes i { flex: 0 0 auto; color: #f0b75a; font-style: normal; }
 
+.travel-recommendations { display: grid; gap: 17px; margin-top: 30px; padding: 20px; border: 1px solid rgba(88,208,194,.28); border-radius: 11px; background: linear-gradient(135deg,rgba(88,208,194,.07),rgba(8,24,32,.24)); }
+.travel-recommendations > header { display: grid; grid-template-columns: minmax(0,.9fr) minmax(210px,1.1fr); gap: 24px; align-items: end; }
+.travel-recommendations > header small, .travel-recommendations article > small { color: #58d0c2; font: 650 9px/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .8px; }
+.travel-recommendations h4 { margin: 7px 0 0; color: #edf5f4; font: 650 18px/1.2 var(--font-display); }
+.travel-recommendations > header p { margin: 0; color: #91aaad; font: 400 12px/1.55 var(--font-body); text-transform: none; letter-spacing: normal; }
+.travel-recommendation-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+.travel-recommendation-grid article { display: flex; min-width: 0; flex-direction: column; padding: 16px; border: 1px solid #2d4650; border-radius: 8px; background: rgba(5,18,25,.62); }
+.travel-recommendation-grid article p { margin: 8px 0 14px; color: #a9bbbc; font-size: 12px; line-height: 1.58; }
+.travel-recommendation-grid article > div { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; }
+.travel-recommendation-grid a { color: #d9f3ef; font: 600 10px/1.4 var(--font-mono); text-decoration-color: rgba(88,208,194,.45); text-underline-offset: 3px; }
+.travel-recommendation-grid a:hover { color: #58d0c2; }
+
 @media (max-width: 700px) {
   .travel-day-routes { padding: 16px; }
   .travel-day-routes > div { grid-template-columns: 1fr; }
+  .travel-recommendations { padding: 16px; }
+  .travel-recommendations > header, .travel-recommendation-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
