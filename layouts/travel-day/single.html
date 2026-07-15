@@ -50,9 +50,16 @@
               {{ $hotelsURL := printf "https://www.hotels.com/Hotel-Search?destination=%s&amenities=PARKING" $query }}
               <article>
                 <div class="travel-day-hotel-destination"><small>{{ if eq site.Language.Lang "no" }}Endepunkt{{ else }}Destination{{ end }}</small><strong>{{ $label }}</strong></div>
-                <div class="travel-day-hotel-services">
-                  <a class="travel-day-hotel-booking" href="{{ $bookingURL }}" target="_blank" rel="noopener"><span><b>Booking.com</b><small>{{ if eq site.Language.Lang "no" }}Hoteller med parkering{{ else }}Hotels with parking{{ end }}</small></span><i aria-hidden="true">↗</i></a>
-                  <a class="travel-day-hotel-hotels" href="{{ $hotelsURL }}" target="_blank" rel="noopener"><span><b>Hotels.com</b><small>{{ if eq site.Language.Lang "no" }}Parkering tilgjengelig{{ else }}Parking available{{ end }}</small></span><i aria-hidden="true">↗</i></a>
+                <div class="travel-day-hotel-options">
+                  {{ with .candidate }}
+                    <a class="travel-day-hotel-candidate" href="{{ .url }}" target="_blank" rel="noopener">
+                      <span><small>{{ index . (printf "label_%s" site.Language.Lang) }}</small><b>{{ .name }}</b><em>{{ index . (printf "note_%s" site.Language.Lang) }}</em></span><i aria-hidden="true">↗</i>
+                    </a>
+                  {{ end }}
+                  <div class="travel-day-hotel-services">
+                    <a class="travel-day-hotel-booking" href="{{ $bookingURL }}" target="_blank" rel="noopener"><span><b>Booking.com</b><small>{{ if eq site.Language.Lang "no" }}Hoteller med parkering{{ else }}Hotels with parking{{ end }}</small></span><i aria-hidden="true">↗</i></a>
+                    <a class="travel-day-hotel-hotels" href="{{ $hotelsURL }}" target="_blank" rel="noopener"><span><b>Hotels.com</b><small>{{ if eq site.Language.Lang "no" }}Parkering tilgjengelig{{ else }}Parking available{{ end }}</small></span><i aria-hidden="true">↗</i></a>
+                  </div>
                 </div>
               </article>
             {{ end }}

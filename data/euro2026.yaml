@@ -4,6 +4,13 @@ hotel_stays:
       - label_no: "Odense"
         label_en: "Odense"
         query: "Odense, Denmark"
+        candidate:
+          name: "Best Western Plus Hotel Odense"
+          label_no: "Mulig vinner"
+          label_en: "Potential winner"
+          note_no: "Ser ut som et svært praktisk valg etter den lange etappen: stor parkering ved hotellet og enkel adkomst like ved E20."
+          note_en: "Looks like a very practical choice after the long drive, with a large hotel car park and easy access just off the E20."
+          url: "https://www.bestwestern.dk/hoteller/best-western-plus-hotel-odense-96106"
   - day: 2
     destinations:
       - label_no: "Berlin"
