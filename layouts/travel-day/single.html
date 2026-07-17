@@ -36,6 +36,25 @@
         <ol class="travel-day-plan-steps">{{ range $index, $step := $copy.steps }}<li><span>{{ printf "%02d" (add $index 1) }}</span><p>{{ $step }}</p></li>{{ end }}</ol>
       </div>
       {{ with $day.routes }}<div class="shell travel-day-map-links"><header><small>Google Maps</small><strong>{{ if eq site.Language.Lang "no" }}Åpne dagens rute{{ else }}Open today's route{{ end }}</strong></header><div>{{ range . }}<a href="{{ .url }}" rel="noopener"><span><strong>{{ index . (printf "label_%s" site.Language.Lang) }}</strong><small>{{ index . (printf "via_%s" site.Language.Lang) }}</small></span><i aria-hidden="true">↗</i></a>{{ end }}</div></div>{{ end }}
+      {{ with $day.routes }}
+        <div class="shell travel-day-abrp">
+          <header>
+            <div><small>A Better Routeplanner</small><strong>{{ if eq site.Language.Lang "no" }}Ladeplan for Audi S6 e-tron Avant{{ else }}Charging plan for the Audi S6 e-tron Avant{{ end }}</strong></div>
+            <p>{{ if eq site.Language.Lang "no" }}ABRP beregner ruten og ladestoppene på nytt. Vær, fart, temperatur og faktisk batterinivå kan endre resultatet.{{ else }}ABRP recalculates the route and charging stops. Weather, speed, temperature and actual battery level can change the result.{{ end }}</p>
+          </header>
+          <div class="travel-day-abrp-grid">
+            {{ range . }}
+              {{ if and .abrp_waypoints .abrp_coords }}
+                {{ $abrpURL := printf "https://abetterrouteplanner.com/resources/ev-comparison/embed?vehicles=audi%%3As6%%3A24%%3A95%%3Aavant&waypoints=%s&waypointCoords=%s" (urlquery .abrp_waypoints) (urlquery .abrp_coords) }}
+                <article>
+                  <div class="travel-day-abrp-heading"><div><small>{{ if eq site.Language.Lang "no" }}Interaktiv ladeplan{{ else }}Interactive charging plan{{ end }}</small><strong>{{ index . (printf "label_%s" site.Language.Lang) }}</strong></div><a href="{{ $abrpURL }}" target="_blank" rel="noopener">{{ if eq site.Language.Lang "no" }}Åpne i ABRP{{ else }}Open in ABRP{{ end }} ↗</a></div>
+                  <iframe src="{{ $abrpURL }}" title="ABRP · {{ index . (printf "label_%s" site.Language.Lang) }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </article>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
       {{ with $hotelStay.destinations }}
         <div class="shell travel-day-hotel-links">
           <header>
