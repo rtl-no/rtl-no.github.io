@@ -4,28 +4,61 @@ hotel_stays:
       - label_no: "Odense"
         label_en: "Odense"
         query: "Odense, Denmark"
-        candidate:
-          name: "Best Western Plus Hotel Odense"
-          label_no: "Mulig vinner"
-          label_en: "Potential winner"
-          note_no: "Ser ut som et svært praktisk valg etter den lange etappen: stor parkering ved hotellet og enkel adkomst like ved E20."
-          note_en: "Looks like a very practical choice after the long drive, with a large hotel car park and easy access just off the E20."
-          url: "https://www.bestwestern.dk/hoteller/best-western-plus-hotel-odense-96106"
+        candidates:
+          - name: "Best Western Plus Hotel Odense"
+            label_no: "Mulig vinner"
+            label_en: "Potential winner"
+            note_no: "Ser ut som et svært praktisk valg etter den lange etappen: stor parkering ved hotellet og enkel adkomst like ved E20."
+            note_en: "Looks like a very practical choice after the long drive, with a large hotel car park and easy access just off the E20."
+            url: "https://www.bestwestern.dk/hoteller/best-western-plus-hotel-odense-96106"
   - day: 2
     destinations:
       - label_no: "Berlin"
         label_en: "Berlin"
         query: "Berlin, Germany"
+        candidates:
+          - name: "Hotel MOA Berlin"
+            label_no: "Til vurdering · tidligere Mercure Hotel MOA Berlin"
+            label_en: "To consider · formerly Mercure Hotel MOA Berlin"
+            note_no: "Eget avgiftsbelagt parkeringshus med kort vei til resepsjon og rom. Hotellet gikk ut av Mercure/Accor i januar 2026."
+            note_en: "Paid on-site multi-storey parking close to reception and the rooms. The hotel left Mercure/Accor in January 2026."
+            url: "https://moa.de/en/"
+          - name: "Estrel Berlin"
+            label_no: "Til vurdering"
+            label_en: "To consider"
+            note_no: "Egen underjordisk garasje og enkel adkomst med bil. Hotellet opplyser at antall parkeringsplasser er midlertidig redusert under ombygging."
+            note_en: "On-site underground garage and convenient access by car. The hotel currently warns that parking capacity is limited during renovation work."
+            url: "https://www.estrel.com/en/hotel"
   - day: 3
     destinations:
       - label_no: "Berlin"
         label_en: "Berlin"
         query: "Berlin, Germany"
+        candidates:
+          - name: "Hotel MOA Berlin"
+            label_no: "Til vurdering · tidligere Mercure Hotel MOA Berlin"
+            label_en: "To consider · formerly Mercure Hotel MOA Berlin"
+            note_no: "Eget avgiftsbelagt parkeringshus med kort vei til resepsjon og rom. Hotellet gikk ut av Mercure/Accor i januar 2026."
+            note_en: "Paid on-site multi-storey parking close to reception and the rooms. The hotel left Mercure/Accor in January 2026."
+            url: "https://moa.de/en/"
+          - name: "Estrel Berlin"
+            label_no: "Til vurdering"
+            label_en: "To consider"
+            note_no: "Egen underjordisk garasje og enkel adkomst med bil. Hotellet opplyser at antall parkeringsplasser er midlertidig redusert under ombygging."
+            note_en: "On-site underground garage and convenient access by car. The hotel currently warns that parking capacity is limited during renovation work."
+            url: "https://www.estrel.com/en/hotel"
   - day: 4
     destinations:
       - label_no: "Ingolstadt"
         label_en: "Ingolstadt"
         query: "Ingolstadt, Germany"
+        candidates:
+          - name: "Maritim Hotel Ingolstadt"
+            label_no: "Til vurdering"
+            label_en: "To consider"
+            note_no: "Sentralt ved Donau, ca. 3 km fra både A9 og Audi Forum. Offentlig parkeringskjeller under hotellet har 500 plasser og elbillading."
+            note_en: "Central location by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
+            url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 5
     destinations:
       - label_no: "München"
@@ -33,19 +66,22 @@ hotel_stays:
         query: "Munich, Germany"
   - day: 6
     destinations:
-      - label_no: "München"
-        label_en: "Munich"
-        query: "Munich, Germany"
-  - day: 7
-    destinations:
       - label_no: "Sölden"
         label_en: "Sölden"
         query: "Sölden, Austria"
-  - day: 8
+  - day: 7
     destinations:
       - label_no: "Selva di Val Gardena"
         label_en: "Selva di Val Gardena"
         query: "Selva di Val Gardena, Italy"
+  - day: 8
+    destinations:
+      - label_no: "Verona"
+        label_en: "Verona"
+        query: "Verona, Italy"
+      - label_no: "Gardasjøen"
+        label_en: "Lake Garda"
+        query: "Lake Garda, Italy"
   - day: 9
     destinations:
       - label_no: "Verona"
@@ -56,12 +92,9 @@ hotel_stays:
         query: "Lake Garda, Italy"
   - day: 10
     destinations:
-      - label_no: "Verona"
-        label_en: "Verona"
-        query: "Verona, Italy"
-      - label_no: "Gardasjøen"
-        label_en: "Lake Garda"
-        query: "Lake Garda, Italy"
+      - label_no: "Antibes"
+        label_en: "Antibes"
+        query: "Antibes, France"
   - day: 11
     destinations:
       - label_no: "Antibes"
@@ -79,27 +112,27 @@ hotel_stays:
         query: "Antibes, France"
   - day: 14
     destinations:
-      - label_no: "Antibes"
-        label_en: "Antibes"
-        query: "Antibes, France"
-  - day: 15
-    destinations:
       - label_no: "Lugano"
         label_en: "Lugano"
         query: "Lugano, Switzerland"
       - label_no: "Andermatt"
         label_en: "Andermatt"
         query: "Andermatt, Switzerland"
-  - day: 16
+  - day: 15
     destinations:
       - label_no: "Vaduz"
         label_en: "Vaduz"
         query: "Vaduz, Liechtenstein"
-  - day: 17
+  - day: 16
     destinations:
       - label_no: "Frankfurt Airport"
         label_en: "Frankfurt Airport"
         query: "Frankfurt Airport, Germany"
+  - day: 17
+    destinations:
+      - label_no: "Amsterdam"
+        label_en: "Amsterdam"
+        query: "Amsterdam, Netherlands"
   - day: 18
     destinations:
       - label_no: "Amsterdam"
@@ -107,18 +140,13 @@ hotel_stays:
         query: "Amsterdam, Netherlands"
   - day: 19
     destinations:
-      - label_no: "Amsterdam"
-        label_en: "Amsterdam"
-        query: "Amsterdam, Netherlands"
-  - day: 20
-    destinations:
       - label_no: "Kolding"
         label_en: "Kolding"
         query: "Kolding, Denmark"
       - label_no: "Vejle"
         label_en: "Vejle"
         query: "Vejle, Denmark"
-  - day: 21
+  - day: 20
     destinations:
       - label_no: "Oslo"
         label_en: "Oslo"
@@ -461,7 +489,7 @@ days:
       steps:
         - "Møt tidlig ved Audi Forum og sett av god margin til parkering og innsjekk."
         - "Opplev museum mobile og eventuelt en forhåndsbestilt fabrikk- eller museumsomvisning."
-        - "Kjør til München, parker bilen ved hotellet og bruk kollektivtransport resten av oppholdet."
+        - "Kjør til München, parker bilen ved hotellet og hold kvelden enkel før avreise neste morgen."
       sights:
         - title: "Audi museum mobile"
           location: "Audi Forum Ingolstadt"
@@ -491,7 +519,7 @@ days:
       steps:
         - "Arrive early at Audi Forum and allow margin for parking and check-in."
         - "Explore museum mobile and, if booked, a factory or museum tour."
-        - "Drive to Munich, park at the hotel and use public transport for the rest of the stay."
+        - "Drive to Munich, park at the hotel and keep the evening simple before leaving the next morning."
       sights:
         - title: "Audi museum mobile"
           location: "Audi Forum Ingolstadt"
@@ -510,78 +538,6 @@ days:
           link_label: "Official city guide"
 
   - number: 6
-    stop_index: 4
-    tone: city
-    distance: "0 km planlagt med bil"
-    drive_no: "Bilen står hele dagen"
-    drive_en: "The car stays parked"
-    image:
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Rathaus_and_Marienplatz_from_Peterskirche_-_August_2006.jpg/1280px-Rathaus_and_Marienplatz_from_Peterskirche_-_August_2006.jpg"
-      credit: "Diliff"
-      license: "CC BY-SA 3.0"
-      source: "https://commons.wikimedia.org/wiki/File:Rathaus_and_Marienplatz_from_Peterskirche_-_August_2006.jpg"
-    no:
-      short_title: "München bydag"
-      eyebrow: "Bydag · München"
-      from: "München"
-      to: "München"
-      status: "Fast bydag"
-      day_type: "Til fots og U-Bahn"
-      summary: "Bilen står ved hotellet mens vi kombinerer historisk sentrum, grøntområder og en rolig dag før Alpene."
-      plan_title: "Byopplevelse uten å bruke opp alpeenergien"
-      plan_intro: "Marienplatz er det naturlige startpunktet. Derfra velger vi mellom marked, Englischer Garten, museer og Olympiapark."
-      steps:
-        - "Ta U-Bahn til Marienplatz og gå gjennom gamlebyen."
-        - "Velg Viktualienmarkt og Englischer Garten eller et museum etter vær."
-        - "Avslutt tidlig nok til å forberede avreise mot Innsbruck og Sölden."
-      sights:
-        - title: "Marienplatz"
-          location: "Altstadt"
-          text: "Byens historiske sentrum med Neues Rathaus og Glockenspiel er et naturlig utgangspunkt for en sammenhengende gåtur."
-          url: "https://www.munich.travel/en/topics/sports-leisure/englischer-garten-tour-by-bike/marienplatz"
-          link_label: "simply Munich"
-        - title: "Englischer Garten"
-          location: "Sentrum → Schwabing"
-          text: "En grønn kontrast til gamlebyen, med mulighet for en rolig spasertur og pause ved en biergarten."
-          url: "https://www.munich.travel/en/pois/urban-districts/english-garden"
-          link_label: "Offisiell guide"
-        - title: "Olympiapark"
-          location: "München nord"
-          text: "Passer ekstra godt dersom hotellet ligger i området og gir ikonisk arkitektur uten krevende logistikk."
-          url: "https://www.munich.travel/en/pois/sports-leisure/olympic-park"
-          link_label: "Offisiell guide"
-    en:
-      short_title: "Munich city day"
-      eyebrow: "City day · Munich"
-      from: "Munich"
-      to: "Munich"
-      status: "Fixed city day"
-      day_type: "Walking and U-Bahn"
-      summary: "The car stays at the hotel while historic Munich, green spaces and a calm pace prepare us for the Alps."
-      plan_title: "See the city without spending tomorrow's Alpine energy"
-      plan_intro: "Marienplatz is the natural starting point. From there, choose between the market, English Garden, museums and Olympiapark."
-      steps:
-        - "Take the U-Bahn to Marienplatz and walk through the Old Town."
-        - "Choose Viktualienmarkt and the English Garden or a museum according to the weather."
-        - "Finish early enough to prepare for Innsbruck and Sölden."
-      sights:
-        - title: "Marienplatz"
-          location: "Old Town"
-          text: "The historic centre with the New Town Hall and Glockenspiel is the natural start for a coherent walking route."
-          url: "https://www.munich.travel/en/topics/sports-leisure/englischer-garten-tour-by-bike/marienplatz"
-          link_label: "simply Munich"
-        - title: "English Garden"
-          location: "Centre → Schwabing"
-          text: "A green contrast to the Old Town, offering a relaxed walk and a possible stop at a beer garden."
-          url: "https://www.munich.travel/en/pois/urban-districts/english-garden"
-          link_label: "Official guide"
-        - title: "Olympiapark"
-          location: "Northern Munich"
-          text: "Especially convenient if the hotel is nearby, with iconic architecture and little logistical effort."
-          url: "https://www.munich.travel/en/pois/sports-leisure/olympic-park"
-          link_label: "Official guide"
-
-  - number: 7
     stop_index: 6
     tone: alpine
     distance: "Ca. 250–290 km"
@@ -659,7 +615,7 @@ days:
           url: "https://www.soelden.com/en"
           link_label: "Sölden"
 
-  - number: 8
+  - number: 7
     stop_index: 8
     tone: alpine
     distance: "Ca. 170–220 km"
@@ -737,7 +693,7 @@ days:
           url: "https://www.valgardena.it/en/"
           link_label: "Val Gardena"
 
-  - number: 9
+  - number: 8
     stop_index: 9
     tone: alpine
     distance: "Ca. 280–320 km"
@@ -825,7 +781,7 @@ days:
           url: "https://www.visittrentino.info/en/articles/art-and-culture/discovering-trento"
           link_label: "Visit Trentino"
 
-  - number: 10
+  - number: 9
     stop_index: 9
     tone: rest
     distance: "0–120 km · avhengig av base og båtvalg"
@@ -903,7 +859,7 @@ days:
           url: "https://www.navigazionelaghi.it/"
           link_label: "Routes and timetables"
 
-  - number: 11
+  - number: 10
     stop_index: 10
     tone: coast
     distance: "Ca. 480–500 km"
@@ -981,7 +937,7 @@ days:
           url: "https://www.antibesjuanlespins.com/en/discover/the-must-sees/antibes-the-city-with-rampart-walls"
           link_label: "Official guide"
 
-  - number: 12
+  - number: 11
     stop_index: 10
     tone: coast
     distance: "Ca. 110–160 km · valgt Corniche-kombinasjon"
@@ -1059,7 +1015,7 @@ days:
           url: "https://www.visitmonaco.com/en"
           link_label: "Visit Monaco"
 
-  - number: 13
+  - number: 12
     stop_index: 10
     tone: coast
     distance: "Ca. 40–70 km lokal rundtur"
@@ -1137,7 +1093,7 @@ days:
           url: "https://www.antibesjuanlespins.com/en/visit-antibes-in/visit-antibes-juan-les-pins-in-1-day"
           link_label: "Official guide"
 
-  - number: 14
+  - number: 13
     stop_index: 10
     tone: rest
     distance: "0–50 km · helt fleksibelt"
@@ -1159,7 +1115,7 @@ days:
       plan_title: "En bevisst åpen dag"
       plan_intro: "Ingen må-se-liste. Dagen brukes der Riviera-oppholdet trenger mer tid, eller som tidlig overgang nordover."
       steps:
-        - "Vurder energinivå, vær og hvordan dag 12–13 faktisk ble."
+        - "Vurder energinivå, vær og hvordan dag 11–12 faktisk ble."
         - "Velg lokal Antibes-dag, strand, Nice med tog eller tidlig avreise."
         - "Hvis dagen beholdes: klargjør bil og neste etappes variant på kvelden."
       sights:
@@ -1189,7 +1145,7 @@ days:
       plan_title: "A deliberately open day"
       plan_intro: "There is no must-see list. Use the day where the Riviera stay needs more time, or begin the northbound transition early."
       steps:
-        - "Review energy, weather and how days twelve and thirteen actually unfolded."
+        - "Review energy, weather and how days eleven and twelve actually unfolded."
         - "Choose a local Antibes day, beach, Nice by train or an early departure."
         - "If the day remains: prepare the car and the next stage variant that evening."
       sights:
@@ -1209,7 +1165,7 @@ days:
           url: "https://www.antibesjuanlespins.com/en/"
           link_label: "Practical visitor information"
 
-  - number: 15
+  - number: 14
     stop_index: 11
     tone: road
     distance: "Ca. 520–650 km · valgt sluttpunkt"
@@ -1292,7 +1248,7 @@ days:
           url: "https://www.andermatt-sedrun-disentis.ch/andermatt/en/pages/alpine-passes"
           link_label: "Andermatt Alpine passes"
 
-  - number: 16
+  - number: 15
     stop_index: 12
     tone: alpine
     distance: "Ca. 300–430 km · valgt passkombinasjon"
@@ -1380,7 +1336,7 @@ days:
           url: "https://en.tourismus.li/entdecken/ganzjaehrig/uebersicht/kulturzentrum-vaduz/sehenswuerdigkeiten-in-vaduz.html"
           link_label: "Official Vaduz guide"
 
-  - number: 17
+  - number: 16
     stop_index: 13
     tone: road
     distance: "Ca. 500–560 km"
@@ -1458,7 +1414,7 @@ days:
           url: "https://www.bmine.de/en/hotel-Frankfurt/carloft"
           link_label: "Official CarLoft information"
 
-  - number: 18
+  - number: 17
     stop_index: 14
     tone: road
     distance: "Ca. 440–470 km"
@@ -1536,7 +1492,7 @@ days:
           url: "https://www.iamsterdam.com/en"
           link_label: "I amsterdam"
 
-  - number: 19
+  - number: 18
     stop_index: 14
     tone: city
     distance: "0 km planlagt med bil"
@@ -1608,7 +1564,7 @@ days:
           url: "https://www.iamsterdam.com/en/see-and-do/things-to-do/canal-cruising"
           link_label: "Official guide"
 
-  - number: 20
+  - number: 19
     stop_index: 15
     tone: road
     distance: "Ca. 650–750 km"
@@ -1686,7 +1642,7 @@ days:
           url: "https://www.kongernessamling.dk/en/koldinghus/"
           link_label: "Official museum information"
 
-  - number: 21
+  - number: 20
     stop_index: 16
     tone: coast
     distance: "Ca. 750–850 km"

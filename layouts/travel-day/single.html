@@ -10,7 +10,7 @@
     <header class="travel-day-hero" style="{{ with $day.image }}--travel-day-image:url('{{ .url }}');{{ end }}{{ with $fallback }}--travel-day-fallback:url('{{ .RelPermalink }}');{{ end }}">
       <div class="shell travel-day-hero-inner">
         <nav class="travel-day-breadcrumb" aria-label="{{ if eq site.Language.Lang "no" }}Brødsmuler{{ else }}Breadcrumb{{ end }}"><a href="{{ $parentURL }}">Euro 2026</a><span>／</span><strong>{{ if eq site.Language.Lang "no" }}Dag{{ else }}Day{{ end }} {{ $day.number }}</strong></nav>
-        <div class="travel-day-count"><span>{{ printf "%02d" $day.number }}</span><i></i><small>21</small></div>
+        <div class="travel-day-count"><span>{{ printf "%02d" $day.number }}</span><i></i><small>20</small></div>
         <div class="travel-day-hero-copy">
           <p>{{ $copy.eyebrow }}</p>
           <h1>{{ .Title }}</h1>
@@ -51,7 +51,7 @@
               <article>
                 <div class="travel-day-hotel-destination"><small>{{ if eq site.Language.Lang "no" }}Endepunkt{{ else }}Destination{{ end }}</small><strong>{{ $label }}</strong></div>
                 <div class="travel-day-hotel-options">
-                  {{ with .candidate }}
+                  {{ range .candidates }}
                     <a class="travel-day-hotel-candidate" href="{{ .url }}" target="_blank" rel="noopener">
                       <span><small>{{ index . (printf "label_%s" site.Language.Lang) }}</small><b>{{ .name }}</b><em>{{ index . (printf "note_%s" site.Language.Lang) }}</em></span><i aria-hidden="true">↗</i>
                     </a>
@@ -87,7 +87,7 @@
 
     <nav class="travel-day-pagination shell" aria-label="{{ if eq site.Language.Lang "no" }}Navigasjon mellom dager{{ else }}Day navigation{{ end }}">
       {{ if gt $day.number 1 }}{{ $prev := sub $day.number 1 }}{{ $prevDay := index (where hugo.Data.euro2026.days "number" $prev) 0 }}{{ $prevCopy := index $prevDay site.Language.Lang }}<a href="/{{ site.Language.Lang }}/travel/euro-2026/{{ $prefix }}-{{ printf "%02d" $prev }}/"><small>← {{ if eq site.Language.Lang "no" }}Forrige{{ else }}Previous{{ end }}</small><strong>{{ if eq site.Language.Lang "no" }}Dag{{ else }}Day{{ end }} {{ $prev }} · {{ $prevCopy.short_title }}</strong></a>{{ else }}<a href="{{ $parentURL }}"><small>← Euro 2026</small><strong>{{ if eq site.Language.Lang "no" }}Hele reiseplanen{{ else }}Full journey plan{{ end }}</strong></a>{{ end }}
-      {{ if lt $day.number 21 }}{{ $next := add $day.number 1 }}{{ $nextDay := index (where hugo.Data.euro2026.days "number" $next) 0 }}{{ $nextCopy := index $nextDay site.Language.Lang }}<a class="travel-day-pagination-next" href="/{{ site.Language.Lang }}/travel/euro-2026/{{ $prefix }}-{{ printf "%02d" $next }}/"><small>{{ if eq site.Language.Lang "no" }}Neste{{ else }}Next{{ end }} →</small><strong>{{ if eq site.Language.Lang "no" }}Dag{{ else }}Day{{ end }} {{ $next }} · {{ $nextCopy.short_title }}</strong></a>{{ else }}<a class="travel-day-pagination-next" href="{{ $parentURL }}"><small>Euro 2026 →</small><strong>{{ if eq site.Language.Lang "no" }}Tilbake til hele reisen{{ else }}Back to the full journey{{ end }}</strong></a>{{ end }}
+      {{ if lt $day.number 20 }}{{ $next := add $day.number 1 }}{{ $nextDay := index (where hugo.Data.euro2026.days "number" $next) 0 }}{{ $nextCopy := index $nextDay site.Language.Lang }}<a class="travel-day-pagination-next" href="/{{ site.Language.Lang }}/travel/euro-2026/{{ $prefix }}-{{ printf "%02d" $next }}/"><small>{{ if eq site.Language.Lang "no" }}Neste{{ else }}Next{{ end }} →</small><strong>{{ if eq site.Language.Lang "no" }}Dag{{ else }}Day{{ end }} {{ $next }} · {{ $nextCopy.short_title }}</strong></a>{{ else }}<a class="travel-day-pagination-next" href="{{ $parentURL }}"><small>Euro 2026 →</small><strong>{{ if eq site.Language.Lang "no" }}Tilbake til hele reisen{{ else }}Back to the full journey{{ end }}</strong></a>{{ end }}
     </nav>
   </article>
 {{ end }}

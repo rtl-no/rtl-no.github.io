@@ -1,5 +1,5 @@
 ---
-title: "Dag 9 · Passo Gardena til Verona eller Gardasjøen"
+title: "Dag 9 · Gardasjøen og Sirmione"
 translationKey: "travel-euro-2026-day-09"
 type: "travel-day"
 day: 9
@@ -7,4 +7,3 @@ url: "/no/travel/euro-2026/dag-09/"
 hero_image: "images/travel-euro-2026-hero.webp"
 summary: "Detaljert plan og fremtidig reiselogg for dag 9 av Europaferien 2026."
 ---
-
