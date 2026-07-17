@@ -61,9 +61,16 @@ hotel_stays:
             url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 5
     destinations:
-      - label_no: "München"
-        label_en: "Munich"
-        query: "Munich, Germany"
+      - label_no: "Ingolstadt"
+        label_en: "Ingolstadt"
+        query: "Ingolstadt, Germany"
+        candidates:
+          - name: "Maritim Hotel Ingolstadt"
+            label_no: "Til vurdering"
+            label_en: "To consider"
+            note_no: "Sentralt ved Donau, ca. 3 km fra både A9 og Audi Forum. Offentlig parkeringskjeller under hotellet har 500 plasser og elbillading."
+            note_en: "Central location by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
+            url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 6
     destinations:
       - label_no: "Sölden"
@@ -460,112 +467,138 @@ days:
           link_label: "Audi Forum"
 
   - number: 5
-    stop_index: 4
+    stop_index: 3
     tone: city
-    distance: "Ca. 80–90 km etter Audi-besøket"
-    drive_no: "Ca. 1–1,5 t"
-    drive_en: "Approx. 1–1.5 hrs"
+    distance: "0–15 km · lokal dag"
+    drive_no: "Bilen kan stå · ingen videre etappe"
+    drive_en: "The car can stay parked · no onward stage"
     image:
       url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Audi_R8_C%2C_Bj._1999_%28museum_mobile_2013-09-03%29.JPG/1280px-Audi_R8_C%2C_Bj._1999_%28museum_mobile_2013-09-03%29.JPG"
       credit: "Lothar Spurzem"
       license: "CC BY-SA 2.0 DE"
       source: "https://commons.wikimedia.org/wiki/File:Audi_R8_C,_Bj._1999_(museum_mobile_2013-09-03).JPG"
-    routes:
-      - label_no: "Audi Forum → München"
-        label_en: "Audi Forum → Munich"
-        via_no: "Kort etappe etter museumsdagen"
-        via_en: "Short stage after the museum day"
-        url: "https://www.google.com/maps/dir/?api=1&origin=Audi+Forum+Ingolstadt%2C+Germany&destination=Munich%2C+Germany&travelmode=driving&avoid=ferries"
     no:
-      short_title: "Audi-dagen"
+      short_title: "Full Audi-dag"
       eyebrow: "Hovedopplevelse · Ingolstadt"
       from: "Ingolstadt"
-      to: "München"
+      to: "Ingolstadt"
       status: "Fast Audi-dag"
-      day_type: "Museum og kort kjøreetappe"
-      summary: "Audi Forum og museum mobile får den tiden besøket krever. Først etterpå går den korte etappen til München."
-      plan_title: "Audi først, kilometer etterpå"
-      plan_intro: "Vi låser ikke et avreisetidspunkt før åpningstider, billetter og eventuelle omvisninger er avklart. München ligger nær nok til at dagen tåler det."
+      day_type: "Audi, museum og by"
+      summary: "En ekstra natt i Ingolstadt gir en hel dag til Audi Forum uten bagasje i bilen eller en videre etappe å rekke."
+      plan_title: "En full Audi-dag uten hotellbytte"
+      plan_intro: "Bagasjen blir på hotellrommet mens vi kombinerer fabrikk- eller museumsomvisning, museum mobile, Audi Forum og en rolig kveld i Ingolstadt. Datoen må sjekkes: museet er normalt stengt mandager, og omvisninger bør bestilles tidlig."
       steps:
-        - "Møt tidlig ved Audi Forum og sett av god margin til parkering og innsjekk."
-        - "Opplev museum mobile og eventuelt en forhåndsbestilt fabrikk- eller museumsomvisning."
-        - "Kjør til München, parker bilen ved hotellet og hold kvelden enkel før avreise neste morgen."
+        - "La bagasjen ligge på hotellrommet og møt tidlig ved Audi Forum."
+        - "Prioriter en forhåndsbestilt fabrikkomvisning og bruk god tid i Audi museum mobile."
+        - "Legg inn lunsj, aktuelle utstillinger, Audi Shop og museum shop uten tidspress."
+        - "Avslutt med gamlebyen, Donau eller Klenzepark før andre natt på samme hotell."
       sights:
         - title: "Audi museum mobile"
           location: "Audi Forum Ingolstadt"
-          text: "Hovedpunktet viser Audis historie, originalbiler og skiftende utstillinger i den runde museumsbygningen."
+          text: "Hovedpunktet viser Audis historie, mer enn hundre historiske kjøretøy og skiftende utstillinger i den runde museumsbygningen."
           url: "https://www.audi.de/audi-forum-ingolstadt/en/audi-museum-mobile/"
           link_label: "Åpningstider og billetter"
-        - title: "Omvisninger"
+        - title: "Fabrikk- og museumsomvisninger"
           location: "Audi Forum Ingolstadt"
-          text: "Fabrikk- og museumsomvisninger må sjekkes og bestilles tidlig. Tilbud og språk varierer."
+          text: "Produksjons- og karosseriomvisninger varer normalt 60–135 minutter. Bestill tidlig; tilbud og språk varierer."
           url: "https://www.audi.de/audi-forum-ingolstadt/en/discovery-tours/"
-          link_label: "Audi-opplevelser"
-        - title: "München ved ankomst"
-          location: "Kveld"
-          text: "Etter innsjekk holder vi oss i hotellets nærområde eller tar U-Bahn til en enkel middag i sentrum."
-          url: "https://www.munich.travel/en"
-          link_label: "Offisiell byguide"
+          link_label: "Omvisninger og bestilling"
+        - title: "Resten av Audi Forum"
+          location: "Utstillinger · butikker · mat"
+          text: "Aktuelle bil- og spesialutstillinger, Audi Shop, museum shop og restaurantene gjør det enkelt å bruke hele dagen på området."
+          url: "https://www.audi.de/audi-forum-ingolstadt/en/visitor-service/"
+          link_label: "Planlegg besøket"
+        - title: "Gamlebyen og Klenzepark"
+          location: "Donau · Ingolstadt sentrum"
+          text: "Kreuztor, gamlebyen, Neues Schloss og en rusletur langs Donau gjennom Klenzepark gir en fin kontrast til Audi-dagen."
+          url: "https://www.germany.travel/en/cities-culture/ingolstadt.html"
+          link_label: "Ingolstadt-guide"
+        - title: "Bayerisches Armeemuseum"
+          location: "Neues Schloss"
+          text: "Et av Europas store militærhistoriske museer ligger i det gotiske Neues Schloss og er et godt alternativ hvis vi vil ha mer historie."
+          url: "https://museen-in-bayern.de/en/museums/museum-details/bayerisches-armeemuseum"
+          link_label: "Museumsinformasjon"
+        - title: "Deutsches Medizinhistorisches Museum"
+          location: "Alte Anatomie"
+          text: "Et mindre og annerledes museum om europeisk medisinhistorie, med barokk anatomi-bygning og egen urtehage."
+          url: "https://www.dmm-ingolstadt.de/"
+          link_label: "Offisiell side"
     en:
-      short_title: "The Audi day"
+      short_title: "Full Audi day"
       eyebrow: "Signature experience · Ingolstadt"
       from: "Ingolstadt"
-      to: "Munich"
+      to: "Ingolstadt"
       status: "Fixed Audi day"
-      day_type: "Museum and short drive"
-      summary: "Audi Forum and museum mobile get the time the visit deserves. Only afterwards does the short stage to Munich begin."
-      plan_title: "Audi first, kilometres afterwards"
-      plan_intro: "Do not lock a departure time until opening hours, tickets and any tours are confirmed. Munich is close enough for the day to remain comfortable."
+      day_type: "Audi, museums and city"
+      summary: "A second night in Ingolstadt creates a full day for Audi Forum without luggage in the car or an onward stage to catch."
+      plan_title: "A full Audi day without changing hotels"
+      plan_intro: "Leave the luggage in the hotel room while combining a factory or museum tour, museum mobile, Audi Forum and a relaxed evening in Ingolstadt. Check the date: the museum is normally closed on Mondays, and tours should be booked early."
       steps:
-        - "Arrive early at Audi Forum and allow margin for parking and check-in."
-        - "Explore museum mobile and, if booked, a factory or museum tour."
-        - "Drive to Munich, park at the hotel and keep the evening simple before leaving the next morning."
+        - "Leave the luggage in the hotel room and arrive early at Audi Forum."
+        - "Prioritise a pre-booked factory tour and allow generous time for Audi museum mobile."
+        - "Add lunch, current exhibitions, the Audi Shop and museum shop without time pressure."
+        - "Finish with the Old Town, the Danube or Klenzepark before a second night at the same hotel."
       sights:
         - title: "Audi museum mobile"
           location: "Audi Forum Ingolstadt"
-          text: "The main attraction covers Audi history, original cars and changing exhibitions inside the circular museum building."
+          text: "The main attraction covers Audi history, more than one hundred historic vehicles and changing exhibitions inside the circular museum building."
           url: "https://www.audi.de/audi-forum-ingolstadt/en/audi-museum-mobile/"
           link_label: "Opening hours and tickets"
-        - title: "Guided experiences"
+        - title: "Factory and museum tours"
           location: "Audi Forum Ingolstadt"
-          text: "Factory and museum tours need to be checked and booked early. Availability and language vary."
+          text: "Production and bodywork tours normally last 60–135 minutes. Book early; availability and language vary."
           url: "https://www.audi.de/audi-forum-ingolstadt/en/discovery-tours/"
-          link_label: "Audi experiences"
-        - title: "Munich on arrival"
-          location: "Evening"
-          text: "After check-in, stay near the hotel or take the U-Bahn for a simple dinner in the centre."
-          url: "https://www.munich.travel/en"
-          link_label: "Official city guide"
+          link_label: "Tours and booking"
+        - title: "The rest of Audi Forum"
+          location: "Exhibitions · shops · dining"
+          text: "Current vehicle and special exhibitions, the Audi Shop, museum shop and restaurants make it easy to spend the full day on site."
+          url: "https://www.audi.de/audi-forum-ingolstadt/en/visitor-service/"
+          link_label: "Plan the visit"
+        - title: "Old Town and Klenzepark"
+          location: "Danube · central Ingolstadt"
+          text: "Kreuztor, the Old Town, New Palace and a Danube walk through Klenzepark provide a good contrast to the Audi day."
+          url: "https://www.germany.travel/en/cities-culture/ingolstadt.html"
+          link_label: "Ingolstadt guide"
+        - title: "Bavarian Army Museum"
+          location: "New Palace"
+          text: "One of Europe's major military history museums occupies the Gothic New Palace and is a strong option for more history."
+          url: "https://museen-in-bayern.de/en/museums/museum-details/bayerisches-armeemuseum"
+          link_label: "Museum information"
+        - title: "German Museum of Medical History"
+          location: "Old Anatomy"
+          text: "A smaller and distinctive museum of European medical history, housed in a Baroque anatomy building with a medicinal garden."
+          url: "https://www.dmm-ingolstadt.de/"
+          link_label: "Official website"
 
   - number: 6
-    stop_index: 6
+    stop_index: 5
     tone: alpine
-    distance: "Ca. 250–290 km"
-    drive_no: "3,5–4,5 t ren · 5–7 t med Innsbruck"
-    drive_en: "3.5–4.5 hrs driving · 5–7 hrs with Innsbruck"
+    distance: "Ca. 330–370 km"
+    drive_no: "4,5–5,5 t ren · 6–8 t med Innsbruck"
+    drive_en: "4.5–5.5 hrs driving · 6–8 hrs with Innsbruck"
     image:
       url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Goldenes_Dachl_from_Innsbruck_2.jpg/1280px-Goldenes_Dachl_from_Innsbruck_2.jpg"
       credit: "Wilfredor"
       license: "CC0"
       source: "https://commons.wikimedia.org/wiki/File:Goldenes_Dachl_from_Innsbruck_2.jpg"
     routes:
-      - label_no: "München → Sölden"
-        label_en: "Munich → Sölden"
+      - label_no: "Ingolstadt → Sölden"
+        label_en: "Ingolstadt → Sölden"
         via_no: "Via et kort stopp i Innsbruck"
         via_en: "Via a short stop in Innsbruck"
-        url: "https://www.google.com/maps/dir/?api=1&origin=Munich%2C+Germany&destination=S%C3%B6lden%2C+Austria&travelmode=driving&avoid=ferries&waypoints=Innsbruck%2C+Austria"
+        url: "https://www.google.com/maps/dir/?api=1&origin=Ingolstadt%2C+Germany&destination=S%C3%B6lden%2C+Austria&travelmode=driving&avoid=ferries&waypoints=Innsbruck%2C+Austria"
     no:
       short_title: "Inn i Alpene"
       eyebrow: "Alpeetappe · Tyskland og Østerrike"
-      from: "München"
+      from: "Ingolstadt"
       to: "Sölden"
       status: "Sannsynlig hovedplan"
       day_type: "Kjøring og kort bystopp"
-      summary: "München byttes mot fjell. Innsbruck får et konsentrert lunsj- og ruslestopp før Ötztal leder inn til Sölden."
+      summary: "Etter to netter i Ingolstadt går turen direkte mot fjellene. Innsbruck får et konsentrert lunsj- og ruslestopp før Ötztal leder inn til Sölden."
       plan_title: "En bypause mellom autobahn og fjell"
       plan_intro: "Innsbruck er et stopp, ikke en ny overnatting. Én til to timer er nok til gamlebyen, Goldenes Dachl og en enkel lunsj."
       steps:
-        - "Kjør fra München etter frokost og følg hovedruten mot Innsbruck."
+        - "Kjør tidlig fra Ingolstadt og følg hovedruten sørover mot Innsbruck."
         - "Parker praktisk og bruk en kort runde gjennom Maria-Theresien-Straße og gamlebyen."
         - "Fortsett gjennom Ötztal til Sölden og sjekk neste dags Timmelsjoch-status på kvelden."
       sights:
@@ -587,15 +620,15 @@ days:
     en:
       short_title: "Into the Alps"
       eyebrow: "Alpine stage · Germany and Austria"
-      from: "Munich"
+      from: "Ingolstadt"
       to: "Sölden"
       status: "Probable main plan"
       day_type: "Driving and short city stop"
-      summary: "Munich gives way to mountains. Innsbruck gets a focused lunch-and-walk stop before the Ötztal road leads into Sölden."
+      summary: "After two nights in Ingolstadt, the route heads directly for the mountains. Innsbruck gets a focused lunch-and-walk stop before the Ötztal road leads into Sölden."
       plan_title: "A city pause between autobahn and mountains"
       plan_intro: "Innsbruck is a stop, not another overnight stay. One or two hours covers the Old Town, Golden Roof and a simple lunch."
       steps:
-        - "Leave Munich after breakfast and follow the main route towards Innsbruck."
+        - "Leave Ingolstadt early and follow the main route south towards Innsbruck."
         - "Park conveniently and take a short loop through Maria-Theresien-Strasse and the Old Town."
         - "Continue through Ötztal to Sölden and check the next day's Timmelsjoch status that evening."
       sights:
@@ -616,7 +649,7 @@ days:
           link_label: "Sölden"
 
   - number: 7
-    stop_index: 8
+    stop_index: 7
     tone: alpine
     distance: "Ca. 170–220 km"
     drive_no: "4–5 t ren · heldag med stopp"
@@ -694,7 +727,7 @@ days:
           link_label: "Val Gardena"
 
   - number: 8
-    stop_index: 9
+    stop_index: 8
     tone: alpine
     distance: "Ca. 280–320 km"
     drive_no: "5,5–6,5 t ren · 7–8 t med stopp"
@@ -782,7 +815,7 @@ days:
           link_label: "Visit Trentino"
 
   - number: 9
-    stop_index: 9
+    stop_index: 8
     tone: rest
     distance: "0–120 km · avhengig av base og båtvalg"
     drive_no: "Hviledag · bilen kan stå"
@@ -860,7 +893,7 @@ days:
           link_label: "Routes and timetables"
 
   - number: 10
-    stop_index: 10
+    stop_index: 9
     tone: coast
     distance: "Ca. 480–500 km"
     drive_no: "5–6 t ren · 6,5–7,5 t med pauser"
@@ -938,7 +971,7 @@ days:
           link_label: "Official guide"
 
   - number: 11
-    stop_index: 10
+    stop_index: 9
     tone: coast
     distance: "Ca. 110–160 km · valgt Corniche-kombinasjon"
     drive_no: "3–5 t kjøring · heldag med stopp"
@@ -1016,7 +1049,7 @@ days:
           link_label: "Visit Monaco"
 
   - number: 12
-    stop_index: 10
+    stop_index: 9
     tone: coast
     distance: "Ca. 40–70 km lokal rundtur"
     drive_no: "1–2 t fordelt gjennom dagen"
@@ -1094,7 +1127,7 @@ days:
           link_label: "Official guide"
 
   - number: 13
-    stop_index: 10
+    stop_index: 9
     tone: rest
     distance: "0–50 km · helt fleksibelt"
     drive_no: "Bufferdag · bilen kan stå"
@@ -1166,7 +1199,7 @@ days:
           link_label: "Practical visitor information"
 
   - number: 14
-    stop_index: 11
+    stop_index: 10
     tone: road
     distance: "Ca. 520–650 km · valgt sluttpunkt"
     drive_no: "6–8 t ren · 7,5–10 t med pauser"
@@ -1249,7 +1282,7 @@ days:
           link_label: "Andermatt Alpine passes"
 
   - number: 15
-    stop_index: 12
+    stop_index: 11
     tone: alpine
     distance: "Ca. 300–430 km · valgt passkombinasjon"
     drive_no: "7–10 t med stopp og fotopauser"
@@ -1337,7 +1370,7 @@ days:
           link_label: "Official Vaduz guide"
 
   - number: 16
-    stop_index: 13
+    stop_index: 12
     tone: road
     distance: "Ca. 500–560 km"
     drive_no: "5–6 t ren · 6,5–7,5 t med pauser"
@@ -1415,7 +1448,7 @@ days:
           link_label: "Official CarLoft information"
 
   - number: 17
-    stop_index: 14
+    stop_index: 13
     tone: road
     distance: "Ca. 440–470 km"
     drive_no: "4,5–5,5 t ren · 5,5–6,5 t med pauser"
@@ -1493,7 +1526,7 @@ days:
           link_label: "I amsterdam"
 
   - number: 18
-    stop_index: 14
+    stop_index: 13
     tone: city
     distance: "0 km planlagt med bil"
     drive_no: "Bilen står hele dagen"
@@ -1565,7 +1598,7 @@ days:
           link_label: "Official guide"
 
   - number: 19
-    stop_index: 15
+    stop_index: 14
     tone: road
     distance: "Ca. 650–750 km"
     drive_no: "6,5–7,5 t ren · 8–9 t med pauser"
@@ -1643,7 +1676,7 @@ days:
           link_label: "Official museum information"
 
   - number: 20
-    stop_index: 16
+    stop_index: 15
     tone: coast
     distance: "Ca. 750–850 km"
     drive_no: "8–9 t ren · 10–11 t med pauser"

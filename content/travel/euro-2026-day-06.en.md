@@ -1,5 +1,5 @@
 ---
-title: "Day 6 · Munich via Innsbruck to Sölden"
+title: "Day 6 · Ingolstadt via Innsbruck to Sölden"
 translationKey: "travel-euro-2026-day-06"
 type: "travel-day"
 day: 6
