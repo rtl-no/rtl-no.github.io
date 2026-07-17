@@ -66,6 +66,23 @@
           </div>
         </div>
       {{ end }}
+      {{ with $day.charging }}
+        <div class="shell travel-day-charging">
+          <header>
+            <div><small>Audi charging</small><strong>{{ if eq site.Language.Lang "no" }}Lademuligheter å vurdere{{ else }}Charging options to consider{{ end }}</strong></div>
+            <p>{{ if eq site.Language.Lang "no" }}Stoppene er koblet til riktig dag, men faktisk ladebehov, trafikk og batterinivå avgjør. Bekreft tilgjengelighet i myAudi før ankomst.{{ else }}Each stop is attached to the relevant day, but actual charging need, traffic and battery level decide. Confirm availability in myAudi before arrival.{{ end }}</p>
+          </header>
+          <div class="travel-day-charging-grid">
+            {{ range . }}
+              <article>
+                <div class="travel-day-charging-name"><small>{{ index . (printf "fit_%s" site.Language.Lang) }}</small><strong>{{ .name }}</strong></div>
+                <div class="travel-day-charging-copy"><small>{{ index . (printf "location_%s" site.Language.Lang) }}</small><p>{{ index . (printf "text_%s" site.Language.Lang) }}</p></div>
+                <a href="{{ .url }}" target="_blank" rel="noopener">{{ if eq site.Language.Lang "no" }}Audi-info{{ else }}Audi details{{ end }} <i aria-hidden="true">↗</i></a>
+              </article>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
     </section>
 
     <section class="travel-day-sights section">
