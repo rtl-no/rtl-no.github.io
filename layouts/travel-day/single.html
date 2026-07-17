@@ -23,7 +23,7 @@
 
     <section class="travel-day-overview">
       <div class="shell travel-day-overview-grid">
-        <div><small>{{ if eq site.Language.Lang "no" }}Status{{ else }}Status{{ end }}</small><strong>{{ $copy.status }}</strong></div>
+        <div><small>{{ if eq site.Language.Lang "no" }}Ukedag / status{{ else }}Weekday / status{{ end }}</small><strong>{{ index $day (printf "weekday_%s" site.Language.Lang) }} · {{ $copy.status }}</strong></div>
         <div><small>{{ if eq site.Language.Lang "no" }}Avstand{{ else }}Distance{{ end }}</small><strong>{{ $day.distance }}</strong></div>
         <div><small>{{ if eq site.Language.Lang "no" }}Kjøretid{{ else }}Drive time{{ end }}</small><strong>{{ index $day (printf "drive_%s" site.Language.Lang) }}</strong></div>
         <div><small>{{ if eq site.Language.Lang "no" }}Dagens type{{ else }}Day type{{ end }}</small><strong>{{ $copy.day_type }}</strong></div>
