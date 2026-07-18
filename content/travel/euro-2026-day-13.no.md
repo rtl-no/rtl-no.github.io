@@ -1,5 +1,5 @@
 ---
-title: "Dag 13 · Fra Antibes mot Sveits"
+title: "Dag 13 · Antibes til Lugano"
 translationKey: "travel-euro-2026-day-13"
 type: "travel-day"
 day: 13
