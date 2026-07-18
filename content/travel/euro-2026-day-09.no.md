@@ -1,5 +1,5 @@
 ---
-title: "Dag 9 · Gardasjøen og Sirmione"
+title: "Dag 9 · Fra Nord-Italia til Antibes"
 translationKey: "travel-euro-2026-day-09"
 type: "travel-day"
 day: 9

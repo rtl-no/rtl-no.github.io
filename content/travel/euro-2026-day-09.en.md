@@ -1,5 +1,5 @@
 ---
-title: "Day 9 · Lake Garda and Sirmione"
+title: "Day 9 · From Northern Italy to Antibes"
 translationKey: "travel-euro-2026-day-09"
 type: "travel-day"
 day: 9

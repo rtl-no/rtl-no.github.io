@@ -1,5 +1,5 @@
 ---
-title: "Dag 10 · Fra Nord-Italia til Antibes"
+title: "Dag 10 · Corniche-veiene, Èze og Monaco"
 translationKey: "travel-euro-2026-day-10"
 type: "travel-day"
 day: 10

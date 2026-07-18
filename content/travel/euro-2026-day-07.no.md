@@ -1,9 +1,9 @@
 ---
-title: "Dag 7 · Over Timmelsjoch til Dolomittene"
+title: "Dag 7 · Bolzano via Val Gardena til Verona eller Gardasjøen"
 translationKey: "travel-euro-2026-day-07"
 type: "travel-day"
 day: 7
 url: "/no/travel/euro-2026/dag-07/"
 hero_image: "images/travel-euro-2026-hero.webp"
-summary: "Detaljert plan og fremtidig reiselogg for dag 7 av Europaferien 2026."
+summary: "Lang Dolomittdag fra Bolzano via Val Gardena og Passo Gardena til Verona eller Gardasjøen."
 ---

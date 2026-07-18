@@ -1,5 +1,5 @@
 ---
-title: "Day 10 · From Northern Italy to Antibes"
+title: "Day 10 · The Corniche roads, Èze and Monaco"
 translationKey: "travel-euro-2026-day-10"
 type: "travel-day"
 day: 10

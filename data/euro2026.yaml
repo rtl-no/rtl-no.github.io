@@ -73,14 +73,17 @@ hotel_stays:
             url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 6
     destinations:
-      - label_no: "Sölden"
-        label_en: "Sölden"
-        query: "Sölden, Austria"
+      - label_no: "Bolzano"
+        label_en: "Bolzano"
+        query: "Bolzano, Italy"
   - day: 7
     destinations:
-      - label_no: "Selva di Val Gardena"
-        label_en: "Selva di Val Gardena"
-        query: "Selva di Val Gardena, Italy"
+      - label_no: "Verona"
+        label_en: "Verona"
+        query: "Verona, Italy"
+      - label_no: "Gardasjøen"
+        label_en: "Lake Garda"
+        query: "Lake Garda, Italy"
   - day: 8
     destinations:
       - label_no: "Verona"
@@ -91,12 +94,9 @@ hotel_stays:
         query: "Lake Garda, Italy"
   - day: 9
     destinations:
-      - label_no: "Verona"
-        label_en: "Verona"
-        query: "Verona, Italy"
-      - label_no: "Gardasjøen"
-        label_en: "Lake Garda"
-        query: "Lake Garda, Italy"
+      - label_no: "Antibes"
+        label_en: "Antibes"
+        query: "Antibes, France"
   - day: 10
     destinations:
       - label_no: "Antibes"
@@ -114,27 +114,27 @@ hotel_stays:
         query: "Antibes, France"
   - day: 13
     destinations:
-      - label_no: "Antibes"
-        label_en: "Antibes"
-        query: "Antibes, France"
-  - day: 14
-    destinations:
       - label_no: "Lugano"
         label_en: "Lugano"
         query: "Lugano, Switzerland"
       - label_no: "Andermatt"
         label_en: "Andermatt"
         query: "Andermatt, Switzerland"
-  - day: 15
+  - day: 14
     destinations:
       - label_no: "Vaduz"
         label_en: "Vaduz"
         query: "Vaduz, Liechtenstein"
-  - day: 16
+  - day: 15
     destinations:
       - label_no: "Frankfurt Airport"
         label_en: "Frankfurt Airport"
         query: "Frankfurt Airport, Germany"
+  - day: 16
+    destinations:
+      - label_no: "Amsterdam"
+        label_en: "Amsterdam"
+        query: "Amsterdam, Netherlands"
   - day: 17
     destinations:
       - label_no: "Amsterdam"
@@ -142,18 +142,13 @@ hotel_stays:
         query: "Amsterdam, Netherlands"
   - day: 18
     destinations:
-      - label_no: "Amsterdam"
-        label_en: "Amsterdam"
-        query: "Amsterdam, Netherlands"
-  - day: 19
-    destinations:
       - label_no: "Kolding"
         label_en: "Kolding"
         query: "Kolding, Denmark"
       - label_no: "Vejle"
         label_en: "Vejle"
         query: "Vejle, Denmark"
-  - day: 20
+  - day: 19
     destinations:
       - label_no: "Oslo"
         label_en: "Oslo"
@@ -656,24 +651,31 @@ days:
   - number: 6
     weekday_no: "Lørdag"
     weekday_en: "Saturday"
-    stop_index: 5
+    stop_index: 6
     tone: alpine
-    distance: "Ca. 330–370 km"
-    drive_no: "4,5–5,5 t ren · 6–8 t med Innsbruck"
-    drive_en: "4.5–5.5 hrs driving · 6–8 hrs with Innsbruck"
+    distance: "Ca. 460–520 km via Timmelsjoch"
+    drive_no: "7,5–9 t ren · 9–11 t med lading og stopp"
+    drive_en: "7.5–9 hrs driving · 9–11 hrs with charging and stops"
     image:
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Goldenes_Dachl_from_Innsbruck_2.jpg/1280px-Goldenes_Dachl_from_Innsbruck_2.jpg"
-      credit: "Wilfredor"
-      license: "CC0"
-      source: "https://commons.wikimedia.org/wiki/File:Goldenes_Dachl_from_Innsbruck_2.jpg"
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Timmelsjoch_-_Hochalpenstra%C3%9Fe_IMG_7446.jpg/1280px-Timmelsjoch_-_Hochalpenstra%C3%9Fe_IMG_7446.jpg"
+      credit: "Fischer.H"
+      license: "CC BY-SA 4.0"
+      source: "https://commons.wikimedia.org/wiki/File:Timmelsjoch_-_Hochalpenstra%C3%9Fe_IMG_7446.jpg"
     routes:
-      - label_no: "Ingolstadt → Sölden"
-        label_en: "Ingolstadt → Sölden"
-        via_no: "Via et kort stopp i Innsbruck"
-        via_en: "Via a short stop in Innsbruck"
-        url: "https://www.google.com/maps/dir/?api=1&origin=Ingolstadt%2C+Germany&destination=S%C3%B6lden%2C+Austria&travelmode=driving&avoid=ferries&waypoints=Innsbruck%2C+Austria"
-        abrp_waypoints: "Ingolstadt, Tyskland|Innsbruck, Østerrike|Sölden, Østerrike"
-        abrp_coords: "48.76654,11.42575|47.26921,11.40410|46.96902,11.01063"
+      - label_no: "Ingolstadt → Bolzano via Timmelsjoch"
+        label_en: "Ingolstadt → Bolzano via Timmelsjoch"
+        via_no: "Hovedrute via Innsbruck, Sölden, Timmelsjoch og Merano"
+        via_en: "Main route via Innsbruck, Sölden, Timmelsjoch and Merano"
+        url: "https://www.google.com/maps/dir/?api=1&origin=Ingolstadt%2C+Germany&destination=Bolzano%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Innsbruck%2C+Austria%7CS%C3%B6lden%2C+Austria%7CTimmelsjoch+Pass%2C+Austria%7CMerano%2C+Italy"
+        abrp_waypoints: "Ingolstadt, Tyskland|Innsbruck, Østerrike|Sölden, Østerrike|Timmelsjoch, Østerrike|Merano, Italia|Bolzano, Italia"
+        abrp_coords: "48.76654,11.42575|47.26921,11.40410|46.96902,11.01063|46.90510,11.09740|46.67129,11.15942|46.49830,11.35476"
+      - label_no: "Ingolstadt → Bolzano via Brenner"
+        label_en: "Ingolstadt → Bolzano via Brenner"
+        via_no: "Backup ved stengt pass, dårlig vær eller for lite tid"
+        via_en: "Backup for a closed pass, poor weather or insufficient time"
+        url: "https://www.google.com/maps/dir/?api=1&origin=Ingolstadt%2C+Germany&destination=Bolzano%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Innsbruck%2C+Austria%7CBrenner+Pass%2C+Italy"
+        abrp_waypoints: "Ingolstadt, Tyskland|Innsbruck, Østerrike|Brennerpasset, Italia|Bolzano, Italia"
+        abrp_coords: "48.76654,11.42575|47.26921,11.40410|47.00110,11.50690|46.49830,11.35476"
     charging:
       - name: "Audi charging hub Kiefersfelden"
         location_no: "A93 · siste avkjøring før Østerrike"
@@ -684,195 +686,123 @@ days:
         text_en: "Four charging points at up to 400 kW directly beside the main route towards Innsbruck. Bivak Bistro and the Dynafit experience centre are alongside."
         url: "https://www.audi.de/de/elektromobilitaet/laden/unterwegs/audi-charging-hub/kiefersfelden/"
     no:
-      short_title: "Inn i Alpene"
-      eyebrow: "Alpeetappe · Tyskland og Østerrike"
+      short_title: "Timmelsjoch til Bolzano"
+      eyebrow: "Lang fjellpassdag · Tyskland til Italia"
       from: "Ingolstadt"
-      to: "Sölden"
-      status: "Sannsynlig hovedplan"
-      day_type: "Kjøring og kort bystopp"
-      summary: "Etter to netter i Ingolstadt går turen direkte mot fjellene. Innsbruck får et konsentrert lunsj- og ruslestopp før Ötztal leder inn til Sölden."
-      plan_title: "En bypause mellom autobahn og fjell"
-      plan_intro: "Innsbruck er et stopp, ikke en ny overnatting. Én til to timer er nok til gamlebyen, Goldenes Dachl og en enkel lunsj."
+      to: "Bolzano"
+      status: "Hovedrute · vær- og tidsavhengig"
+      day_type: "Lang panoramisk kjøredag"
+      summary: "Sölden-natten er fjernet. En svært tidlig start gjør Timmelsjoch til hovedruten direkte fra Ingolstadt til Bolzano, mens Brenner ligger klar som raskere backup."
+      plan_title: "Timmelsjoch beholdes – Bolzano korter ned dagen"
+      plan_intro: "Dette blir turens lengste fjelldag, men Bolzano ligger tidligere enn Selva. Passet er normalt åpent 07–20 i sesongen; offisiell status, vær, trafikk og fremdrift avgjør om hovedruten er forsvarlig. Innsbruck blir gjennomkjøring, ikke bystopp."
       steps:
-        - "Kjør tidlig fra Ingolstadt og følg hovedruten sørover mot Innsbruck."
-        - "Parker praktisk og bruk en kort runde gjennom Maria-Theresien-Straße og gamlebyen."
-        - "Fortsett gjennom Ötztal til Sölden og sjekk neste dags Timmelsjoch-status på kvelden."
+        - "Forlat Ingolstadt svært tidlig, lad effektivt ved Kiefersfelden og kjør videre uten et lengre stopp i Innsbruck."
+        - "Bekreft Timmelsjoch-status før Ötztal. Velg Brenner straks dersom passet er stengt, været er dårlig eller tidsmarginen blir for liten."
+        - "På hovedruten fortsetter vi via Sölden, Timmelsjoch og Merano til hotell og middag i Bolzano."
       sights:
-        - title: "Maria-Theresien-Straße"
-          location: "Innsbruck sentrum"
-          text: "En effektiv inngang til byen med fjellutsikt, kafeer og kort vei videre til gamlebyen."
-          url: "https://www.innsbruck.info/en/sightseeing/highlights/innsbruck-in-minutes.html"
-          link_label: "Innsbruck på kort tid"
-        - title: "Goldenes Dachl"
-          location: "Innsbruck Altstadt"
-          text: "Det forgylte taket er byens mest kjente landemerke og passer perfekt i en kort, konsentrert spasertur."
-          url: "https://www.innsbruck.info/en/sightseeing/i/golden-roof.html"
-          link_label: "Offisiell informasjon"
-        - title: "Sölden"
-          location: "Ötztal · overnatting"
-          text: "Sölden er strategisk base for Timmelsjoch. Kvelden brukes til vær, veistatus, lading og en tidlig natt."
-          url: "https://www.soelden.com/en"
-          link_label: "Sölden"
+        - title: "Timmelsjoch Hochalpenstraße"
+          location: "2 509 moh. · dagens hovedopplevelse"
+          text: "Hårnåler, høyfjellslandskap og arkitektoniske stopp gjør passeringen til grunnen for å velge den lange ruten. Fotostoppene må likevel holdes fokuserte."
+          url: "https://www.timmelsjoch.com/en"
+          link_label: "Åpning og status"
+        - title: "Merano"
+          location: "Sør-Tyrol · kort pausekandidat"
+          text: "Det mildere landskapet markerer overgangen fra høyfjellet. Stopp bare dersom fremdriften mot Bolzano fortsatt er god."
+          url: "https://www.merano-suedtirol.it/en/merano.html"
+          link_label: "Offisiell guide"
+        - title: "Brenner-backup"
+          location: "Innsbruck → Brenner → Bolzano"
+          text: "Den kortere og mer forutsigbare ruten brukes ved stengt pass, dårlig vær, kø eller for sen fremdrift. Den sparer flere timer og ender på samme hotell i Bolzano."
+          url: "https://www.valgardena.it/en/holidays-dolomites/arrival/by-car/"
+          link_label: "Ruteinformasjon"
+        - title: "Bolzano"
+          location: "Sør-Tyrol · overnatting"
+          text: "Bolzano gir en enklere avslutning enn Selva etter den lange passdagen og en god start mot Val Gardena neste morgen."
+          url: "https://www.bolzano-bozen.it/en/"
+          link_label: "Bolzano"
     en:
-      short_title: "Into the Alps"
-      eyebrow: "Alpine stage · Germany and Austria"
+      short_title: "Timmelsjoch to Bolzano"
+      eyebrow: "Long mountain-pass day · Germany to Italy"
       from: "Ingolstadt"
-      to: "Sölden"
-      status: "Probable main plan"
-      day_type: "Driving and short city stop"
-      summary: "After two nights in Ingolstadt, the route heads directly for the mountains. Innsbruck gets a focused lunch-and-walk stop before the Ötztal road leads into Sölden."
-      plan_title: "A city pause between autobahn and mountains"
-      plan_intro: "Innsbruck is a stop, not another overnight stay. One or two hours covers the Old Town, Golden Roof and a simple lunch."
+      to: "Bolzano"
+      status: "Main route · weather- and time-dependent"
+      day_type: "Long panoramic driving day"
+      summary: "The Sölden night is removed. A very early start keeps Timmelsjoch as the main route directly from Ingolstadt to Bolzano, with Brenner ready as the faster fallback."
+      plan_title: "Keep Timmelsjoch – shorten the day at Bolzano"
+      plan_intro: "This becomes the trip's longest mountain day, but Bolzano finishes earlier than Selva. The pass normally operates from 07:00 to 20:00 in season; official status, weather, traffic and progress decide whether the main route remains sensible. Innsbruck becomes a drive-through rather than a city stop."
       steps:
-        - "Leave Ingolstadt early and follow the main route south towards Innsbruck."
-        - "Park conveniently and take a short loop through Maria-Theresien-Strasse and the Old Town."
-        - "Continue through Ötztal to Sölden and check the next day's Timmelsjoch status that evening."
+        - "Leave Ingolstadt very early, charge efficiently at Kiefersfelden and continue without a substantial Innsbruck stop."
+        - "Confirm the Timmelsjoch status before entering Ötztal. Choose Brenner immediately if the pass is closed, the weather is poor or the time margin becomes too small."
+        - "On the main route, continue through Sölden, Timmelsjoch and Merano to the hotel and dinner in Bolzano."
       sights:
-        - title: "Maria-Theresien-Strasse"
-          location: "Central Innsbruck"
-          text: "An efficient introduction to the city, with mountain views, cafés and a short walk into the Old Town."
-          url: "https://www.innsbruck.info/en/sightseeing/highlights/innsbruck-in-minutes.html"
-          link_label: "Innsbruck in a short visit"
-        - title: "Golden Roof"
-          location: "Innsbruck Old Town"
-          text: "The gilded roof is the city's best-known landmark and fits perfectly into a short, concentrated walk."
-          url: "https://www.innsbruck.info/en/sightseeing/i/golden-roof.html"
-          link_label: "Official information"
-        - title: "Sölden"
-          location: "Ötztal · overnight"
-          text: "Sölden is the strategic base for Timmelsjoch. The evening is for weather, road status, charging and an early night."
-          url: "https://www.soelden.com/en"
-          link_label: "Sölden"
+        - title: "Timmelsjoch High Alpine Road"
+          location: "2,509 m · the day's main experience"
+          text: "Hairpins, high-Alpine scenery and architectural stops make the crossing the reason to choose the long route. Photo stops still need to remain focused."
+          url: "https://www.timmelsjoch.com/en"
+          link_label: "Opening and status"
+        - title: "Merano"
+          location: "South Tyrol · short break candidate"
+          text: "The milder landscape marks the transition from the high mountains. Stop only if progress towards Bolzano remains good."
+          url: "https://www.merano-suedtirol.it/en/merano.html"
+          link_label: "Official guide"
+        - title: "Brenner fallback"
+          location: "Innsbruck → Brenner → Bolzano"
+          text: "Use the shorter, more predictable route if the pass is closed, weather is poor, traffic is heavy or progress is too slow. It saves several hours and ends at the same hotel in Bolzano."
+          url: "https://www.valgardena.it/en/holidays-dolomites/arrival/by-car/"
+          link_label: "Route information"
+        - title: "Bolzano"
+          location: "South Tyrol · overnight"
+          text: "Bolzano provides an easier finish than Selva after the long pass day and a good start towards Val Gardena the following morning."
+          url: "https://www.bolzano-bozen.it/en/"
+          link_label: "Bolzano"
 
   - number: 7
     weekday_no: "Søndag"
     weekday_en: "Sunday"
-    stop_index: 7
-    tone: alpine
-    distance: "Ca. 170–220 km"
-    drive_no: "4–5 t ren · heldag med stopp"
-    drive_en: "4–5 hrs driving · a full day with stops"
-    image:
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Timmelsjoch_-_Hochalpenstra%C3%9Fe_IMG_7446.jpg/1280px-Timmelsjoch_-_Hochalpenstra%C3%9Fe_IMG_7446.jpg"
-      credit: "Fischer.H"
-      license: "CC BY-SA 4.0"
-      source: "https://commons.wikimedia.org/wiki/File:Timmelsjoch_-_Hochalpenstra%C3%9Fe_IMG_7446.jpg"
-    routes:
-      - label_no: "Sölden → Selva"
-        label_en: "Sölden → Selva"
-        via_no: "Via Timmelsjoch, Merano og Bolzano"
-        via_en: "Via Timmelsjoch, Merano and Bolzano"
-        url: "https://www.google.com/maps/dir/?api=1&origin=S%C3%B6lden%2C+Austria&destination=Selva+di+Val+Gardena%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Timmelsjoch+Pass%2C+Austria%7CMerano%2C+Italy%7CBolzano%2C+Italy"
-        abrp_waypoints: "Sölden, Østerrike|Timmelsjoch, Østerrike|Merano, Italia|Bolzano, Italia|Selva di Val Gardena, Italia"
-        abrp_coords: "46.96902,11.01063|46.90510,11.09740|46.67129,11.15942|46.49830,11.35476|46.55653,11.76060"
-    no:
-      short_title: "Over Timmelsjoch"
-      eyebrow: "Fjellpass · Østerrike til Italia"
-      from: "Sölden"
-      to: "Selva di Val Gardena"
-      status: "Fast mål · væravhengig"
-      day_type: "Panoramisk fjelldag"
-      summary: "Timmelsjoch blir turens første store pass og en dramatisk overgang til Sør-Tyrol, Merano, Bolzano og Dolomittene."
-      plan_title: "Dagen der veien er opplevelsen"
-      plan_intro: "Timmelsjoch er sesongåpent og kan stenge på kort varsel. Backup via Brenner må ligge klar, men hovedplanen gir dagen god tid."
-      steps:
-        - "Sjekk offisiell åpning, vær og tidsvindu før avreise fra Sölden."
-        - "Kjør passet rolig med fotostopp ved utsiktspunktene og overgangsmuseene."
-        - "Fortsett via Merano og Bolzano til Selva; ikke press inn ekstra avstikkere sent på dagen."
-      sights:
-        - title: "Timmelsjoch Hochalpenstraße"
-          location: "2 509 moh. · grensepass"
-          text: "Hårnåler, høyfjellslandskap og arkitektoniske stopp gjør selve passeringen til dagens hovedopplevelse."
-          url: "https://www.timmelsjoch.com/en"
-          link_label: "Åpning og status"
-        - title: "Merano"
-          location: "Sør-Tyrol · pausekandidat"
-          text: "Et mildere landskap med palmer og historisk sentrum gir en tydelig kontrast etter høyfjellet."
-          url: "https://www.merano-suedtirol.it/en/merano.html"
-          link_label: "Offisiell guide"
-        - title: "Selva di Val Gardena"
-          location: "Dolomittene · overnatting"
-          text: "Ankomst før mørket gir tid til å se fjellene og forberede Passo Gardena neste morgen."
-          url: "https://www.valgardena.it/en/"
-          link_label: "Val Gardena"
-    en:
-      short_title: "Across Timmelsjoch"
-      eyebrow: "Mountain pass · Austria to Italy"
-      from: "Sölden"
-      to: "Selva di Val Gardena"
-      status: "Fixed goal · weather-dependent"
-      day_type: "Panoramic mountain day"
-      summary: "Timmelsjoch becomes the first major pass of the trip and a dramatic transition into South Tyrol, Merano, Bolzano and the Dolomites."
-      plan_title: "The day when the road is the experience"
-      plan_intro: "Timmelsjoch is seasonal and can close at short notice. A Brenner fallback must be ready, while the main plan leaves generous time."
-      steps:
-        - "Check the official opening status, weather and operating window before leaving Sölden."
-        - "Drive the pass calmly with photo stops at the viewpoints and architectural stations."
-        - "Continue through Merano and Bolzano to Selva; avoid adding late detours."
-      sights:
-        - title: "Timmelsjoch High Alpine Road"
-          location: "2,509 m · border pass"
-          text: "Hairpins, high-Alpine scenery and architectural stops turn the crossing itself into the day's main experience."
-          url: "https://www.timmelsjoch.com/en"
-          link_label: "Opening and status"
-        - title: "Merano"
-          location: "South Tyrol · break candidate"
-          text: "A milder landscape with palms and a historic centre creates a clear contrast after the high mountains."
-          url: "https://www.merano-suedtirol.it/en/merano.html"
-          link_label: "Official guide"
-        - title: "Selva di Val Gardena"
-          location: "Dolomites · overnight"
-          text: "Arriving before dark gives time to see the mountains and prepare for Passo Gardena next morning."
-          url: "https://www.valgardena.it/en/"
-          link_label: "Val Gardena"
-
-  - number: 8
-    weekday_no: "Mandag"
-    weekday_en: "Monday"
     stop_index: 8
     tone: alpine
-    distance: "Ca. 280–320 km"
-    drive_no: "5,5–6,5 t ren · 7–8 t med stopp"
-    drive_en: "5.5–6.5 hrs driving · 7–8 hrs with stops"
+    distance: "Ca. 320–370 km"
+    drive_no: "6–7 t ren · 8–9 t med Val Gardena og stopp"
+    drive_en: "6–7 hrs driving · 8–9 hrs with Val Gardena and stops"
     image:
       url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Frea_pass_Sella_group_Pisciadu_Dolomites_South_Tyrol.jpg/1280px-Frea_pass_Sella_group_Pisciadu_Dolomites_South_Tyrol.jpg"
       credit: "Wolfgang Moroder"
       license: "CC BY-SA 3.0"
       source: "https://commons.wikimedia.org/wiki/File:Frea_pass_Sella_group_Pisciadu_Dolomites_South_Tyrol.jpg"
     routes:
-      - label_no: "Selva → Verona"
-        label_en: "Selva → Verona"
-        via_no: "Via Passo Gardena, Arabba og Trento"
-        via_en: "Via Passo Gardena, Arabba and Trento"
-        url: "https://www.google.com/maps/dir/?api=1&origin=Selva+di+Val+Gardena%2C+Italy&destination=Verona%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Passo+Gardena%2C+Italy%7CArabba%2C+Italy%7CTrento%2C+Italy"
-        abrp_waypoints: "Selva di Val Gardena, Italia|Passo Gardena, Italia|Arabba, Italia|Trento, Italia|Verona, Italia"
-        abrp_coords: "46.55653,11.76060|46.54970,11.80880|46.49869,11.87465|46.07478,11.12175|45.43838,10.99162"
-      - label_no: "Selva → Desenzano"
-        label_en: "Selva → Desenzano"
-        via_no: "Gardasjø-alternativ via Arabba og Trento"
-        via_en: "Lake Garda alternative via Arabba and Trento"
-        url: "https://www.google.com/maps/dir/?api=1&origin=Selva+di+Val+Gardena%2C+Italy&destination=Desenzano+del+Garda%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Passo+Gardena%2C+Italy%7CArabba%2C+Italy%7CTrento%2C+Italy"
-        abrp_waypoints: "Selva di Val Gardena, Italia|Passo Gardena, Italia|Arabba, Italia|Trento, Italia|Desenzano del Garda, Italia"
-        abrp_coords: "46.55653,11.76060|46.54970,11.80880|46.49869,11.87465|46.07478,11.12175|45.47134,10.53559"
-      - label_no: "Selva → Salò"
-        label_en: "Selva → Salò"
-        via_no: "Gardasjø-alternativ via Arabba og Trento"
-        via_en: "Lake Garda alternative via Arabba and Trento"
-        url: "https://www.google.com/maps/dir/?api=1&origin=Selva+di+Val+Gardena%2C+Italy&destination=Salo%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Passo+Gardena%2C+Italy%7CArabba%2C+Italy%7CTrento%2C+Italy"
-        abrp_waypoints: "Selva di Val Gardena, Italia|Passo Gardena, Italia|Arabba, Italia|Trento, Italia|Salò, Italia"
-        abrp_coords: "46.55653,11.76060|46.54970,11.80880|46.49869,11.87465|46.07478,11.12175|45.60685,10.52107"
+      - label_no: "Bolzano → Verona via Val Gardena"
+        label_en: "Bolzano → Verona via Val Gardena"
+        via_no: "Via Selva, Passo Gardena, Arabba og Trento"
+        via_en: "Via Selva, Passo Gardena, Arabba and Trento"
+        url: "https://www.google.com/maps/dir/?api=1&origin=Bolzano%2C+Italy&destination=Verona%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Selva+di+Val+Gardena%2C+Italy%7CPasso+Gardena%2C+Italy%7CArabba%2C+Italy%7CTrento%2C+Italy"
+        abrp_waypoints: "Bolzano, Italia|Selva di Val Gardena, Italia|Passo Gardena, Italia|Arabba, Italia|Trento, Italia|Verona, Italia"
+        abrp_coords: "46.49830,11.35476|46.55653,11.76060|46.54970,11.80880|46.49869,11.87465|46.07478,11.12175|45.43838,10.99162"
+      - label_no: "Bolzano → Desenzano via Val Gardena"
+        label_en: "Bolzano → Desenzano via Val Gardena"
+        via_no: "Gardasjø-alternativ via Selva, Passo Gardena, Arabba og Trento"
+        via_en: "Lake Garda alternative via Selva, Passo Gardena, Arabba and Trento"
+        url: "https://www.google.com/maps/dir/?api=1&origin=Bolzano%2C+Italy&destination=Desenzano+del+Garda%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Selva+di+Val+Gardena%2C+Italy%7CPasso+Gardena%2C+Italy%7CArabba%2C+Italy%7CTrento%2C+Italy"
+        abrp_waypoints: "Bolzano, Italia|Selva di Val Gardena, Italia|Passo Gardena, Italia|Arabba, Italia|Trento, Italia|Desenzano del Garda, Italia"
+        abrp_coords: "46.49830,11.35476|46.55653,11.76060|46.54970,11.80880|46.49869,11.87465|46.07478,11.12175|45.47134,10.53559"
+      - label_no: "Bolzano → Salò via Val Gardena"
+        label_en: "Bolzano → Salò via Val Gardena"
+        via_no: "Gardasjø-alternativ via Selva, Passo Gardena, Arabba og Trento"
+        via_en: "Lake Garda alternative via Selva, Passo Gardena, Arabba and Trento"
+        url: "https://www.google.com/maps/dir/?api=1&origin=Bolzano%2C+Italy&destination=Salo%2C+Italy&travelmode=driving&avoid=ferries&waypoints=Selva+di+Val+Gardena%2C+Italy%7CPasso+Gardena%2C+Italy%7CArabba%2C+Italy%7CTrento%2C+Italy"
+        abrp_waypoints: "Bolzano, Italia|Selva di Val Gardena, Italia|Passo Gardena, Italia|Arabba, Italia|Trento, Italia|Salò, Italia"
+        abrp_coords: "46.49830,11.35476|46.55653,11.76060|46.54970,11.80880|46.49869,11.87465|46.07478,11.12175|45.60685,10.52107"
     no:
-      short_title: "Dolomittmorgen"
-      eyebrow: "Fjellpass · Dolomittene til Gardasjøen"
-      from: "Selva di Val Gardena"
+      short_title: "Val Gardena til Gardasjøen"
+      eyebrow: "Lang Dolomittdag · Bolzano til Gardasjøen"
+      from: "Bolzano"
       to: "Verona / Gardasjøen"
       status: "Fast korridor · åpen base"
       day_type: "Panoramisk kjøredag"
-      summary: "Passo Gardena, Corvara og Arabba gir en siste stor Dolomittopplevelse før ruten synker mot Trento og to netter ved Verona eller Gardasjøen."
-      plan_title: "Tidlig over passene, rolig inn til basen"
-      plan_intro: "Morgenen er laget for fjellveiene. Verona, Desenzano eller Salò velges før booking, men alle alternativene beholder samme første del av dagen."
+      summary: "Fra Bolzano går turen opp gjennom Val Gardena til Selva, Passo Gardena, Corvara og Arabba før ruten synker mot Trento og to netter ved Verona eller Gardasjøen."
+      plan_title: "Val Gardena blir opplevelse, ikke overnatting"
+      plan_intro: "Bolzano legger omtrent 40 km foran oss før Selva, men turen til Gardasjøen er fortsatt overkommelig. Verona, Desenzano eller Salò velges før booking; alle alternativene beholder den samme Dolomitt-runden."
       steps:
-        - "Start tidlig fra Selva for roligere trafikk over Passo Gardena."
+        - "Start tidlig fra Bolzano og følg SS242 gjennom Ortisei og Val Gardena til Selva."
         - "Følg Corvara, Passo Campolongo, Arabba og Canazei uten å gjøre hvert stopp langt."
         - "Ta hovedkorridoren via Trento til den valgte basen og parker for to netter."
       sights:
@@ -892,17 +822,17 @@ days:
           url: "https://www.visittrentino.info/en/articles/art-and-culture/discovering-trento"
           link_label: "Visit Trentino"
     en:
-      short_title: "Dolomites morning"
-      eyebrow: "Mountain passes · Dolomites to Lake Garda"
-      from: "Selva di Val Gardena"
+      short_title: "Val Gardena to Lake Garda"
+      eyebrow: "Long Dolomites day · Bolzano to Lake Garda"
+      from: "Bolzano"
       to: "Verona / Lake Garda"
       status: "Fixed corridor · open base"
       day_type: "Panoramic driving day"
-      summary: "Passo Gardena, Corvara and Arabba deliver a final major Dolomites experience before the route descends towards Trento and two nights around Verona or Lake Garda."
-      plan_title: "Early over the passes, calm into the base"
-      plan_intro: "The morning is designed around mountain roads. Verona, Desenzano or Salò will be chosen before booking, while all options share the same first half."
+      summary: "From Bolzano, the route climbs through Val Gardena to Selva, Passo Gardena, Corvara and Arabba before descending towards Trento and two nights around Verona or Lake Garda."
+      plan_title: "Make Val Gardena the experience, not the overnight"
+      plan_intro: "Bolzano adds roughly 40 km before Selva, but the journey to Lake Garda remains manageable. Verona, Desenzano or Salò will be chosen before booking; every option keeps the same Dolomites loop."
       steps:
-        - "Leave Selva early for quieter traffic over Passo Gardena."
+        - "Leave Bolzano early and follow the SS242 through Ortisei and Val Gardena to Selva."
         - "Follow Corvara, Passo Campolongo, Arabba and Canazei without turning every stop into a long visit."
         - "Use the main corridor through Trento to the chosen base and park for two nights."
       sights:
@@ -922,9 +852,9 @@ days:
           url: "https://www.visittrentino.info/en/articles/art-and-culture/discovering-trento"
           link_label: "Visit Trentino"
 
-  - number: 9
-    weekday_no: "Tirsdag"
-    weekday_en: "Tuesday"
+  - number: 8
+    weekday_no: "Mandag"
+    weekday_en: "Monday"
     stop_index: 8
     tone: rest
     distance: "0–120 km · avhengig av base og båtvalg"
@@ -950,7 +880,7 @@ days:
       to: "Samme base"
       status: "Fleksibel hviledag"
       day_type: "Båt, by eller innsjø"
-      summary: "Dag ti senker tempoet. Sirmione er hovedkandidaten, helst med rutebåt fra Salò eller Desenzano dersom rutetidene passer."
+      summary: "Dag åtte senker tempoet. Sirmione er hovedkandidaten, helst med rutebåt fra Salò eller Desenzano dersom rutetidene passer."
       plan_title: "La base og vær bestemme dagen"
       plan_intro: "Bor vi i Verona, blir dette en bydag. Bor vi ved sjøen, prioriteres Sirmione, båttur og tid uten bil."
       steps:
@@ -980,7 +910,7 @@ days:
       to: "Same base"
       status: "Flexible rest day"
       day_type: "Boat, city or lakeside"
-      summary: "Day ten slows the pace. Sirmione is the main candidate, preferably by scheduled boat from Salò or Desenzano when the timetable works."
+      summary: "Day eight slows the pace. Sirmione is the main candidate, preferably by scheduled boat from Salò or Desenzano when the timetable works."
       plan_title: "Let the base and weather shape the day"
       plan_intro: "If based in Verona, this becomes a city day. If based by the lake, prioritise Sirmione, a boat journey and time without the car."
       steps:
@@ -1004,9 +934,9 @@ days:
           url: "https://www.navigazionelaghi.it/"
           link_label: "Routes and timetables"
 
-  - number: 10
-    weekday_no: "Onsdag"
-    weekday_en: "Wednesday"
+  - number: 9
+    weekday_no: "Tirsdag"
+    weekday_en: "Tuesday"
     stop_index: 9
     tone: coast
     distance: "Ca. 480–500 km"
@@ -1086,9 +1016,9 @@ days:
           url: "https://www.antibesjuanlespins.com/en/discover/the-must-sees/antibes-the-city-with-rampart-walls"
           link_label: "Official guide"
 
-  - number: 11
-    weekday_no: "Torsdag"
-    weekday_en: "Thursday"
+  - number: 10
+    weekday_no: "Onsdag"
+    weekday_en: "Wednesday"
     stop_index: 9
     tone: coast
     distance: "Ca. 110–160 km · valgt Corniche-kombinasjon"
@@ -1168,9 +1098,9 @@ days:
           url: "https://www.visitmonaco.com/en"
           link_label: "Visit Monaco"
 
-  - number: 12
-    weekday_no: "Fredag"
-    weekday_en: "Friday"
+  - number: 11
+    weekday_no: "Torsdag"
+    weekday_en: "Thursday"
     stop_index: 9
     tone: coast
     distance: "Ca. 40–70 km lokal rundtur"
@@ -1250,9 +1180,9 @@ days:
           url: "https://www.antibesjuanlespins.com/en/visit-antibes-in/visit-antibes-juan-les-pins-in-1-day"
           link_label: "Official guide"
 
-  - number: 13
-    weekday_no: "Lørdag"
-    weekday_en: "Saturday"
+  - number: 12
+    weekday_no: "Fredag"
+    weekday_en: "Friday"
     stop_index: 9
     tone: rest
     distance: "0–50 km · helt fleksibelt"
@@ -1274,7 +1204,7 @@ days:
       plan_title: "En bevisst åpen dag"
       plan_intro: "Ingen må-se-liste. Dagen brukes der Riviera-oppholdet trenger mer tid, eller som tidlig overgang nordover."
       steps:
-        - "Vurder energinivå, vær og hvordan dag 11–12 faktisk ble."
+        - "Vurder energinivå, vær og hvordan dag 10–11 faktisk ble."
         - "Velg lokal Antibes-dag, strand, Nice med tog eller tidlig avreise."
         - "Hvis dagen beholdes: klargjør bil og neste etappes variant på kvelden."
       sights:
@@ -1324,9 +1254,9 @@ days:
           url: "https://www.antibesjuanlespins.com/en/"
           link_label: "Practical visitor information"
 
-  - number: 14
-    weekday_no: "Søndag"
-    weekday_en: "Sunday"
+  - number: 13
+    weekday_no: "Lørdag"
+    weekday_en: "Saturday"
     stop_index: 10
     tone: road
     distance: "Ca. 520–650 km · valgt sluttpunkt"
@@ -1361,7 +1291,7 @@ days:
       day_type: "Lang overgangsdag"
       summary: "Ruten vender nordøst via Torino og Milano. Lugano gir en roligere avslutning; Andermatt gir best posisjon for passdagen."
       plan_title: "Bestem ambisjonen før Milano"
-      plan_intro: "Valget påvirker både dag femten og seksten. Vær, passåpninger, trafikk og energinivå avgjør hvor langt vi kjører."
+      plan_intro: "Valget påvirker både dag fjorten og femten. Vær, passåpninger, trafikk og energinivå avgjør hvor langt vi kjører."
       steps:
         - "Start tidlig fra Antibes og bruk Torino-korridoren som første lange delmål."
         - "Ta beslutningen Lugano eller Andermatt senest før Milano/Como."
@@ -1391,7 +1321,7 @@ days:
       day_type: "Long transition day"
       summary: "The route turns north-east through Turin and Milan. Lugano creates a gentler finish; Andermatt gives the best position for the pass day."
       plan_title: "Decide the ambition before Milan"
-      plan_intro: "The choice affects both days fifteen and sixteen. Weather, pass openings, traffic and energy decide how far the car goes."
+      plan_intro: "The choice affects both days fourteen and fifteen. Weather, pass openings, traffic and energy decide how far the car goes."
       steps:
         - "Leave Antibes early and use the Turin corridor as the first major target."
         - "Make the Lugano or Andermatt decision no later than Milan/Como."
@@ -1413,9 +1343,9 @@ days:
           url: "https://www.andermatt-sedrun-disentis.ch/andermatt/en/pages/alpine-passes"
           link_label: "Andermatt Alpine passes"
 
-  - number: 15
-    weekday_no: "Mandag"
-    weekday_en: "Monday"
+  - number: 14
+    weekday_no: "Søndag"
+    weekday_en: "Sunday"
     stop_index: 11
     tone: alpine
     distance: "Ca. 300–430 km · valgt passkombinasjon"
@@ -1509,9 +1439,9 @@ days:
           url: "https://en.tourismus.li/entdecken/ganzjaehrig/uebersicht/kulturzentrum-vaduz/sehenswuerdigkeiten-in-vaduz.html"
           link_label: "Official Vaduz guide"
 
-  - number: 16
-    weekday_no: "Tirsdag"
-    weekday_en: "Tuesday"
+  - number: 15
+    weekday_no: "Mandag"
+    weekday_en: "Monday"
     stop_index: 12
     tone: road
     distance: "Ca. 500–560 km"
@@ -1600,9 +1530,9 @@ days:
           url: "https://www.bmine.de/en/hotel-Frankfurt/carloft"
           link_label: "Official CarLoft information"
 
-  - number: 17
-    weekday_no: "Onsdag"
-    weekday_en: "Wednesday"
+  - number: 16
+    weekday_no: "Tirsdag"
+    weekday_en: "Tuesday"
     stop_index: 13
     tone: road
     distance: "Ca. 440–470 km"
@@ -1634,7 +1564,7 @@ days:
       steps:
         - "Forlat Frankfurt etter en rolig CarLoft-morgen og kjør mot Köln."
         - "Ta et konsentrert stopp ved Rhinen og domkirken, eller hold pausen utenfor sentrum ved kø."
-        - "Kjør via Arnhem, parker ved hotellet i Amsterdam og la bilen stå til dag tjue."
+        - "Kjør via Arnhem, parker ved hotellet i Amsterdam og la bilen stå til dag atten."
       sights:
         - title: "Kölnerdomen og Rhinen"
           location: "Köln · hovedstopp"
@@ -1664,7 +1594,7 @@ days:
       steps:
         - "Leave Frankfurt after a calm CarLoft morning and drive towards Cologne."
         - "Take a focused stop by the Rhine and cathedral, or keep the break outside the centre if traffic is poor."
-        - "Continue through Arnhem, park at the Amsterdam hotel and leave the car until day twenty."
+        - "Continue through Arnhem, park at the Amsterdam hotel and leave the car until day eighteen."
       sights:
         - title: "Cologne Cathedral and Rhine"
           location: "Cologne · main stop"
@@ -1682,9 +1612,9 @@ days:
           url: "https://www.iamsterdam.com/en"
           link_label: "I amsterdam"
 
-  - number: 18
-    weekday_no: "Torsdag"
-    weekday_en: "Thursday"
+  - number: 17
+    weekday_no: "Onsdag"
+    weekday_en: "Wednesday"
     stop_index: 13
     tone: city
     distance: "0 km planlagt med bil"
@@ -1756,9 +1686,9 @@ days:
           url: "https://www.iamsterdam.com/en/see-and-do/things-to-do/canal-cruising"
           link_label: "Official guide"
 
-  - number: 19
-    weekday_no: "Fredag"
-    weekday_en: "Friday"
+  - number: 18
+    weekday_no: "Torsdag"
+    weekday_en: "Thursday"
     stop_index: 14
     tone: road
     distance: "Ca. 650–750 km"
@@ -1847,9 +1777,9 @@ days:
           url: "https://www.kongernessamling.dk/en/koldinghus/"
           link_label: "Official museum information"
 
-  - number: 20
-    weekday_no: "Lørdag"
-    weekday_en: "Saturday"
+  - number: 19
+    weekday_no: "Fredag"
+    weekday_en: "Friday"
     stop_index: 15
     tone: coast
     distance: "Ca. 750–850 km"

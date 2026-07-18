@@ -1,5 +1,5 @@
 ---
-title: "Day 13 · A flexible day in Antibes"
+title: "Day 13 · From Antibes towards Switzerland"
 translationKey: "travel-euro-2026-day-13"
 type: "travel-day"
 day: 13

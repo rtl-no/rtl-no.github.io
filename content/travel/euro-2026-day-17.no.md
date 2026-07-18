@@ -1,5 +1,5 @@
 ---
-title: "Dag 17 · Frankfurt til Amsterdam"
+title: "Dag 17 · En hel dag i Amsterdam"
 translationKey: "travel-euro-2026-day-17"
 type: "travel-day"
 day: 17

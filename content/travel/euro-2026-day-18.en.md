@@ -1,5 +1,5 @@
 ---
-title: "Day 18 · A full day in Amsterdam"
+title: "Day 18 · Amsterdam to Kolding"
 translationKey: "travel-euro-2026-day-18"
 type: "travel-day"
 day: 18

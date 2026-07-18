@@ -1,5 +1,5 @@
 ---
-title: "Dag 14 · Fra Antibes mot Sveits"
+title: "Dag 14 · Furka, Grimsel og Vaduz"
 translationKey: "travel-euro-2026-day-14"
 type: "travel-day"
 day: 14

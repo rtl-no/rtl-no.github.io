@@ -1,5 +1,5 @@
 ---
-title: "Dag 8 · Passo Gardena til Verona eller Gardasjøen"
+title: "Dag 8 · Gardasjøen og Sirmione"
 translationKey: "travel-euro-2026-day-08"
 type: "travel-day"
 day: 8

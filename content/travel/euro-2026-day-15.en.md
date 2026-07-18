@@ -1,5 +1,5 @@
 ---
-title: "Day 15 · Furka, Grimsel and Vaduz"
+title: "Day 15 · Vaduz to the Frankfurt CarLoft"
 translationKey: "travel-euro-2026-day-15"
 type: "travel-day"
 day: 15

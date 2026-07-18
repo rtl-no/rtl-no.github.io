@@ -1,5 +1,5 @@
 ---
-title: "Day 12 · Cannes and Juan-les-Pins"
+title: "Day 12 · A flexible day in Antibes"
 translationKey: "travel-euro-2026-day-12"
 type: "travel-day"
 day: 12

@@ -1,5 +1,5 @@
 ---
-title: "Day 11 · The Corniche roads, Èze and Monaco"
+title: "Day 11 · Cannes and Juan-les-Pins"
 translationKey: "travel-euro-2026-day-11"
 type: "travel-day"
 day: 11

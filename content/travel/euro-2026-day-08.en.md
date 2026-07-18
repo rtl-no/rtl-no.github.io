@@ -1,5 +1,5 @@
 ---
-title: "Day 8 · Passo Gardena to Verona or Lake Garda"
+title: "Day 8 · Lake Garda and Sirmione"
 translationKey: "travel-euro-2026-day-08"
 type: "travel-day"
 day: 8
