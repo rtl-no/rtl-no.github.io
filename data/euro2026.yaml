@@ -1,5 +1,14 @@
+trip:
+  start_date: "2026-07-20"
+  rooms: 1
+  adults: 2
+  children: 1
+  child_ages: [14]
+
 hotel_stays:
   - day: 1
+    checkin: "2026-07-20"
+    checkout: "2026-07-21"
     destinations:
       - label_no: "Odense"
         label_en: "Odense"
@@ -12,6 +21,8 @@ hotel_stays:
             note_en: "Looks like a very practical choice after the long drive, with a large hotel car park and easy access just off the E20."
             url: "https://www.bestwestern.dk/hoteller/best-western-plus-hotel-odense-96106"
   - day: 2
+    checkin: "2026-07-21"
+    checkout: "2026-07-23"
     destinations:
       - label_no: "Berlin"
         label_en: "Berlin"
@@ -30,6 +41,8 @@ hotel_stays:
             note_en: "On-site underground garage and convenient access by car. The hotel currently warns that parking capacity is limited during renovation work."
             url: "https://www.estrel.com/en/hotel"
   - day: 3
+    checkin: "2026-07-21"
+    checkout: "2026-07-23"
     destinations:
       - label_no: "Berlin"
         label_en: "Berlin"
@@ -48,6 +61,8 @@ hotel_stays:
             note_en: "On-site underground garage and convenient access by car. The hotel currently warns that parking capacity is limited during renovation work."
             url: "https://www.estrel.com/en/hotel"
   - day: 4
+    checkin: "2026-07-23"
+    checkout: "2026-07-25"
     destinations:
       - label_no: "Ingolstadt"
         label_en: "Ingolstadt"
@@ -60,6 +75,8 @@ hotel_stays:
             note_en: "Central location by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
             url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 5
+    checkin: "2026-07-23"
+    checkout: "2026-07-25"
     destinations:
       - label_no: "Ingolstadt"
         label_en: "Ingolstadt"
@@ -72,6 +89,8 @@ hotel_stays:
             note_en: "Central location by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
             url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 6
+    checkin: "2026-07-25"
+    checkout: "2026-07-26"
     destinations:
       - label_no: "Bolzano"
         label_en: "Bolzano"
@@ -84,6 +103,8 @@ hotel_stays:
             note_en: "Practical after the long mountain day: close to Bolzano Sud, with on-site parking and EV charging listed. Marriott currently states €25 per day for self-parking."
             url: "https://www.marriott.com/en-us/hotels/bzofp-four-points-bolzano/overview/"
   - day: 7
+    checkin: "2026-07-26"
+    checkout: "2026-07-28"
     destinations:
       - label_no: "Verona"
         label_en: "Verona"
@@ -92,6 +113,8 @@ hotel_stays:
         label_en: "Lake Garda"
         query: "Lake Garda, Italy"
   - day: 8
+    checkin: "2026-07-26"
+    checkout: "2026-07-28"
     destinations:
       - label_no: "Verona"
         label_en: "Verona"
@@ -100,6 +123,8 @@ hotel_stays:
         label_en: "Lake Garda"
         query: "Lake Garda, Italy"
   - day: 9
+    checkin: "2026-07-28"
+    checkout: "2026-08-01"
     destinations:
       - label_no: "Antibes"
         label_en: "Antibes"
@@ -112,6 +137,8 @@ hotel_stays:
             note_en: "In Juan-les-Pins, about 300 metres from the beach and 700 metres from the railway station. The hotel lists private, enclosed outdoor parking; confirm price and availability when booking."
             url: "https://www.lesstrelitzias.com/en/accueil.php"
   - day: 10
+    checkin: "2026-07-28"
+    checkout: "2026-08-01"
     destinations:
       - label_no: "Antibes"
         label_en: "Antibes"
@@ -124,6 +151,8 @@ hotel_stays:
             note_en: "In Juan-les-Pins, about 300 metres from the beach and 700 metres from the railway station. The hotel lists private, enclosed outdoor parking; confirm price and availability when booking."
             url: "https://www.lesstrelitzias.com/en/accueil.php"
   - day: 11
+    checkin: "2026-07-28"
+    checkout: "2026-08-01"
     destinations:
       - label_no: "Antibes"
         label_en: "Antibes"
@@ -136,6 +165,8 @@ hotel_stays:
             note_en: "In Juan-les-Pins, about 300 metres from the beach and 700 metres from the railway station. The hotel lists private, enclosed outdoor parking; confirm price and availability when booking."
             url: "https://www.lesstrelitzias.com/en/accueil.php"
   - day: 12
+    checkin: "2026-07-28"
+    checkout: "2026-08-01"
     destinations:
       - label_no: "Antibes"
         label_en: "Antibes"
@@ -148,6 +179,8 @@ hotel_stays:
             note_en: "In Juan-les-Pins, about 300 metres from the beach and 700 metres from the railway station. The hotel lists private, enclosed outdoor parking; confirm price and availability when booking."
             url: "https://www.lesstrelitzias.com/en/accueil.php"
   - day: 13
+    checkin: "2026-08-01"
+    checkout: "2026-08-02"
     destinations:
       - label_no: "Lugano"
         label_en: "Lugano"
@@ -160,6 +193,8 @@ hotel_stays:
             note_en: "Its own underground garage has lift access to reception and the room floors, plus EV charging. Spaces are limited and require reservation; the hotel lists CHF 15 for direct bookings or CHF 20 otherwise, plus CHF 0.50/kWh for charging."
             url: "https://www.hotelcitylugano.ch/en/services/"
   - day: 14
+    checkin: "2026-08-02"
+    checkout: "2026-08-03"
     destinations:
       - label_no: "Vaduz"
         label_en: "Vaduz"
@@ -172,11 +207,15 @@ hotel_stays:
             note_en: "In a quiet setting above Vaduz with views towards the Alps, Rhine Valley and Vaduz Castle. The hotel lists a large free outdoor car park directly in front of the entrance and two EV charging stations."
             url: "https://www.sonnenhof.li/en/worthwhile-information/good-to-know/"
   - day: 15
+    checkin: "2026-08-03"
+    checkout: "2026-08-04"
     destinations:
       - label_no: "Frankfurt Airport"
         label_en: "Frankfurt Airport"
         query: "Frankfurt Airport, Germany"
   - day: 16
+    checkin: "2026-08-04"
+    checkout: "2026-08-06"
     destinations:
       - label_no: "Amsterdam"
         label_en: "Amsterdam"
@@ -189,6 +228,8 @@ hotel_stays:
             note_en: "Its own garage beneath the hotel has 131 spaces, lift access and six Allego Type 2 charging points at up to 22 kW. The hotel lists €25 per day, or €15 with direct booking/Valk Loyal; parking and charging are subject to availability."
             url: "https://www.vandervalkamsterdam.com/en/facilities/parking"
   - day: 17
+    checkin: "2026-08-04"
+    checkout: "2026-08-06"
     destinations:
       - label_no: "Amsterdam"
         label_en: "Amsterdam"
@@ -201,6 +242,8 @@ hotel_stays:
             note_en: "Its own garage beneath the hotel has 131 spaces, lift access and six Allego Type 2 charging points at up to 22 kW. The hotel lists €25 per day, or €15 with direct booking/Valk Loyal; parking and charging are subject to availability."
             url: "https://www.vandervalkamsterdam.com/en/facilities/parking"
   - day: 18
+    checkin: "2026-08-06"
+    checkout: "2026-08-07"
     destinations:
       - label_no: "Kolding"
         label_en: "Kolding"
@@ -209,6 +252,8 @@ hotel_stays:
         label_en: "Vejle"
         query: "Vejle, Denmark"
   - day: 19
+    checkin: "2026-08-07"
+    checkout: "2026-08-08"
     destinations:
       - label_no: "Oslo"
         label_en: "Oslo"
@@ -1022,7 +1067,7 @@ days:
       to: "Antibes"
       status: "Fast korridor"
       day_type: "Lang kysttransport"
-      summary: "En effektiv dag via Piacenza, Genova og Sanremo flytter reisen fra Nord-Italia til en tre-netters base i Antibes."
+      summary: "En effektiv dag via Piacenza, Genova og Sanremo flytter reisen fra Nord-Italia til en fire-netters base i Antibes."
       plan_title: "Kysten er vakker, men trafikken styrer"
       plan_intro: "Motorveien rundt Genova og den italienske rivieraen kan bruke mer tid enn avstanden antyder. Pauser og lading legges med god margin."
       steps:
@@ -1052,7 +1097,7 @@ days:
       to: "Antibes"
       status: "Fixed corridor"
       day_type: "Long coastal transit"
-      summary: "An efficient day through Piacenza, Genoa and Sanremo moves the journey from northern Italy to a three-night base in Antibes."
+      summary: "An efficient day through Piacenza, Genoa and Sanremo moves the journey from northern Italy to a four-night base in Antibes."
       plan_title: "The coast is beautiful, but traffic decides"
       plan_intro: "The motorway around Genoa and the Italian Riviera can take longer than the distance suggests. Breaks and charging need generous margins."
       steps:
@@ -1260,7 +1305,7 @@ days:
       to: "Antibes"
       status: "Første dag som kan kuttes"
       day_type: "Hvile, lokal opplevelse eller tidlig avreise"
-      summary: "Denne dagen gjør tre-nettersbasen robust. Den kan bli strand, gamleby og Port Vauban – eller ofres hvis reisen må komprimeres."
+      summary: "Denne dagen gjør fire-nettersbasen robust. Den kan bli strand, gamleby og Port Vauban – eller ofres hvis reisen må komprimeres."
       plan_title: "En bevisst åpen dag"
       plan_intro: "Ingen må-se-liste. Dagen brukes der Riviera-oppholdet trenger mer tid, eller som tidlig overgang nordover."
       steps:
@@ -1290,7 +1335,7 @@ days:
       to: "Antibes"
       status: "First day to cut"
       day_type: "Rest, local experience or early departure"
-      summary: "This day makes the three-night base resilient. It can become beach, Old Town and Port Vauban – or disappear if the trip must be compressed."
+      summary: "This day makes the four-night base resilient. It can become beach, Old Town and Port Vauban – or disappear if the trip must be compressed."
       plan_title: "A deliberately open day"
       plan_intro: "There is no must-see list. Use the day where the Riviera stay needs more time, or begin the northbound transition early."
       steps:

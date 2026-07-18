@@ -2,6 +2,7 @@
   {{ $day := index (where hugo.Data.euro2026.days "number" .Params.day) 0 }}
   {{ $dayCount := len hugo.Data.euro2026.days }}
   {{ $copy := index $day site.Language.Lang }}
+  {{ $trip := hugo.Data.euro2026.trip }}
   {{ $hotelStay := index (where hugo.Data.euro2026.hotel_stays "day" .Params.day) 0 }}
   {{ $prefix := cond (eq site.Language.Lang "no") "dag" "day" }}
   {{ $parentURL := printf "/%s/travel/euro-2026/" site.Language.Lang }}
@@ -60,14 +61,16 @@
         <div class="shell travel-day-hotel-links">
           <header>
             <div><small>{{ if eq site.Language.Lang "no" }}Hotellsøk{{ else }}Hotel search{{ end }}</small><strong>{{ if eq site.Language.Lang "no" }}Finn hotell med parkering{{ else }}Find a hotel with parking{{ end }}</strong></div>
-            <p>{{ if eq site.Language.Lang "no" }}Parkering er valgt som filter. Kontroller alltid plassering, garasjehøyde og pris før bestilling.{{ else }}Parking is selected as a filter. Always confirm location, garage height and price before booking.{{ end }}</p>
+            <p>{{ if eq site.Language.Lang "no" }}Datoene og reisefølget er fylt inn: 2 voksne og 1 barn på 14 år, i 1 rom. Parkering er valgt som filter.{{ else }}Dates and guests are pre-filled: 2 adults and one 14-year-old child in 1 room. Parking is selected as a filter.{{ end }}</p>
           </header>
           <div class="travel-day-hotel-grid">
             {{ range . }}
               {{ $label := index . (printf "label_%s" site.Language.Lang) }}
               {{ $query := urlquery .query }}
-              {{ $bookingURL := printf "https://www.booking.com/searchresults.html?ss=%s&nflt=hotelfacility%%3D2" $query }}
-              {{ $hotelsURL := printf "https://www.hotels.com/Hotel-Search?destination=%s&amenities=PARKING" $query }}
+              {{ $childAge := index $trip.child_ages 0 }}
+              {{ $bookingURL := printf "https://www.booking.com/searchresults.html?ss=%s&checkin=%s&checkout=%s&group_adults=%d&group_children=%d&age=%d&no_rooms=%d&nflt=hotelfacility%%3D2" $query $hotelStay.checkin $hotelStay.checkout $trip.adults $trip.children $childAge $trip.rooms }}
+              {{ $hotelsURL := printf "https://www.hotels.com/Hotel-Search?destination=%s&startDate=%s&endDate=%s&adults=%d&children=%d&childAges=%d&rooms=%d&amenities=PARKING" $query $hotelStay.checkin $hotelStay.checkout $trip.adults $trip.children $childAge $trip.rooms }}
+              {{ $stayLabel := printf "%s → %s · 2+1 (14)" $hotelStay.checkin $hotelStay.checkout }}
               <article>
                 <div class="travel-day-hotel-destination"><small>{{ if eq site.Language.Lang "no" }}Endepunkt{{ else }}Destination{{ end }}</small><strong>{{ $label }}</strong></div>
                 <div class="travel-day-hotel-options">
@@ -77,8 +80,8 @@
                     </a>
                   {{ end }}
                   <div class="travel-day-hotel-services">
-                    <a class="travel-day-hotel-booking" href="{{ $bookingURL }}" target="_blank" rel="noopener"><span><b>Booking.com</b><small>{{ if eq site.Language.Lang "no" }}Hoteller med parkering{{ else }}Hotels with parking{{ end }}</small></span><i aria-hidden="true">↗</i></a>
-                    <a class="travel-day-hotel-hotels" href="{{ $hotelsURL }}" target="_blank" rel="noopener"><span><b>Hotels.com</b><small>{{ if eq site.Language.Lang "no" }}Parkering tilgjengelig{{ else }}Parking available{{ end }}</small></span><i aria-hidden="true">↗</i></a>
+                    <a class="travel-day-hotel-booking" href="{{ $bookingURL }}" target="_blank" rel="noopener"><span><b>Booking.com</b><small>{{ $stayLabel }}</small></span><i aria-hidden="true">↗</i></a>
+                    <a class="travel-day-hotel-hotels" href="{{ $hotelsURL }}" target="_blank" rel="noopener"><span><b>Hotels.com</b><small>{{ $stayLabel }}</small></span><i aria-hidden="true">↗</i></a>
                   </div>
                 </div>
               </article>
