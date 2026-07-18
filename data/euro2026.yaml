@@ -164,6 +164,13 @@ hotel_stays:
       - label_no: "Vaduz"
         label_en: "Vaduz"
         query: "Vaduz, Liechtenstein"
+        candidates:
+          - name: "Park Hotel Sonnenhof"
+            label_no: "Til vurdering"
+            label_en: "To consider"
+            note_no: "Ligger i rolige omgivelser ovenfor Vaduz med utsikt mot Alpene, Rhindalen og Vaduz slott. Hotellet oppgir en stor, gratis utendørsparkering rett foran inngangen og to ladestasjoner for elbil."
+            note_en: "In a quiet setting above Vaduz with views towards the Alps, Rhine Valley and Vaduz Castle. The hotel lists a large free outdoor car park directly in front of the entrance and two EV charging stations."
+            url: "https://www.sonnenhof.li/en/worthwhile-information/good-to-know/"
   - day: 15
     destinations:
       - label_no: "Frankfurt Airport"
@@ -174,11 +181,25 @@ hotel_stays:
       - label_no: "Amsterdam"
         label_en: "Amsterdam"
         query: "Amsterdam, Netherlands"
+        candidates:
+          - name: "Van der Valk Hotel Amsterdam - Amstel"
+            label_no: "Til vurdering"
+            label_en: "To consider"
+            note_no: "Egen garasje under hotellet med 131 plasser, heis og seks Allego-ladepunkter med Type 2 og opptil 22 kW. Hotellet oppgir €25 per døgn, eller €15 ved direktebestilling/Valk Loyal; plass og lading er avhengig av tilgjengelighet."
+            note_en: "Its own garage beneath the hotel has 131 spaces, lift access and six Allego Type 2 charging points at up to 22 kW. The hotel lists €25 per day, or €15 with direct booking/Valk Loyal; parking and charging are subject to availability."
+            url: "https://www.vandervalkamsterdam.com/en/facilities/parking"
   - day: 17
     destinations:
       - label_no: "Amsterdam"
         label_en: "Amsterdam"
         query: "Amsterdam, Netherlands"
+        candidates:
+          - name: "Van der Valk Hotel Amsterdam - Amstel"
+            label_no: "Til vurdering"
+            label_en: "To consider"
+            note_no: "Egen garasje under hotellet med 131 plasser, heis og seks Allego-ladepunkter med Type 2 og opptil 22 kW. Hotellet oppgir €25 per døgn, eller €15 ved direktebestilling/Valk Loyal; plass og lading er avhengig av tilgjengelighet."
+            note_en: "Its own garage beneath the hotel has 131 spaces, lift access and six Allego Type 2 charging points at up to 22 kW. The hotel lists €25 per day, or €15 with direct booking/Valk Loyal; parking and charging are subject to availability."
+            url: "https://www.vandervalkamsterdam.com/en/facilities/parking"
   - day: 18
     destinations:
       - label_no: "Kolding"
