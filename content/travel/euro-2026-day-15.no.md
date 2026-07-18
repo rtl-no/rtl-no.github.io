@@ -1,5 +1,5 @@
 ---
-title: "Dag 15 · Vaduz til CarLoft i Frankfurt"
+title: "Dag 15 · Lindt og CarLoft i Frankfurt"
 translationKey: "travel-euro-2026-day-15"
 type: "travel-day"
 day: 15
