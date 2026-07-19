@@ -44,6 +44,40 @@
       </section>
     {{ end }}
 
+    {{ with .Params.road_groups }}
+      <section class="travel-road-info" id="road-info">
+        <div class="shell">
+          <div class="travel-road-heading">
+            <div><p class="section-label">{{ $.Params.road_label }}</p><h2>{{ $.Params.road_title }}</h2></div>
+            <p>{{ $.Params.road_intro }}</p>
+          </div>
+          {{ with $.Params.road_priority }}
+            <article class="travel-road-priority">
+              <div class="travel-road-priority-mark" aria-hidden="true">!</div>
+              <div class="travel-road-priority-copy"><span>{{ .badge }}</span><h3>{{ .title }}</h3><p>{{ .text }}</p></div>
+              <div class="travel-road-priority-stop">
+                <small>{{ .stop_label }}</small><strong>{{ .stop_name }}</strong><address>{{ .address }}</address><p>{{ .hours }}</p><em>{{ .bring }}</em>
+                <div>{{ range .links }}<a href="{{ .url }}" rel="noopener">{{ .label }} ↗</a>{{ end }}</div>
+              </div>
+            </article>
+          {{ end }}
+          <div class="travel-road-grid">
+            {{ range . }}
+              <article>
+                <header><span>{{ .status }}</span><h3>{{ .title }}</h3></header>
+                <p>{{ .summary }}</p>
+                <ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+                <div>{{ range .links }}<a href="{{ .url }}" rel="noopener">{{ .label }} ↗</a>{{ end }}</div>
+              </article>
+            {{ end }}
+          </div>
+          {{ with $.Params.road_cash }}
+            <aside class="travel-road-cash"><div><small>{{ .label }}</small><h3>{{ .title }}</h3></div><p>{{ .text }}</p><ul>{{ range .items }}<li>{{ . }}</li>{{ end }}</ul></aside>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
     <section class="travel-route-section" id="route">
       <div class="shell travel-route-heading"><div><p class="section-label">{{ if eq site.Language.Lang "no" }}Sted for sted{{ else }}Place by place{{ end }}</p><h2>{{ .Params.route_name }}</h2></div><p>{{ if eq site.Language.Lang "no" }}Scroll gjennom stoppene. Kartet følger reisen og viser hvor i fortellingen du befinner deg.{{ else }}Scroll through the stops. The map follows the journey and shows where you are in the story.{{ end }}</p></div>
       <div class="shell travel-route-layout">
