@@ -58,10 +58,10 @@
         </div>
       {{ end }}
       {{ with $hotelStay.destinations }}
-        <div class="shell travel-day-hotel-links">
+        <div class="shell travel-day-hotel-links{{ if $hotelStay.booked }} is-booked{{ end }}">
           <header>
-            <div><small>{{ if eq site.Language.Lang "no" }}Hotellsøk{{ else }}Hotel search{{ end }}</small><strong>{{ if eq site.Language.Lang "no" }}Finn hotell med parkering{{ else }}Find a hotel with parking{{ end }}</strong></div>
-            <p>{{ if eq site.Language.Lang "no" }}Datoene og reisefølget er fylt inn: 2 voksne og 1 barn på 14 år, i 1 rom. Parkering er valgt som filter.{{ else }}Dates and guests are pre-filled: 2 adults and one 14-year-old child in 1 room. Parking is selected as a filter.{{ end }}</p>
+            <div><small>{{ if eq site.Language.Lang "no" }}Hotell{{ else }}Hotel{{ end }}</small><strong>{{ if $hotelStay.booked }}{{ if eq site.Language.Lang "no" }}Bestilt hotell{{ else }}Booked hotel{{ end }}{{ else }}{{ if eq site.Language.Lang "no" }}Finn hotell med parkering{{ else }}Find a hotel with parking{{ end }}{{ end }}</strong></div>
+            <p>{{ if $hotelStay.booked }}{{ if eq site.Language.Lang "no" }}Hotellvalget er landet og oppholdet er bestilt for 2 voksne og 1 barn på 14 år, i 1 rom.{{ else }}The hotel decision is final and the stay is booked for 2 adults and one 14-year-old child in 1 room.{{ end }}{{ else }}{{ if eq site.Language.Lang "no" }}Datoene og reisefølget er fylt inn: 2 voksne og 1 barn på 14 år, i 1 rom. Parkering er valgt som filter.{{ else }}Dates and guests are pre-filled: 2 adults and one 14-year-old child in 1 room. Parking is selected as a filter.{{ end }}{{ end }}</p>
           </header>
           <div class="travel-day-hotel-grid">
             {{ range . }}
@@ -71,18 +71,18 @@
               {{ $bookingURL := printf "https://www.booking.com/searchresults.html?ss=%s&checkin=%s&checkout=%s&group_adults=%d&group_children=%d&age=%d&no_rooms=%d&nflt=hotelfacility%%3D2" $query $hotelStay.checkin $hotelStay.checkout $trip.adults $trip.children $childAge $trip.rooms }}
               {{ $hotelsURL := printf "https://www.hotels.com/Hotel-Search?destination=%s&startDate=%s&endDate=%s&adults=%d&children=%d&childAges=%d&rooms=%d&amenities=PARKING" $query $hotelStay.checkin $hotelStay.checkout $trip.adults $trip.children $childAge $trip.rooms }}
               {{ $stayLabel := printf "%s → %s · 2+1 (14)" $hotelStay.checkin $hotelStay.checkout }}
-              <article>
-                <div class="travel-day-hotel-destination"><small>{{ if eq site.Language.Lang "no" }}Endepunkt{{ else }}Destination{{ end }}</small><strong>{{ $label }}</strong></div>
+              <article{{ if $hotelStay.booked }} class="is-booked"{{ end }}>
+                <div class="travel-day-hotel-destination"><small>{{ if $hotelStay.booked }}{{ if eq site.Language.Lang "no" }}Bekreftet{{ else }}Confirmed{{ end }}{{ else }}{{ if eq site.Language.Lang "no" }}Endepunkt{{ else }}Destination{{ end }}{{ end }}</small><strong>{{ $label }}</strong></div>
                 <div class="travel-day-hotel-options">
                   {{ range .candidates }}
-                    <a class="travel-day-hotel-candidate" href="{{ .url }}" target="_blank" rel="noopener">
+                    <a class="travel-day-hotel-candidate{{ if $hotelStay.booked }} is-booked{{ end }}" href="{{ .url }}" target="_blank" rel="noopener">
                       <span><small>{{ index . (printf "label_%s" site.Language.Lang) }}</small><b>{{ .name }}</b><em>{{ index . (printf "note_%s" site.Language.Lang) }}</em></span><i aria-hidden="true">↗</i>
                     </a>
                   {{ end }}
-                  <div class="travel-day-hotel-services">
+                  {{ if not $hotelStay.booked }}<div class="travel-day-hotel-services">
                     <a class="travel-day-hotel-booking" href="{{ $bookingURL }}" target="_blank" rel="noopener"><span><b>Booking.com</b><small>{{ $stayLabel }}</small></span><i aria-hidden="true">↗</i></a>
                     <a class="travel-day-hotel-hotels" href="{{ $hotelsURL }}" target="_blank" rel="noopener"><span><b>Hotels.com</b><small>{{ $stayLabel }}</small></span><i aria-hidden="true">↗</i></a>
-                  </div>
+                  </div>{{ end }}
                 </div>
               </article>
             {{ end }}
