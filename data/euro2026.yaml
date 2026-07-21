@@ -60,10 +60,10 @@ hotel_stays:
         query: "Ingolstadt, Germany"
         candidates:
           - name: "Maritim Hotel Ingolstadt"
-            label_no: "Til vurdering"
-            label_en: "To consider"
-            note_no: "Sentralt ved Donau, ca. 3 km fra både A9 og Audi Forum. Offentlig parkeringskjeller under hotellet har 500 plasser og elbillading."
-            note_en: "Central location by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
+            label_no: "Bestilt · 23.–25. juli"
+            label_en: "Booked · 23–25 July"
+            note_no: "Valgt og bestilt for to netter. Hotellet ligger sentralt ved Donau, ca. 3 km fra både A9 og Audi Forum. Offentlig parkeringskjeller under hotellet har 500 plasser og elbillading."
+            note_en: "Selected and booked for two nights. The hotel is centrally located by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
             url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 5
     checkin: "2026-07-23"
@@ -74,10 +74,10 @@ hotel_stays:
         query: "Ingolstadt, Germany"
         candidates:
           - name: "Maritim Hotel Ingolstadt"
-            label_no: "Til vurdering"
-            label_en: "To consider"
-            note_no: "Sentralt ved Donau, ca. 3 km fra både A9 og Audi Forum. Offentlig parkeringskjeller under hotellet har 500 plasser og elbillading."
-            note_en: "Central location by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
+            label_no: "Bestilt · 23.–25. juli"
+            label_en: "Booked · 23–25 July"
+            note_no: "Valgt og bestilt for to netter. Hotellet ligger sentralt ved Donau, ca. 3 km fra både A9 og Audi Forum. Offentlig parkeringskjeller under hotellet har 500 plasser og elbillading."
+            note_en: "Selected and booked for two nights. The hotel is centrally located by the Danube, about 3 km from both the A9 and Audi Forum. The public underground car park beneath the hotel has 500 spaces and EV charging."
             url: "https://www.maritim.com/en/hotels/germany/ingolstadt/hotel-overview"
   - day: 6
     checkin: "2026-07-25"
