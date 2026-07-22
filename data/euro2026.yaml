@@ -450,10 +450,16 @@ days:
       plan_title: "Én sammenhengende rute gjennom byen"
       plan_intro: "Bilen blir stående i Hotel MOAs parkeringshus med innkjøring fra Birkenstrasse 21. Bershka i Mall of Berlin og Urban Outfitters ved Alexanderplatz flettes inn i ruten; Reichstag krever forhåndsbestilling hvis kuppelen skal besøkes."
       steps:
+        - "Kjøp én 24-timers smågruppebillett for Berlin AB i BVG-appen før første reise. Den dekker to voksne og ett barn på 14 år så lenge alle reiser sammen."
         - "Start ved Brandenburger Tor, Reichstag og regjeringskvartalet."
         - "Gå via Holocaust-minnesmerket til Bershka i Mall of Berlin, fortsett til Checkpoint Charlie og reis deretter til Urban Outfitters i Weinmeisterstraße 10 ved Alexanderplatz."
         - "Avslutt ved Berlinmuren og East Side Gallery, med middag i Friedrichshain eller Kreuzberg."
       sights:
+        - title: "BVG-billett for hele familien"
+          location: "24 timer · Berlin AB · inntil 5 personer"
+          text: "Kjøp én 24-timers smågruppebillett i BVG Ticket- eller Fahrinfo-appen. Bare én voksen trenger appen, men telefonen med billetten må være med gruppen og ha strøm. Aktiver mobilbilletten før første reise; en papirbillett fra automaten må stemples. Billetten gjelder på U-Bahn, S-Bahn, buss og trikk."
+          url: "https://www.bvg.de/en/subscriptions-and-tickets/all-tickets/24h-tickets/24h-small-group-ticket"
+          link_label: "BVG · 24-timers smågruppebillett"
         - title: "Brandenburger Tor og Reichstag"
           location: "Mitte"
           text: "To av byens viktigste symboler ligger tett. Reichstag-kuppelen må normalt reserveres på forhånd."
@@ -500,10 +506,16 @@ days:
       plan_title: "One coherent route through the city"
       plan_intro: "The car stays in Hotel MOA's multi-storey car park, entered from Birkenstrasse 21. Bershka in the Mall of Berlin and Urban Outfitters near Alexanderplatz are woven into the route; the Reichstag requires advance registration if the dome is included."
       steps:
+        - "Buy one Berlin AB 24-hour small-group ticket in the BVG app before the first journey. It covers two adults and one 14-year-old child as long as everyone travels together."
         - "Start at Brandenburg Gate, the Reichstag and the government quarter."
         - "Walk via the Memorial to the Murdered Jews of Europe to Bershka in the Mall of Berlin, continue to Checkpoint Charlie, then travel to Urban Outfitters at Weinmeisterstraße 10 near Alexanderplatz."
         - "Finish at the Berlin Wall and East Side Gallery, followed by dinner in Friedrichshain or Kreuzberg."
       sights:
+        - title: "One BVG ticket for the family"
+          location: "24 hours · Berlin AB · up to 5 people"
+          text: "Buy one 24-hour small-group ticket in the BVG Ticket or Fahrinfo app. Only one adult needs the app, but the phone holding the ticket must stay with the group and have enough battery. Activate the mobile ticket before the first journey; a paper ticket from a machine must be validated. The ticket covers U-Bahn, S-Bahn, buses and trams."
+          url: "https://www.bvg.de/en/subscriptions-and-tickets/all-tickets/24h-tickets/24h-small-group-ticket"
+          link_label: "BVG · 24-hour small-group ticket"
         - title: "Brandenburg Gate and Reichstag"
           location: "Mitte"
           text: "Two of the city's defining landmarks sit close together. The Reichstag dome normally needs advance registration."
