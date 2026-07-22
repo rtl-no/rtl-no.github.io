@@ -14,5 +14,9 @@ story_paragraphs:
 story_image: "images/audi-electric-story.webp"
 story_image_alt: "A dark Audi S6 e-tron Avant and a red Audi RS e-tron GT performance in front of a large geometric metal sculpture."
 story_image_caption: "My Audi S6 e-tron Avant alongside the Audi RS e-tron GT performance."
+video_label: "Featured video"
+video_title: "Side by side with EV legend Bjørn Nyland"
+video_description: "Bjørn Nyland and I compare the Volkswagen ID.7 GTX Tourer and Audi S6 e-tron Avant side by side, looking at the practical details and differences that matter in real use."
+video_youtube: "5y3UhEUdezw"
 articles_title: "More personal experience"
 ---
