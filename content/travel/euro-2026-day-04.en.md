@@ -5,6 +5,6 @@ type: "travel-day"
 day: 4
 url: "/en/travel/euro-2026/day-04/"
 hero_image: "images/travel-euro-2026-hero.webp"
+timelapse_youtube: "UQ8I_nIYX-Y"
 summary: "Detailed plan and future travel log for day 4 of the 2026 European road trip."
 ---
-
