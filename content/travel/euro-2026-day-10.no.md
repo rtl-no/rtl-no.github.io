@@ -1,5 +1,5 @@
 ---
-title: "Dag 10 · Corniche-veiene, Èze og Monaco"
+title: "Dag 10 · Monaco og Nice med tog"
 translationKey: "travel-euro-2026-day-10"
 type: "travel-day"
 day: 10

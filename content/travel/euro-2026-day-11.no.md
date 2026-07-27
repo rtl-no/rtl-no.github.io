@@ -1,5 +1,5 @@
 ---
-title: "Dag 11 · Cannes og Juan-les-Pins"
+title: "Dag 11 · Cannes og gamle Antibes"
 translationKey: "travel-euro-2026-day-11"
 type: "travel-day"
 day: 11

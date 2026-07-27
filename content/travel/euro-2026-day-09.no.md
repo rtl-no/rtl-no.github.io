@@ -1,5 +1,5 @@
 ---
-title: "Dag 9 · Fra Nord-Italia til Antibes"
+title: "Dag 9 · Verona til Hôtel Le Collier i Antibes"
 translationKey: "travel-euro-2026-day-09"
 type: "travel-day"
 day: 9

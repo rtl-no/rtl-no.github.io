@@ -1,5 +1,5 @@
 ---
-title: "Day 10 · The Corniche roads, Èze and Monaco"
+title: "Day 10 · Monaco and Nice by train"
 translationKey: "travel-euro-2026-day-10"
 type: "travel-day"
 day: 10

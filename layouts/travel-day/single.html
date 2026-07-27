@@ -3,6 +3,8 @@
   {{ $dayCount := len hugo.Data.euro2026.days }}
   {{ $copy := index $day site.Language.Lang }}
   {{ $trip := hugo.Data.euro2026.trip }}
+  {{ $tripStart := time.AsTime $trip.start_date }}
+  {{ $dayDate := $tripStart.AddDate 0 0 (sub $day.number 1) }}
   {{ $hotelStay := index (where hugo.Data.euro2026.hotel_stays "day" .Params.day) 0 }}
   {{ $prefix := cond (eq site.Language.Lang "no") "dag" "day" }}
   {{ $parentURL := printf "/%s/travel/euro-2026/" site.Language.Lang }}
@@ -25,7 +27,7 @@
 
     <section class="travel-day-overview">
       <div class="shell travel-day-overview-grid">
-        <div><small>{{ if eq site.Language.Lang "no" }}Ukedag / status{{ else }}Weekday / status{{ end }}</small><strong>{{ index $day (printf "weekday_%s" site.Language.Lang) }} · {{ $copy.status }}</strong></div>
+        <div><small>{{ if eq site.Language.Lang "no" }}Dato / status{{ else }}Date / status{{ end }}</small><strong>{{ index $day (printf "weekday_%s" site.Language.Lang) }} {{ $dayDate.Format "02.01.2006" }} · {{ $copy.status }}</strong></div>
         <div><small>{{ if eq site.Language.Lang "no" }}Avstand{{ else }}Distance{{ end }}</small><strong>{{ $day.distance }}</strong></div>
         <div><small>{{ if eq site.Language.Lang "no" }}Kjøretid{{ else }}Drive time{{ end }}</small><strong>{{ index $day (printf "drive_%s" site.Language.Lang) }}</strong></div>
         <div><small>{{ if eq site.Language.Lang "no" }}Dagens type{{ else }}Day type{{ end }}</small><strong>{{ $copy.day_type }}</strong></div>

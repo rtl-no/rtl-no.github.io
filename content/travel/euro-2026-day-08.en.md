@@ -1,5 +1,5 @@
 ---
-title: "Day 8 · Lake Garda and Sirmione"
+title: "Day 8 · Verona city centre"
 translationKey: "travel-euro-2026-day-08"
 type: "travel-day"
 day: 8
