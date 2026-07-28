@@ -59,6 +59,7 @@
           </div>
         </div>
       {{ end }}
+      {{ if not $hotelStay.home }}
       {{ with $hotelStay.destinations }}
         <div class="shell travel-day-hotel-links{{ if $hotelStay.booked }} is-booked{{ end }}">
           <header>
@@ -90,6 +91,7 @@
             {{ end }}
           </div>
         </div>
+      {{ end }}
       {{ end }}
       {{ with $day.charging }}
         <div class="shell travel-day-charging">
