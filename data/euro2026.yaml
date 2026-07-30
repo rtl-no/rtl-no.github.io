@@ -175,27 +175,21 @@ hotel_stays:
   - day: 12
     checkin: "2026-07-31"
     checkout: "2026-08-01"
-    destinations:
-      - label_no: "Neste etappe"
-        label_en: "Next stage"
-        query: "Lugano, Switzerland"
-  - day: 13
-    checkin: "2026-08-01"
-    checkout: "2026-08-02"
+    booked: true
     destinations:
       - label_no: "Lugano"
         label_en: "Lugano"
         query: "Lugano, Switzerland"
         candidates:
-          - name: "Hotel City Lugano"
-            label_no: "Til vurdering"
-            label_en: "To consider"
-            note_no: "Egen underjordisk garasje med heis til resepsjon og rometasjer, samt elbillading. Plassene er begrenset og må reserveres; hotellet oppgir CHF 15 ved direktebestilling eller CHF 20 ellers, pluss CHF 0,50/kWh for lading."
-            note_en: "Its own underground garage has lift access to reception and the room floors, plus EV charging. Spaces are limited and require reservation; the hotel lists CHF 15 for direct bookings or CHF 20 otherwise, plus CHF 0.50/kWh for charging."
-            url: "https://www.hotelcitylugano.ch/en/services/"
-  - day: 14
-    checkin: "2026-08-02"
-    checkout: "2026-08-03"
+          - name: "Hotel Federale"
+            label_no: "Bestilt · 31. juli–1. august"
+            label_en: "Booked · 31 July–1 August"
+            note_no: "Bestilt for fredag til lørdag. Adresse: Via Paolo Regazzoni 8, 6900 Lugano. Hotellet har videoovervåket underjordisk parkering til CHF 21 per natt og to ladepunkter. Innsjekking fra 14:30 og utsjekking senest 11:30."
+            note_en: "Booked from Friday to Saturday. Address: Via Paolo Regazzoni 8, 6900 Lugano. The hotel has video-surveilled underground parking at CHF 21 per night and two EV charging points. Check-in is from 14:30 and check-out is by 11:30."
+            url: "https://www.hotel-federale.ch/en/"
+  - day: 13
+    checkin: "2026-08-01"
+    checkout: "2026-08-02"
     destinations:
       - label_no: "Vaduz"
         label_en: "Vaduz"
@@ -207,16 +201,24 @@ hotel_stays:
             note_no: "Ligger i rolige omgivelser ovenfor Vaduz med utsikt mot Alpene, Rhindalen og Vaduz slott. Hotellet oppgir en stor, gratis utendørsparkering rett foran inngangen og to ladestasjoner for elbil."
             note_en: "In a quiet setting above Vaduz with views towards the Alps, Rhine Valley and Vaduz Castle. The hotel lists a large free outdoor car park directly in front of the entrance and two EV charging stations."
             url: "https://www.sonnenhof.li/en/worthwhile-information/good-to-know/"
-  - day: 15
-    checkin: "2026-08-03"
-    checkout: "2026-08-04"
+  - day: 14
+    checkin: "2026-08-02"
+    checkout: "2026-08-03"
+    booked: true
     destinations:
       - label_no: "Frankfurt Airport"
         label_en: "Frankfurt Airport"
         query: "Frankfurt Airport, Germany"
-  - day: 16
-    checkin: "2026-08-04"
-    checkout: "2026-08-05"
+        candidates:
+          - name: "b’mine Frankfurt Airport · Car Loft – Planespotting"
+            label_no: "Bestilt · 2.–3. august"
+            label_en: "Booked · 2–3 August"
+            note_no: "Car Loft – Planespotting er bestilt for én natt, 2 voksne og 1 barn. Pris €270 med fleksibel rate. Gratis avbestilling eller endring inntil én dag før ankomst; senere avbestilling og uteblivelse belastes med 90 %. Adresse: Georg-Baumgarten-Str. 1, 60549 Frankfurt."
+            note_en: "Car Loft – Planespotting is booked for one night, 2 adults and 1 child. Price €270 on a flexible rate. Free cancellation or changes until one day before arrival; later cancellation and no-show are charged at 90%. Address: Georg-Baumgarten-Str. 1, 60549 Frankfurt."
+            url: "https://www.bmine.de/en/hotel-frankfurt"
+  - day: 15
+    checkin: "2026-08-03"
+    checkout: "2026-08-04"
     destinations:
       - label_no: "Amsterdam"
         label_en: "Amsterdam"
@@ -228,9 +230,9 @@ hotel_stays:
             note_no: "Egen garasje under hotellet med 131 plasser, heis og seks Allego-ladepunkter med Type 2 og opptil 22 kW. Hotellet oppgir €25 per døgn, eller €15 ved direktebestilling/Valk Loyal; plass og lading er avhengig av tilgjengelighet."
             note_en: "Its own garage beneath the hotel has 131 spaces, lift access and six Allego Type 2 charging points at up to 22 kW. The hotel lists €25 per day, or €15 with direct booking/Valk Loyal; parking and charging are subject to availability."
             url: "https://www.vandervalkamsterdam.com/en/facilities/parking"
-  - day: 17
-    checkin: "2026-08-04"
-    checkout: "2026-08-05"
+  - day: 16
+    checkin: "2026-08-03"
+    checkout: "2026-08-04"
     home: true
     destinations:
       - label_no: "Oslo"
@@ -1386,80 +1388,6 @@ days:
   - number: 12
     weekday_no: "Fredag"
     weekday_en: "Friday"
-    stop_index: 9
-    tone: rest
-    distance: "Neste etappe må tilpasses ny utsjekking"
-    drive_no: "Utsjekking fra Antibes · nordgående etappe"
-    drive_en: "Check out from Antibes · northbound stage"
-    image:
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Antibes_-_Pointe_de_l%27Ilette_-_View_NNE_on_Old_Town_II.jpg/1280px-Antibes_-_Pointe_de_l%27Ilette_-_View_NNE_on_Old_Town_II.jpg"
-      credit: "Txllxt TxllxT"
-      license: "CC BY-SA 4.0"
-      source: "https://commons.wikimedia.org/wiki/File:Antibes_-_Pointe_de_l%27Ilette_-_View_NNE_on_Old_Town_II.jpg"
-    no:
-      short_title: "Videre fra Antibes"
-      eyebrow: "Utsjekking fredag 31. juli"
-      from: "Hôtel Le Collier"
-      to: "Neste nordgående stopp"
-      status: "Riviera-bufferen er fjernet"
-      day_type: "Nordgående overgang"
-      summary: "Den bekreftede bestillingen avsluttes etter tre netter. Den tidligere fjerde dagen i Antibes utgår, og hjemruten kan flyttes én dag frem."
-      plan_title: "Neste hotell avgjør etappen"
-      plan_intro: "Sjekk ut fra Hôtel Le Collier og start nordover. Lugano-planen og de senere dagene må datoforskyves når neste hotell er bestemt."
-      steps:
-        - "Hent bilen fra hotellgarasjen etter utsjekking og start med god batterimargin."
-        - "Velg neste overnatting før avreise; ikke behold gamle datoer automatisk etter at Riviera-oppholdet ble én natt kortere."
-        - "Flytt den videre ruten mot Lugano og Alpene én dag frem når neste bestilling er bekreftet."
-      sights:
-        - title: "Port Vauban"
-          location: "Antibes"
-          text: "Gamle havnen, superyachtene og Nomade-skulpturen gir en enkel gåtur uten transportbehov."
-          url: "https://www.antibesjuanlespins.com/en/discover/antibes-juan-les-pins-a-mediterranean-city/the-ports/port-vauban"
-          link_label: "Offisiell guide"
-        - title: "Gamle Antibes"
-          location: "Innenfor bymurene"
-          text: "Marked, smågater og kaféer passer en dag der tempoet skal være lavere enn på de øvrige Riviera-dagene."
-          url: "https://www.antibesjuanlespins.com/en/discover/antibes-juan-les-pins-a-mediterranean-city/one-city-3-places-3-entities/antibes-step-by-step"
-          link_label: "Antibes steg for steg"
-        - title: "Fleksibel avreise"
-          location: "Rutevalg"
-          text: "Hvis bufferen kuttes, kan etappen mot Lugano starte her og frigjøre én hel feriedag."
-          url: "https://www.antibesjuanlespins.com/en/"
-          link_label: "Praktisk turistinfo"
-    en:
-      short_title: "Onwards from Antibes"
-      eyebrow: "Check-out Friday 31 July"
-      from: "Hôtel Le Collier"
-      to: "Next northbound stop"
-      status: "The Riviera buffer has been removed"
-      day_type: "Northbound transition"
-      summary: "The confirmed booking ends after three nights. The former fourth Antibes day is removed, allowing the return route to move one day earlier."
-      plan_title: "The next hotel determines the stage"
-      plan_intro: "Check out from Hôtel Le Collier and start north. The Lugano plan and later days should move one date earlier once the next hotel is decided."
-      steps:
-        - "Collect the car from the hotel garage after check-out and start with a healthy battery margin."
-        - "Choose the next overnight stop before departure; do not retain the old dates automatically after shortening the Riviera stay."
-        - "Move the onward route towards Lugano and the Alps one day earlier once the next booking is confirmed."
-      sights:
-        - title: "Port Vauban"
-          location: "Antibes"
-          text: "The Old Port, superyachts and Nomade sculpture create an easy walk with no transport requirement."
-          url: "https://www.antibesjuanlespins.com/en/discover/antibes-juan-les-pins-a-mediterranean-city/the-ports/port-vauban"
-          link_label: "Official guide"
-        - title: "Antibes Old Town"
-          location: "Inside the ramparts"
-          text: "Market, narrow lanes and cafés suit a day designed to be slower than the other Riviera days."
-          url: "https://www.antibesjuanlespins.com/en/discover/antibes-juan-les-pins-a-mediterranean-city/one-city-3-places-3-entities/antibes-step-by-step"
-          link_label: "Antibes step by step"
-        - title: "Flexible departure"
-          location: "Route decision"
-          text: "If the buffer is cut, the stage towards Lugano can start here and release a full holiday day."
-          url: "https://www.antibesjuanlespins.com/en/"
-          link_label: "Practical visitor information"
-
-  - number: 13
-    weekday_no: "Lørdag"
-    weekday_en: "Saturday"
     stop_index: 10
     tone: road
     distance: "Ca. 400–500 km til Lugano"
@@ -1483,11 +1411,11 @@ days:
       eyebrow: "Overgangsetappe · Rivieraen til Sveits"
       from: "Antibes"
       to: "Lugano"
-      status: "Valgt overnatting"
+      status: "Hotel Federale bestilt · 31. juli–1. august"
       day_type: "Lang overgangsdag"
       summary: "Ruten går nordøst via Torino, Milano og Como til valgt overnatting i Lugano. Andermatt blir et kort stopp på den lengre passdagen neste morgen."
       plan_title: "En tydelig etappe til Lugano"
-      plan_intro: "Start tidlig, hold gode lademarginer gjennom Nord-Italia og bruk kvelden i Lugano til lading og kontroll av passstatus."
+      plan_intro: "Start tidlig, hold gode lademarginer gjennom Nord-Italia og kjør til Hotel Federale, Via Paolo Regazzoni 8. Hotellet har underjordisk parkering og to ladepunkter."
       steps:
         - "Start tidlig fra Antibes og bruk Torino-korridoren som første lange delmål."
         - "Fortsett via Milano og Como uten å legge inn et ambisiøst bybesøk på transportdagen."
@@ -1513,11 +1441,11 @@ days:
       eyebrow: "Transition stage · Riviera to Switzerland"
       from: "Antibes"
       to: "Lugano"
-      status: "Selected overnight stop"
+      status: "Hotel Federale booked · 31 July–1 August"
       day_type: "Long transition day"
       summary: "The route heads north-east through Turin, Milan and Como to the selected overnight stop in Lugano. Andermatt becomes a short stop on the longer pass day next morning."
       plan_title: "A clear stage to Lugano"
-      plan_intro: "Leave early, keep healthy charging margins through northern Italy and use the evening in Lugano for charging and checking pass status."
+      plan_intro: "Leave early, keep healthy charging margins through northern Italy and drive to Hotel Federale, Via Paolo Regazzoni 8. The hotel has underground parking and two EV charging points."
       steps:
         - "Leave Antibes early and use the Turin corridor as the first major target."
         - "Continue through Milan and Como without adding an ambitious city visit to the transport day."
@@ -1539,9 +1467,9 @@ days:
           url: "https://www.luganoregion.com/en"
           link_label: "Lugano Region"
 
-  - number: 14
-    weekday_no: "Søndag"
-    weekday_en: "Sunday"
+  - number: 13
+    weekday_no: "Lørdag"
+    weekday_en: "Saturday"
     stop_index: 11
     tone: alpine
     distance: "Ca. 410–540 km · fra Lugano via Andermatt"
@@ -1645,9 +1573,9 @@ days:
           url: "https://en.tourismus.li/entdecken/ganzjaehrig/uebersicht/kulturzentrum-vaduz/sehenswuerdigkeiten-in-vaduz.html"
           link_label: "Official Vaduz guide"
 
-  - number: 15
-    weekday_no: "Mandag"
-    weekday_en: "Monday"
+  - number: 14
+    weekday_no: "Søndag"
+    weekday_en: "Sunday"
     stop_index: 12
     tone: road
     distance: "Ca. 520–560 km via Lindt i Kilchberg"
@@ -1682,7 +1610,7 @@ days:
       to: "Frankfurt Airport"
       status: "Svært sannsynlig"
       day_type: "Sjokolade, autobahn og hotellopplevelse"
-      summary: "Dagen går først til Lindt Home of Chocolate i Kilchberg, deretter via Basel og Karlsruhe til b’mine Frankfurt Airport og helst en CarLoft med bilen ved rommet."
+      summary: "Dagen går først til Lindt Home of Chocolate i Kilchberg, deretter via Basel og Karlsruhe til den bestilte Car Loft – Planespotting på b’mine Frankfurt Airport."
       plan_title: "Lindt først, CarLoft til slutt"
       plan_intro: "Bestill et tidlig tidspunkt hos Lindt. Etter besøket prioriteres fremdrift via Basel og Karlsruhe, slik at hotellet fortsatt kan nytes på kvelden."
       steps:
@@ -1713,7 +1641,7 @@ days:
       to: "Frankfurt Airport"
       status: "Highly probable"
       day_type: "Chocolate, autobahn and hotel experience"
-      summary: "The day first visits Lindt Home of Chocolate in Kilchberg, then continues through Basel and Karlsruhe to b’mine Frankfurt Airport and preferably a CarLoft with the car beside the room."
+      summary: "The day first visits Lindt Home of Chocolate in Kilchberg, then continues through Basel and Karlsruhe to the booked Car Loft – Planespotting at b’mine Frankfurt Airport."
       plan_title: "Lindt first, the CarLoft at the finish"
       plan_intro: "Book an early time slot at Lindt. After the visit, prioritise progress through Basel and Karlsruhe so there is still time to enjoy the hotel in the evening."
       steps:
@@ -1738,9 +1666,9 @@ days:
           url: "https://www.bmine.de/en/hotel-Frankfurt/carloft"
           link_label: "Official CarLoft information"
 
-  - number: 16
-    weekday_no: "Tirsdag"
-    weekday_en: "Tuesday"
+  - number: 15
+    weekday_no: "Mandag"
+    weekday_en: "Monday"
     stop_index: 13
     tone: road
     distance: "Ca. 440–470 km"
@@ -1824,9 +1752,9 @@ days:
           url: "https://www.iamsterdam.com/en"
           link_label: "I amsterdam"
 
-  - number: 17
-    weekday_no: "Onsdag"
-    weekday_en: "Wednesday"
+  - number: 16
+    weekday_no: "Tirsdag"
+    weekday_en: "Tuesday"
     stop_index: 15
     tone: road
     distance: "Ca. 1 450–1 550 km · uten ferge"

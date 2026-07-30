@@ -1,5 +1,5 @@
 ---
-title: "Day 15 · Lindt and the Frankfurt CarLoft"
+title: "Day 15 · Early from Frankfurt to Amsterdam"
 translationKey: "travel-euro-2026-day-15"
 type: "travel-day"
 day: 15

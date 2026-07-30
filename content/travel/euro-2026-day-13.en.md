@@ -1,5 +1,5 @@
 ---
-title: "Day 13 · Antibes to Lugano"
+title: "Day 13 · Furka, Grimsel and Vaduz"
 translationKey: "travel-euro-2026-day-13"
 type: "travel-day"
 day: 13

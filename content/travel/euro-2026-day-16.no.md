@@ -1,5 +1,5 @@
 ---
-title: "Dag 16 · Tidlig fra Frankfurt til Amsterdam"
+title: "Dag 16 · Amsterdam til Oslo kl. 07:00"
 translationKey: "travel-euro-2026-day-16"
 type: "travel-day"
 day: 16

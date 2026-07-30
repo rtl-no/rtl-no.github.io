@@ -1,5 +1,5 @@
 ---
-title: "Dag 14 · Furka, Grimsel og Vaduz"
+title: "Dag 14 · Lindt og CarLoft i Frankfurt"
 translationKey: "travel-euro-2026-day-14"
 type: "travel-day"
 day: 14
