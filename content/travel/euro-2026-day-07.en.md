@@ -5,5 +5,6 @@ type: "travel-day"
 day: 7
 url: "/en/travel/euro-2026/day-07/"
 hero_image: "images/travel-euro-2026-hero.webp"
+timelapse_youtube: "G_4vxLD-IGo"
 summary: "Long Dolomites day from Bolzano through Val Gardena and Passo Gardena to Verona or Lake Garda."
 ---
