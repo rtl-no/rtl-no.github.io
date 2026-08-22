@@ -1798,7 +1798,7 @@ days:
   - number: 16
     weekday_no: "Tirsdag"
     weekday_en: "Tuesday"
-    stop_index: 15
+    stop_index: 14
     tone: road
     distance: "Ca. 1 450–1 550 km · uten ferge"
     drive_no: "15–16 t ren · ca. 17–19 t med lading, mat og hundehenting"
