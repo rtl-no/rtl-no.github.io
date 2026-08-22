@@ -5,5 +5,6 @@ type: "travel-day"
 day: 15
 url: "/no/travel/euro-2026/dag-15/"
 hero_image: "images/travel-euro-2026-hero.webp"
+timelapse_youtube: "7kN4vIsb5YU"
 summary: "Detaljert plan og fremtidig reiselogg for dag 15 av Europaferien 2026."
 ---
