@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <header class="learning-hero learning-{{ .Params.platform_key }}">
+    <div class="shell learning-hero-grid">
+      <div>
+        <p class="kicker">{{ .Params.platform }}</p>
+        <h1>{{ .Params.headline }}</h1>
+        <p class="lede">{{ .Description }}</p>
+        <div class="learning-meta">
+          <span>{{ len .RegularPages }} {{ if eq site.Language.Lang "no" }}moduler{{ else }}modules{{ end }}</span>
+          <span>{{ .Params.level }}</span>
+          <span>{{ if eq site.Language.Lang "no" }}Gjennomgått{{ else }}Reviewed{{ end }} {{ .Params.last_reviewed }}</span>
+        </div>
+      </div>
+      <div class="learning-stack" aria-hidden="true">
+        {{ range .Params.layers }}<span>{{ . }}</span>{{ end }}
+      </div>
+    </div>
+  </header>
+
+  <section class="section shell learning-intro">
+    <div class="prose intro-prose">{{ .Content }}</div>
+  </section>
+
+  <section class="shell learning-path" aria-labelledby="learning-path-title">
+    <header class="section-heading">
+      <div>
+        <p class="section-label">{{ if eq site.Language.Lang "no" }}Anbefalt rekkefølge{{ else }}Recommended order{{ end }}</p>
+        <h2 id="learning-path-title">{{ if eq site.Language.Lang "no" }}Fra grunnmur til produksjon{{ else }}From foundations to production{{ end }}</h2>
+      </div>
+      <p>{{ .Params.path_note }}</p>
+    </header>
+    <div class="learning-module-grid">
+      {{ range .RegularPages.ByWeight }}
+        <a class="learning-module-card{{ if .Params.questions }} learning-module-assessment{{ end }}" href="{{ .RelPermalink }}">
+          <div class="learning-module-top"><span>{{ .Params.module }}</span><small>{{ .Params.duration }}</small></div>
+          <p class="card-kicker">{{ .Params.track }}</p>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary }}</p>
+          {{ with .Params.topics }}<ul>{{ range first 3 . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+          <strong>{{ if .Params.questions }}{{ if eq site.Language.Lang "no" }}Ta kunnskapstesten{{ else }}Take the knowledge check{{ end }}{{ else }}{{ if eq site.Language.Lang "no" }}Start modulen{{ else }}Start module{{ end }}{{ end }} →</strong>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Params.bridge }}
+    <section class="learning-bridge"><div class="shell">
+      <div><p class="section-label">{{ .label }}</p><h2>{{ .title }}</h2><p>{{ .text }}</p></div>
+      <a class="button" href="{{ relLangURL .url }}">{{ .cta }} →</a>
+    </div></section>
+  {{ end }}
+{{ end }}

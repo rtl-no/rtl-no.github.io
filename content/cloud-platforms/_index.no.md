@@ -1,40 +1,38 @@
 ---
 title: "Skyplattformer"
 headline: "Plattformene som programvare bygges, sikres og driftes på."
-description: "Azure er skyplattformen jeg har jobbet mest med. Her samles Azure-kunnskap med dybdeområder om Altinn- og NAIS-plattformene og offisielle innganger til sentrale skyplattformer."
+description: "Strukturerte læringsløp for Azure, Google Cloud og NAIS, sammen med en arkitekturgjennomgang av Altinn og utvalgte sky-native referansepunkter."
 translationKey: cloud-platforms
 type: section-hub
 theme: cloud
 hero_image: "images/cloud-platforms-hero.webp"
 eyebrow: "Cloud platforms"
 featured:
-  title: "Microsoft Azure"
-  text: "Produkter, arkitekturvalg, identitet, sikkerhet, sertifiseringer og 75 scenario-baserte kunnskapsspørsmål."
-  url: "/cloud-platforms/azure/"
-  cta: "Utforsk Azure-området"
-  mark: "AZ"
+  title: "Google Cloud og NAIS"
+  text: "Lær Google Cloud-grunnmuren, sammenlign direkte skydrift med NAIS, og se hva NAIS standardiserer over GKE og administrerte tjenester. Tretten tospråklige guider og moduler danner ett sammenhengende løp."
+  url: "/cloud-platforms/google-cloud/"
+  cta: "Start med Google Cloud"
+  mark: "GCP"
 areas:
+  - title: "Microsoft Azure"
+    label: "Kunnskapsområde for sky"
+    text: "Produkter, arkitekturvalg, identitet, sikkerhet, sertifiseringer og 75 scenario-baserte kunnskapsspørsmål."
+    url: "/cloud-platforms/azure/"
+    mark: "AZ"
   - title: "Altinn-plattformen"
     label: "Norsk digital infrastruktur"
     text: "Altinn Studio, Altinn Apps og de felles plattformtjenestene for autentisering, autorisasjon, lagring, hendelser og varsling."
     url: "/cloud-platforms/altinn-platform/"
     mark: "ALT"
   - title: "NAIS-plattformen"
-    label: "Applikasjonsplattform"
-    text: "Hvordan NAIS gir autonome team en sikker runtime, deklarativ utrulling, identitet, data og observability på Kubernetes."
+    label: "Læringsløp i sju deler"
+    text: "Begynn med Google Cloud direkte mot NAIS, og fortsett med workloads, identitet, data, observability og produksjonsansvar."
     url: "/cloud-platforms/nais/"
     mark: "NAIS"
-  - title: "Amazon Web Services"
-    label: "Offisiell dokumentasjon"
-    text: "AWS-dokumentasjonen som referansepunkt for tjenester, arkitekturmønstre og begreper på tvers av skyleverandører."
-    url: "https://docs.aws.amazon.com/"
-    external: true
-    mark: "AWS"
   - title: "Google Cloud"
-    label: "Offisiell dokumentasjon"
-    text: "Dokumentasjon for Google Clouds plattform, data-, applikasjons-, infrastruktur- og AI-tjenester."
-    url: "https://cloud.google.com/docs"
-    external: true
+    label: "Læringsløp med seks moduler"
+    text: "Ressurshierarki, IAM, nettverk, compute, data, drift og arkitektur – med direkte koblinger til NAIS-abstraksjonene som er bygget oppå."
+    url: "/cloud-platforms/google-cloud/"
     mark: "GCP"
   - title: "Cloud Native Computing Foundation"
     label: "Åpent økosystem"
@@ -51,6 +49,6 @@ principles:
     text: "Infrastructure as code, policy, observability og repeterbare pipelines reduserer konfigurasjonsdrift."
 ---
 
-Skyplattformer er et eget område fordi plattformvalg påvirker arkitektur, sikkerhet, kostnad, observability og hvordan løsninger kan endres over tid. Azure er hovedfokuset og har en egen detaljert kunnskapsbase. Altinn og NAIS har fått egne dybdesider fordi de representerer to viktige, men forskjellige, former for norsk plattformbygging.
+Skyplattformer er et eget område fordi plattformvalg påvirker arkitektur, sikkerhet, kostnad, observability og hvordan løsninger kan endres over tid. Azure er fortsatt en detaljert kunnskapsbase. Google Cloud og NAIS danner nå et sammenhengende læringsløp: forstå først skyprimitivene, og lær deretter hvilke valg NAIS gjør om til en tryggere og enklere utviklerkontrakt.
 
-AWS, Google Cloud og CNCF er foreløpig med som offisielle referansepunkter. Det betyr ikke at de presenteres som like sentrale i min erfaring; de gjør det lettere å sammenligne begreper og skille generelle skymønstre fra leverandørspesifikke løsninger.
+Altinn er fortsatt en egen dybdeguide fordi plattformen representerer en annen type norsk plattform: felles kapabiliteter for å bygge og drifte offentlige digitale tjenester. CNCF er tatt med som det åpne økosystemet bak mange av de sky-native idéene som brukes på tvers av plattformene.

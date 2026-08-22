@@ -1,40 +1,38 @@
 ---
 title: "Cloud platforms"
 headline: "The platforms on which software is built, secured and operated."
-description: "Azure is the cloud platform I have worked with the most. This area combines Azure material with in-depth guides to the Altinn and Nais platforms and official entry points to major cloud platforms."
+description: "Structured learning for Azure, Google Cloud and Nais, alongside an architectural guide to Altinn and selected cloud-native reference points."
 translationKey: cloud-platforms
 type: section-hub
 theme: cloud
 hero_image: "images/cloud-platforms-hero.webp"
 eyebrow: "Cloud platforms"
 featured:
-  title: "Microsoft Azure"
-  text: "Products, architecture decisions, identity, security, certifications and 75 scenario-based knowledge questions."
-  url: "/cloud-platforms/azure/"
-  cta: "Explore the Azure area"
-  mark: "AZ"
+  title: "Google Cloud and Nais"
+  text: "Learn the Google Cloud foundation, compare direct cloud operation with Nais, then see what Nais standardizes on top of GKE and managed services. Thirteen bilingual guides and modules form one connected path."
+  url: "/cloud-platforms/google-cloud/"
+  cta: "Start with Google Cloud"
+  mark: "GCP"
 areas:
+  - title: "Microsoft Azure"
+    label: "Cloud knowledge area"
+    text: "Products, architecture decisions, identity, security, certifications and 75 scenario-based knowledge questions."
+    url: "/cloud-platforms/azure/"
+    mark: "AZ"
   - title: "The Altinn platform"
     label: "Norwegian digital infrastructure"
     text: "Altinn Studio, Altinn Apps and shared platform services for authentication, authorization, storage, events and notifications."
     url: "/cloud-platforms/altinn-platform/"
     mark: "ALT"
   - title: "The Nais platform"
-    label: "Application platform"
-    text: "How Nais gives autonomous teams a secure runtime, declarative deployment, identity, data and observability on Kubernetes."
+    label: "Seven-part learning path"
+    text: "Begin with Google Cloud direct versus Nais, then continue through workloads, identity, data, observability and production responsibility."
     url: "/cloud-platforms/nais/"
     mark: "NAIS"
-  - title: "Amazon Web Services"
-    label: "Official documentation"
-    text: "AWS documentation as a reference point for services, architecture patterns and concepts across cloud providers."
-    url: "https://docs.aws.amazon.com/"
-    external: true
-    mark: "AWS"
   - title: "Google Cloud"
-    label: "Official documentation"
-    text: "Documentation for Google Cloud's platform, data, application, infrastructure and AI services."
-    url: "https://cloud.google.com/docs"
-    external: true
+    label: "Six-module learning path"
+    text: "Resource hierarchy, IAM, networking, compute, data, operations and architecture—with direct links to the Nais abstractions built on top."
+    url: "/cloud-platforms/google-cloud/"
     mark: "GCP"
   - title: "Cloud Native Computing Foundation"
     label: "Open ecosystem"
@@ -51,6 +49,6 @@ principles:
     text: "Infrastructure as code, policy, observability and repeatable pipelines reduce configuration drift."
 ---
 
-Cloud platforms deserve a dedicated area because platform decisions affect architecture, security, cost, observability and how solutions can evolve. Azure is the primary focus and has its own detailed knowledge base. Altinn and Nais have dedicated deep dives because they represent two important, but different, approaches to platform engineering in Norway.
+Cloud platforms deserve a dedicated area because platform decisions affect architecture, security, cost, observability and how solutions can evolve. Azure remains a detailed knowledge base. Google Cloud and Nais now form a connected learning journey: first understand the cloud primitives, then learn which decisions Nais turns into a safer, simpler developer contract.
 
-AWS, Google Cloud and CNCF are currently included as official reference points. They are not presented as equally central to my experience; they make it easier to compare terminology and distinguish general cloud patterns from provider-specific solutions.
+Altinn remains a separate deep dive because it represents a different kind of Norwegian platform: shared capabilities for building and operating public digital services. CNCF is included as the open ecosystem behind many of the cloud-native ideas used across these platforms.

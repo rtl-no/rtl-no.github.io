@@ -1,0 +1,37 @@
+{{ define "main" }}
+  {{ if .Params.questions }}
+    <article class="learning-quiz learning-{{ .Params.platform_key }}">
+      <header class="learning-guide-hero"><div class="shell narrow-shell">
+        <p class="kicker">{{ .Params.platform }} · {{ .Params.module }}</p>
+        <h1>{{ .Title }}</h1>
+        <p class="lede">{{ .Params.summary }}</p>
+        <div class="learning-meta"><span>{{ len .Params.questions }} {{ .Params.questions_label }}</span><span>{{ .Params.duration }}</span><span>{{ .Params.pass_percent }}% {{ if eq site.Language.Lang "no" }}for anbefalt nivå{{ else }}recommended target{{ end }}</span></div>
+      </div></header>
+      <div class="shell narrow-shell learning-quiz-shell" data-quiz data-pass="{{ .Params.pass_percent }}" data-pass-message="{{ .Params.pass_message }}" data-review-message="{{ .Params.review_message }}" data-correct-label="{{ .Params.correct_label }}" data-wrong-label="{{ .Params.wrong_label }}" data-unanswered-label="{{ .Params.unanswered_label }}">
+        <div class="prose learning-quiz-intro">{{ .Content }}</div>
+        <div class="azure-quiz-progress" aria-live="polite"><div><span data-quiz-progress-bar></span></div><p><strong data-quiz-answered>0</strong> / {{ len .Params.questions }} {{ .Params.answered_label }}</p></div>
+        <form data-quiz-form>{{ range $questionIndex, $question := .Params.questions }}{{ $questionNumber := add $questionIndex 1 }}<fieldset class="quiz-question" data-correct="{{ $question.correct }}" data-domain="{{ $question.domain }}"><legend class="sr-only">{{ if eq site.Language.Lang "no" }}Oppgave{{ else }}Question{{ end }} {{ $questionNumber }}: {{ $question.question }}</legend><div class="quiz-question-header" aria-hidden="true"><span>{{ $questionNumber }}</span><p>{{ $question.question }}</p></div><div class="quiz-options">{{ range $optionIndex, $option := $question.options }}<label><input type="radio" name="question-{{ $questionIndex }}" value="{{ $optionIndex }}"><span>{{ $option }}</span></label>{{ end }}</div><div class="quiz-feedback" hidden><strong data-feedback-label></strong><p>{{ $question.explanation }}</p><a href="{{ $question.reference }}" rel="noopener">{{ $question.reference_label }} ↗</a></div></fieldset>{{ end }}<div class="quiz-actions"><button class="button button-primary" type="submit">{{ .Params.submit_label }}</button><button class="button" type="button" data-quiz-reset>{{ .Params.reset_label }}</button></div></form>
+        <section class="quiz-result" data-quiz-result hidden tabindex="-1" aria-live="polite"><p class="card-kicker">{{ .Params.result_label }}</p><div class="quiz-score"><strong data-quiz-score>0%</strong><span data-quiz-score-text></span></div><p data-quiz-message></p><div class="quiz-domain-results" data-quiz-domains></div><p class="quiz-result-note">{{ .Params.result_note }}</p></section>
+        <footer class="learning-guide-footer"><a href="{{ .CurrentSection.RelPermalink }}">← {{ if eq site.Language.Lang "no" }}Tilbake til læringsløpet{{ else }}Back to the learning path{{ end }}</a></footer>
+      </div>
+    </article>
+  {{ else }}
+    <article class="learning-guide learning-{{ .Params.platform_key }}">
+      <header class="learning-guide-hero"><div class="shell narrow-shell">
+        <p class="kicker">{{ .Params.platform }} · {{ .Params.module }}</p>
+        <h1>{{ .Title }}</h1>
+        <p class="lede">{{ .Params.summary }}</p>
+        <div class="learning-meta"><span>{{ .Params.duration }}</span><span>{{ .Params.level }}</span><span>{{ if eq site.Language.Lang "no" }}Gjennomgått{{ else }}Reviewed{{ end }} {{ .Params.last_reviewed }}</span></div>
+      </div></header>
+      <div class="shell narrow-shell learning-guide-body">
+        {{ with .Params.outcomes }}<aside class="learning-outcomes"><p class="section-label">{{ if eq site.Language.Lang "no" }}Etter denne modulen kan du{{ else }}After this module you can{{ end }}</p><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></aside>{{ end }}
+        {{ if gt (len .TableOfContents) 32 }}<aside class="toc"><h2>{{ i18n "on_this_page" }}</h2>{{ .TableOfContents }}</aside>{{ end }}
+        <div class="prose">{{ .Content }}</div>
+        <footer class="learning-guide-footer">
+          <a href="{{ .CurrentSection.RelPermalink }}">← {{ if eq site.Language.Lang "no" }}Alle moduler{{ else }}All modules{{ end }}</a>
+          {{ with .Params.next }}<a href="{{ relLangURL .url }}">{{ .label }} →</a>{{ end }}
+        </footer>
+      </div>
+    </article>
+  {{ end }}
+{{ end }}
